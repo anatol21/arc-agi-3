@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Local ARC practice and Ollama benchmark environment">
+    <title>ARC Practice</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">LOCAL ARC PRACTICE</p>
+        <h1>ARC Testing Interface</h1>
+        <p id="dataset-summary" class="dataset-summary">Loading datasets…</p>
+      </div>
+      <div class="scoreboard" aria-live="polite">
+        <span>Session</span>
+        <strong id="score-value">0 solved / 0 attempts</strong>
+      </div>
+    </header>
+
+    <nav class="view-tabs" aria-label="ARC practice modes">
+      <button id="manual-view-button" class="active" type="button" aria-selected="true">Manual practice</button>
+      <button id="benchmark-view-button" type="button" aria-selected="false">Ollama benchmark</button>
+    </nav>
+
+    <section id="manual-view">
+      <section class="task-controls" aria-label="Task controls">
+        <label>
+          Dataset
+          <select id="manual-dataset-filter"></select>
+        </label>
+        <label>
+          Source
+          <select id="source-filter"><option value="">All sources</option></select>
+        </label>
+        <button id="random-task" type="button">Random task</button>
+        <button id="previous-task" type="button">Previous</button>
+        <button id="next-task" type="button">Next</button>
+        <form id="task-id-form">
+          <label for="task-id-input">Task ID</label>
+          <input id="task-id-input" type="text" autocomplete="off" placeholder="e.g. google_007bbfb7_000">
+          <button type="submit">Go</button>
+        </form>
+      </section>
+
+      <p id="task-status" class="task-status" aria-live="polite"></p>
+
+      <main id="workspace" class="workspace" hidden>
+        <section class="panel demonstrations-panel" aria-labelledby="demonstrations-heading">
+          <div class="panel-title-row">
+            <div>
+              <p class="panel-kicker">PATTERN</p>
+              <h2 id="demonstrations-heading">Task demonstrations</h2>
+            </div>
+            <span id="demo-count" class="count-badge"></span>
+          </div>
+          <div id="demonstrations" class="demonstrations"></div>
+        </section>
+
+        <section class="panel test-panel" aria-labelledby="test-heading">
+          <div class="panel-title-row">
+            <div>
+              <p class="panel-kicker">QUERY</p>
+              <h2 id="test-heading">Test input</h2>
+            </div>
+            <span id="test-count" class="count-badge"></span>
+          </div>
+          <div class="test-navigation">
+            <button id="previous-test" type="button">← Previous test</button>
+            <button id="next-test" type="button">Next test →</button>
+          </div>
+          <div id="test-input" class="single-grid" aria-label="Test input grid"></div>
+        </section>
+
+        <section class="panel editor-panel" aria-labelledby="editor-heading">
+          <div class="panel-title-row">
+            <div>
+              <p class="panel-kicker">RESPONSE</p>
+              <h2 id="editor-heading">Your output</h2>
+            </div>
+            <span id="grid-size-display" class="count-badge">3 × 3</span>
+          </div>
+
+          <div class="editor-controls">
+            <div class="resize-controls">
+              <label for="grid-size-input">Grid size</label>
+              <input id="grid-size-input" value="3x3" inputmode="numeric" aria-label="Output grid size">
+              <button id="resize-grid" type="button">Resize</button>
+            </div>
+            <div class="action-controls">
+              <button id="copy-input" type="button">Copy input</button>
+              <button id="reset-grid" type="button">Reset</button>
+              <button id="submit-grid" class="submit-button" type="button">Submit</button>
+            </div>
+          </div>
+
+          <fieldset class="tool-controls">
+            <legend>Tool</legend>
+            <label><input type="radio" name="tool" value="edit" checked> Edit</label>
+            <label><input type="radio" name="tool" value="select"> Select</label>
+            <label><input type="radio" name="tool" value="floodfill"> Flood fill</label>
+          </fieldset>
+
+          <div class="output-shell">
+            <div id="output-grid" class="editable-grid" aria-label="Editable output grid"></div>
+          </div>
+
+          <div class="palette-row">
+            <div id="palette" class="palette" aria-label="Color palette"></div>
+            <label class="number-toggle"><input id="show-numbers" type="checkbox"> Show color numbers</label>
+          </div>
+          <p class="keyboard-hint">Select cells, press <kbd>C</kbd> to copy, select one destination cell, then press <kbd>V</kbd> to paste.</p>
+          <p id="solution-status" class="solution-status" aria-live="polite"></p>
+        </section>
+      </main>
+    </section>
+
+    <section id="benchmark-view" class="benchmark-view" hidden aria-labelledby="benchmark-heading">
+      <div class="benchmark-intro">
+        <p class="eyebrow">LOCAL OLLAMA EVALUATION</p>
+        <h2 id="benchmark-heading">Benchmark a model on ARC tasks</h2>
+        <p>Only demonstrations and test inputs are sent to Ollama. Validation answers remain on this local server.</p>
+      </div>
+
+      <form id="benchmark-form" class="benchmark-panel">
+        <div class="benchmark-grid">
+          <label>Dataset<select id="benchmark-dataset"></select></label>
+          <label>Source<select id="benchmark-source"><option value="">All sources</option></select></label>
+          <label>Ollama model<select id="benchmark-model"><option value="">Load local models first</option></select></label>
+          <div class="model-actions"><button id="refresh-models" type="button">Refresh local models</button></div>
+          <label>Task order<select id="benchmark-order"><option value="random">Random</option><option value="sequential">Sequential</option></select></label>
+          <label>Games / tasks<input id="benchmark-task-count" type="number" min="1" value="10"></label>
+          <label>Random seed<input id="benchmark-seed" type="number" min="0" placeholder="Optional"></label>
+          <label>Temperature<input id="benchmark-temperature" type="number" min="0" max="2" step="0.05" value="0"></label>
+          <label>Top-p<input id="benchmark-top-p" type="number" min="0" max="1" step="0.05" value="1"></label>
+          <label>Maximum tokens<input id="benchmark-num-predict" type="number" min="1" max="32768" value="4096"></label>
+          <label>Per-task timeout (seconds)<input id="benchmark-timeout" type="number" min="1" max="600" value="120"></label>
+        </div>
+        <label class="prompt-modifier" for="benchmark-core-instruction">Core instruction
+          <textarea id="benchmark-core-instruction" rows="3" maxlength="4000">Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.</textarea>
+          <span class="field-note">This replaces the main task instruction. The JSON response contract below stays fixed for scoring.</span>
+        </label>
+        <label class="prompt-modifier" for="benchmark-prompt-modifier">Prompt modifier
+          <textarea id="benchmark-prompt-modifier" rows="4" maxlength="8000" placeholder="Optional extra instruction appended after the task data."></textarea>
+        </label>
+        <p class="response-contract">Required model response: <code>{"outputs": [[[0]]]}</code>. It must contain one 0–9 grid for each test input.</p>
+        <div class="benchmark-actions">
+          <button id="start-benchmark" class="submit-button" type="submit">Start benchmark</button>
+          <button id="cancel-benchmark" type="button" disabled>Cancel after current task</button>
+          <button id="export-json" type="button" disabled>Download JSON</button>
+          <button id="export-csv" type="button" disabled>Download CSV</button>
+        </div>
+        <p id="benchmark-message" class="benchmark-message" aria-live="polite"></p>
+      </form>
+
+      <section class="benchmark-results" aria-live="polite">
+        <div class="metric"><span>Run state</span><strong id="benchmark-state">Idle</strong></div>
+        <div class="metric"><span>Completed</span><strong id="benchmark-progress">0 / 0</strong></div>
+        <div class="metric"><span>Task exact</span><strong id="benchmark-task-score">0</strong></div>
+        <div class="metric"><span>Test grids exact</span><strong id="benchmark-test-score">0 / 0</strong></div>
+      </section>
+
+      <section class="benchmark-history" aria-labelledby="benchmark-history-heading">
+        <h3 id="benchmark-history-heading">Current run</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Task</th><th>Source</th><th>Status</th><th>Tests</th><th>Seconds</th><th>Note</th><th>Output</th></tr></thead>
+            <tbody id="benchmark-results-body"><tr><td colspan="7">No benchmark has started.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="benchmark-inspector" class="benchmark-inspector" hidden aria-labelledby="benchmark-inspector-heading">
+        <div class="inspector-title-row">
+          <div>
+            <p class="panel-kicker">MODEL OUTPUT</p>
+            <h3 id="benchmark-inspector-heading">Response inspector</h3>
+          </div>
+          <button id="close-benchmark-inspector" type="button">Close</button>
+        </div>
+        <p id="benchmark-inspector-summary" class="inspector-summary"></p>
+        <p class="inspector-protection">This view shows the model’s response and parsed prediction only. Protected target grids are never displayed.</p>
+        <details class="inspector-request">
+          <summary>Request sent to Ollama</summary>
+          <p>The exact local request payload: model settings plus the task prompt with demonstrations and test inputs.</p>
+          <pre id="benchmark-model-request" class="benchmark-raw-response"></pre>
+        </details>
+        <div class="inspector-columns">
+          <section>
+            <h4>Parsed prediction</h4>
+            <div id="benchmark-prediction" class="benchmark-prediction"></div>
+          </section>
+          <section>
+            <h4>Raw model response</h4>
+            <pre id="benchmark-raw-response" class="benchmark-raw-response"></pre>
+          </section>
+        </div>
+        <section class="inspector-reasoning">
+          <h4>Model reasoning / CoT (when returned)</h4>
+          <pre id="benchmark-reasoning" class="benchmark-raw-response"></pre>
+        </section>
+      </section>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
