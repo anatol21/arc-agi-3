@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Local ARC practice and Ollama benchmark environment">
+    <meta name="description" content="Local ARC practice and model benchmark environment">
     <title>ARC Practice</title>
     <link rel="stylesheet" href="app.css">
   </head>
@@ -22,7 +22,7 @@
 
     <nav class="view-tabs" aria-label="ARC practice modes">
       <button id="manual-view-button" class="active" type="button" aria-selected="true">Manual practice</button>
-      <button id="benchmark-view-button" type="button" aria-selected="false">Ollama benchmark</button>
+      <button id="benchmark-view-button" type="button" aria-selected="false">Model benchmark</button>
     </nav>
 
     <section id="manual-view">
@@ -119,17 +119,119 @@
 
     <section id="benchmark-view" class="benchmark-view" hidden aria-labelledby="benchmark-heading">
       <div class="benchmark-intro">
-        <p class="eyebrow">LOCAL OLLAMA EVALUATION</p>
+        <p class="eyebrow">MODEL EVALUATION</p>
         <h2 id="benchmark-heading">Benchmark a model on ARC tasks</h2>
-        <p>Only demonstrations and test inputs are sent to Ollama. Validation answers remain on this local server.</p>
+        <p>Only demonstrations and test inputs are sent to the selected provider. Validation answers remain on this local server.</p>
       </div>
 
+      <section class="experiment-batch-panel" aria-labelledby="experiment-batch-heading">
+        <div class="batch-title-row">
+          <div>
+            <p class="panel-kicker">RELIABLE COMPARISON</p>
+            <h3 id="experiment-batch-heading">Parallel experiment batch</h3>
+            <p class="field-note">A screening batch repeats the same seeded ARC cohort for every configuration. Invalid output and provider failures remain part of the score.</p>
+          </div>
+          <span class="count-badge">Up to 5 configurations</span>
+        </div>
+        <form id="experiment-batch-form">
+          <div class="batch-shared-grid">
+            <label>Dataset<select id="batch-dataset"></select></label>
+            <label>Source<select id="batch-source"><option value="">All sources</option></select></label>
+            <label>OpenRouter API key
+              <input id="batch-openrouter-api-key" type="password" autocomplete="off" spellcheck="false" maxlength="512" placeholder="sk-or-v1-…">
+              <span class="field-note">Used only for this active batch; never exported.</span>
+            </label>
+            <div class="model-actions"><button id="batch-refresh-models" type="button">Load OpenRouter models</button></div>
+            <label>Shared tasks<input id="batch-task-count" type="number" min="1" value="10"></label>
+            <label>Shared random seed<input id="batch-seed" type="number" min="0" value="42"></label>
+            <label>Trials per task<input id="batch-trials-per-task" type="number" min="1" max="10" value="3"></label>
+            <label>Global concurrent requests<input id="batch-global-parallel" type="number" min="1" max="8" value="4"></label>
+          </div>
+          <p class="batch-estimate">The default screening batch is <strong>5 configurations × 10 shared tasks × 3 trials = 150 logical requests</strong>. The global cap limits total OpenRouter requests across every configuration.</p>
+          <p class="field-note">Reasoning shares Maximum tokens with the final answer. With reasoning enabled and at least 2,048 maximum tokens, half is requested as the reasoning budget, leaving room for an answer where the model supports this limit.</p>
+          <datalist id="batch-model-options"></datalist>
+          <div class="batch-experiments-title">
+            <h4>Experiment configurations</h4>
+            <button id="add-experiment" type="button">Add configuration</button>
+          </div>
+          <div id="batch-experiments" class="batch-experiments"></div>
+          <div class="benchmark-actions">
+            <button id="start-experiment-batch" class="submit-button" type="submit">Start experiment batch</button>
+            <button id="cancel-experiment-batch" type="button" disabled>Cancel batch</button>
+            <button id="export-batch-json" type="button" disabled>Download batch JSON</button>
+            <button id="export-batch-csv" type="button" disabled>Download batch CSV</button>
+          </div>
+          <p id="batch-message" class="benchmark-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="batch-live-results" aria-live="polite">
+        <div class="metric"><span>Batch state</span><strong id="batch-state">Idle</strong></div>
+        <div class="metric"><span>Trials completed</span><strong id="batch-progress">0 / 0</strong></div>
+        <div class="metric"><span>Active requests</span><strong id="batch-active-requests">0 / 0</strong></div>
+        <div class="metric"><span>Shared cohort</span><strong id="batch-cohort-size">0 tasks</strong></div>
+      </section>
+      <p id="batch-request-progress" class="field-note" aria-live="polite"></p>
+
+      <section class="batch-summary" aria-labelledby="batch-summary-heading">
+        <div class="batch-title-row">
+          <div><h3 id="batch-summary-heading">Experiment scorecards</h3><p class="field-note">Use stable-task rate and response reliability before trusting a high one-shot score.</p></div>
+        </div>
+        <div id="batch-scorecards" class="batch-scorecards"><p class="empty-batch-state">No experiment batch has started.</p></div>
+        <div class="batch-matrix-section">
+          <h4>Task / trial matrix</h4>
+          <div id="batch-task-matrix" class="batch-task-matrix">No completed batch trials yet.</div>
+        </div>
+      </section>
+
+      <section class="benchmark-history batch-history" aria-labelledby="batch-history-heading">
+        <h3 id="batch-history-heading">Batch trials</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Experiment</th><th>Task</th><th>Trial</th><th>Status</th><th>Queue</th><th>Provider</th><th>Note</th><th>Output</th></tr></thead>
+            <tbody id="batch-results-body"><tr><td colspan="8">No batch trials yet.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="batch-inspector" class="benchmark-inspector" hidden aria-labelledby="batch-inspector-heading">
+        <div class="inspector-title-row">
+          <div><p class="panel-kicker">BATCH TRIAL</p><h3 id="batch-inspector-heading">Response inspector</h3></div>
+          <button id="close-batch-inspector" type="button">Close</button>
+        </div>
+        <p id="batch-inspector-summary" class="inspector-summary"></p>
+        <p class="inspector-protection">This view shows model output and settings only. Protected target grids are never displayed.</p>
+        <details class="inspector-request"><summary>Request sent to the model provider</summary><pre id="batch-model-request" class="benchmark-raw-response"></pre></details>
+        <div class="inspector-columns">
+          <section><h4>Parsed prediction</h4><div id="batch-prediction" class="benchmark-prediction"></div></section>
+          <section><h4>Raw model response</h4><pre id="batch-raw-response" class="benchmark-raw-response"></pre></section>
+        </div>
+        <section class="inspector-reasoning"><h4>Reasoning trace</h4><pre id="batch-reasoning" class="benchmark-raw-response"></pre></section>
+        <section class="inspector-reasoning"><h4>Attempts</h4><pre id="batch-attempts" class="benchmark-raw-response"></pre></section>
+        <details class="inspector-request"><summary>Provider completion details</summary><pre id="batch-provider-response" class="benchmark-raw-response"></pre></details>
+      </section>
+
+      <section class="legacy-benchmark-heading"><p class="panel-kicker">SINGLE RUN</p><h3>Legacy one-model benchmark</h3></section>
       <form id="benchmark-form" class="benchmark-panel">
         <div class="benchmark-grid">
           <label>Dataset<select id="benchmark-dataset"></select></label>
           <label>Source<select id="benchmark-source"><option value="">All sources</option></select></label>
-          <label>Ollama model<select id="benchmark-model"><option value="">Load local models first</option></select></label>
+          <label>Provider<select id="benchmark-provider"><option value="ollama">Ollama (local)</option><option value="openrouter">OpenRouter</option></select></label>
+          <label id="benchmark-model-label">Ollama model<select id="benchmark-model"><option value="">Load local models first</option></select></label>
           <div class="model-actions"><button id="refresh-models" type="button">Refresh local models</button></div>
+          <label class="openrouter-setting" hidden>OpenRouter API key
+            <input id="openrouter-api-key" type="password" autocomplete="off" spellcheck="false" maxlength="512" placeholder="sk-or-v1-…">
+            <span class="field-note">Used only for this session; never saved or included in exports.</span>
+          </label>
+          <label class="openrouter-setting" hidden>OpenRouter model ID
+            <input id="openrouter-model-id" type="text" autocomplete="off" spellcheck="false" maxlength="512" placeholder="e.g. openai/gpt-4.1">
+            <span class="field-note">Enter a model ID directly, or load OpenRouter’s catalog.</span>
+          </label>
+          <div class="model-actions openrouter-setting" hidden><button id="add-openrouter-model" type="button">Add model</button></div>
+          <label class="openrouter-setting" hidden>Parallel requests
+            <input id="benchmark-parallel-requests" type="number" min="1" max="16" value="1">
+            <span class="field-note">Run up to 16 independent OpenRouter task requests at once.</span>
+          </label>
           <label>Task order<select id="benchmark-order"><option value="random">Random</option><option value="sequential">Sequential</option></select></label>
           <label>Games / tasks<input id="benchmark-task-count" type="number" min="1" value="10"></label>
           <label>Random seed<input id="benchmark-seed" type="number" min="0" placeholder="Optional"></label>
@@ -137,18 +239,24 @@
           <label>Top-p<input id="benchmark-top-p" type="number" min="0" max="1" step="0.05" value="1"></label>
           <label>Maximum tokens<input id="benchmark-num-predict" type="number" min="1" max="32768" value="4096"></label>
           <label>Per-task timeout (seconds)<input id="benchmark-timeout" type="number" min="1" max="600" value="120"></label>
+          <label class="reasoning-toggle">
+            <span>Reasoning trace</span>
+            <span><input id="benchmark-think" type="checkbox"> Request when the selected model supports it</span>
+            <span id="reasoning-note" class="field-note">Thinking consumes the maximum-token budget. Some models, including Qwen3-Coder, do not provide a separate trace.</span>
+          </label>
         </div>
         <label class="prompt-modifier" for="benchmark-core-instruction">Core instruction
-          <textarea id="benchmark-core-instruction" rows="3" maxlength="4000">Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.</textarea>
-          <span class="field-note">This replaces the main task instruction. The JSON response contract below stays fixed for scoring.</span>
+          <textarea id="benchmark-core-instruction" rows="3" maxlength="32768">Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.</textarea>
+          <span class="field-note">This replaces the main task instruction (up to 32,768 characters). The JSON response contract below stays fixed for scoring.</span>
         </label>
         <label class="prompt-modifier" for="benchmark-prompt-modifier">Prompt modifier
-          <textarea id="benchmark-prompt-modifier" rows="4" maxlength="8000" placeholder="Optional extra instruction appended after the task data."></textarea>
+          <textarea id="benchmark-prompt-modifier" rows="4" maxlength="32768" placeholder="Optional extra instruction appended after the task data."></textarea>
+          <span class="field-note">Up to 32,768 characters.</span>
         </label>
         <p class="response-contract">Required model response: <code>{"outputs": [[[0]]]}</code>. It must contain one 0–9 grid for each test input.</p>
         <div class="benchmark-actions">
           <button id="start-benchmark" class="submit-button" type="submit">Start benchmark</button>
-          <button id="cancel-benchmark" type="button" disabled>Cancel after current task</button>
+          <button id="cancel-benchmark" type="button" disabled>Cancel queued tasks</button>
           <button id="export-json" type="button" disabled>Download JSON</button>
           <button id="export-csv" type="button" disabled>Download CSV</button>
         </div>
@@ -161,6 +269,7 @@
         <div class="metric"><span>Task exact</span><strong id="benchmark-task-score">0</strong></div>
         <div class="metric"><span>Test grids exact</span><strong id="benchmark-test-score">0 / 0</strong></div>
       </section>
+      <p id="benchmark-request-progress" class="field-note" aria-live="polite"></p>
 
       <section class="benchmark-history" aria-labelledby="benchmark-history-heading">
         <h3 id="benchmark-history-heading">Current run</h3>
@@ -183,7 +292,7 @@
         <p id="benchmark-inspector-summary" class="inspector-summary"></p>
         <p class="inspector-protection">This view shows the model’s response and parsed prediction only. Protected target grids are never displayed.</p>
         <details class="inspector-request">
-          <summary>Request sent to Ollama</summary>
+          <summary>Request sent to the model provider</summary>
           <p>The exact local request payload: model settings plus the task prompt with demonstrations and test inputs.</p>
           <pre id="benchmark-model-request" class="benchmark-raw-response"></pre>
         </details>
@@ -201,6 +310,7 @@
           <h4>Model reasoning / CoT (when returned)</h4>
           <pre id="benchmark-reasoning" class="benchmark-raw-response"></pre>
         </section>
+        <details class="inspector-request"><summary>Provider completion details</summary><pre id="benchmark-provider-response" class="benchmark-raw-response"></pre></details>
       </section>
     </section>
     <script src="app.js"></script>

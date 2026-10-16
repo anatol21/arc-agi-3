@@ -213,6 +213,71 @@ kbd { padding: 1px 4px; border: 1px solid #c7d0df; border-radius: 3px; backgroun
   background: var(--panel);
   box-shadow: 0 5px 18px rgba(25, 39, 64, 0.07);
 }
+.experiment-batch-panel, .batch-summary {
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid #bdcbe7;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f7faff 0%, #fdfdff 100%);
+  box-shadow: 0 5px 18px rgba(25, 39, 64, 0.07);
+}
+.batch-title-row, .batch-experiments-title, .experiment-card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+}
+.batch-title-row h3, .batch-experiments-title h4, .legacy-benchmark-heading h3, .experiment-card h5 { margin: 0; }
+.batch-title-row > div > .panel-kicker { margin-bottom: 5px; }
+.batch-shared-grid, .experiment-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.batch-shared-grid label, .experiment-fields label, .experiment-prompts label {
+  display: grid;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.batch-shared-grid input, .batch-shared-grid select, .experiment-fields input { width: 100%; }
+.batch-estimate { margin: 14px 0; color: #435577; font-size: 0.86rem; line-height: 1.45; }
+.batch-experiments-title { align-items: center; margin: 18px 0 10px; }
+.batch-experiments-title h4 { font-size: 1rem; }
+.batch-experiments { display: grid; gap: 12px; }
+.experiment-card { padding: 14px; border: 1px solid #d7e0f0; border-radius: 8px; background: white; }
+.experiment-card-header { align-items: center; }
+.experiment-card h5 { font-size: 0.94rem; }
+.experiment-card-actions { display: flex; gap: 7px; }
+.experiment-card-actions button { min-height: 30px; padding: 4px 8px; font-size: 0.76rem; }
+.experiment-thinking { align-self: end; }
+.experiment-thinking input { width: auto; }
+.experiment-prompts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.batch-live-results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 15px 0; }
+.batch-scorecards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.batch-scorecard { padding: 14px; border: 1px solid #d8e0ed; border-radius: 8px; background: white; }
+.batch-scorecard h4 { margin: 0; font-size: 1rem; }
+.batch-scorecard > .field-note { margin: 5px 0 12px; }
+.scorecard-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.scorecard-metric { display: grid; gap: 3px; padding: 8px; border-radius: 6px; background: #f5f8fd; }
+.scorecard-metric span { color: var(--muted); font-size: 0.68rem; font-weight: 750; letter-spacing: 0.04em; text-transform: uppercase; }
+.scorecard-metric strong { font-size: 0.88rem; }
+.scorecard-statuses { margin: 12px 0 0; color: var(--muted); font-size: 0.78rem; }
+.batch-matrix-section { margin-top: 18px; }
+.batch-matrix-section h4 { margin: 0 0 9px; font-size: 0.92rem; }
+.batch-task-matrix { overflow: auto; border: 1px solid #d8e0ed; border-radius: 7px; background: white; }
+.batch-task-matrix table { min-width: 740px; }
+.matrix-status { min-height: 27px; padding: 3px 6px; border-color: #cbd5e5; background: #f4f7fc; color: #32435f; font-size: 0.73rem; }
+.matrix-status.correct { border-color: #83bc9a; background: #edf8f0; color: #21643c; }
+.matrix-status.incorrect { border-color: #e2bd70; background: #fff8e7; color: #87580d; }
+.matrix-status.malformed_response, .matrix-status.provider_error, .matrix-status.internal_error { border-color: #d9959b; background: #fff0f1; color: #962f3b; }
+.batch-history { margin-top: 16px; }
+.legacy-benchmark-heading { margin: 26px 0 10px; }
+.legacy-benchmark-heading .panel-kicker { margin-bottom: 5px; }
 .benchmark-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
@@ -230,6 +295,9 @@ kbd { padding: 1px 4px; border: 1px solid #c7d0df; border-radius: 3px; backgroun
 .benchmark-grid input, .benchmark-grid select { width: 100%; }
 .model-actions { display: flex; align-items: end; }
 .model-actions button { width: 100%; }
+.reasoning-toggle { grid-column: span 2; }
+.reasoning-toggle > span:nth-child(2) { display: flex; align-items: center; gap: 7px; color: var(--ink); font-size: 0.82rem; font-weight: 500; letter-spacing: normal; text-transform: none; }
+.reasoning-toggle input { width: auto; }
 .prompt-modifier { margin-top: 14px; }
 .field-note { color: var(--muted); font-size: 0.78rem; font-weight: 400; letter-spacing: normal; line-height: 1.35; text-transform: none; }
 textarea {
@@ -307,10 +375,13 @@ th { color: #53637d; background: #f5f7fb; font-size: 0.72rem; letter-spacing: 0.
   .output-shell { min-height: 310px; }
   .view-tabs, .benchmark-view { padding-left: 12px; padding-right: 12px; }
   .benchmark-grid, .benchmark-results { grid-template-columns: 1fr; }
+  .batch-shared-grid, .experiment-fields, .batch-live-results, .experiment-prompts { grid-template-columns: 1fr; }
   .inspector-columns { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1120px) and (min-width: 921px) {
   .benchmark-grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
   .benchmark-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .batch-shared-grid, .experiment-fields { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+  .batch-live-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
