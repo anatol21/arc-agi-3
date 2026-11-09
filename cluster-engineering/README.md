@@ -1,5 +1,7 @@
 # Cluster engineering
 
+This folder contains the tools we used to improve inference throughput and reduce restart costs.
+
 A long evaluation can use a short GPU allocation if its worker saves progress before the time limit. The next worker reloads the model, skips completed responses, and continues from saved prefixes. Queue time and GPU time are measured separately.
 
 | Component | Use |
@@ -9,8 +11,6 @@ A long evaluation can use a short GPU allocation if its worker saves progress be
 | [ARC inference worker](arc_worker/) | Run the direct-answer worker, interrupt a batch, and inspect which stored tokens it uses on restart. |
 | [Inference batching](inference/) | Group comparable inputs, test wider batches, and retain a smaller working width after an out-of-memory failure. |
 | [Worker runbook](agent.md) | Implement a resumable worker, test it offline and launch it on Slurm. |
-| [Completed cluster benchmarks](benchmarks/) | Inspect generated responses, per-task scores and historical inference code for the 128- and 138-task evaluations. |
-| [ARC validation profiles](arc-validation/) | Inspect prompt lengths, measured response lengths and one worked example from the 138-task evaluation. |
 
 ## Start locally
 

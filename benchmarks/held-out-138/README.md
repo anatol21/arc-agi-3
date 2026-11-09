@@ -16,7 +16,7 @@ Both the base model and checkpoint-660 finished all 138 tasks (185 query grids p
 
 ## Experimental conditions
 
-The two arms used the native NF4 loading path. The fine-tuned arm enabled the checkpoint-660 adapter and the base arm disabled it. Each task received one direct JSON answer with greedy decoding, thinking disabled, a single beam and an 18,432-token context. The completion budget was the smaller of 8,192 tokens and the space remaining after the full prompt. There was no Python refinement or test-time training. The 138 tasks were reserved from fine-tuning and some were used in earlier API prompt experiments. The [task profiles](../../arc-validation/) give the prompt, one example and token counts.
+The two arms used the native NF4 loading path. The fine-tuned arm enabled the checkpoint-660 adapter and the base arm disabled it. Each task received one direct JSON answer with greedy decoding, thinking disabled, a single beam and an 18,432-token context. The completion budget was the smaller of 8,192 tokens and the space remaining after the full prompt. There was no Python refinement or test-time training. The 138 tasks were reserved from fine-tuning and some were used in earlier API prompt experiments. The [task profiles](../arc-validation/) give the prompt, one example and token counts.
 
 ## Combining the allocations
 
@@ -26,7 +26,7 @@ Checkpoint-660’s first recorded response for `67b4a34d` was incorrect. A later
 
 ## Evidence
 
-- [observations.jsonl](evidence/observations.jsonl) preserves the exact decoded model text for every scored source observation, including malformed outputs. Each line gives the task, model arm, source package, per-pair precedence (`source_order == 0` for the primary record), prompt and output token counts, finish reason, SHA-256 of the UTF-8 response, per-grid matches, format error and task score. `finetuned` denotes checkpoint-660. All 276 primary response digests, source packages, token counts and stop reasons also match the [previously published task profiles](../../arc-validation/task-costs.jsonl). Cluster paths and scheduler identifiers are omitted.
+- [observations.jsonl](evidence/observations.jsonl) preserves the exact decoded model text for every scored source observation, including malformed outputs. Each line gives the task, model arm, source package, per-pair precedence (`source_order == 0` for the primary record), prompt and output token counts, finish reason, SHA-256 of the UTF-8 response, per-grid matches, format error and task score. `finetuned` denotes checkpoint-660. All 276 primary response digests, source packages, token counts and stop reasons also match the [previously published task profiles](../arc-validation/task-costs.jsonl). Cluster paths and scheduler identifiers are omitted.
 - [paired-results.csv](evidence/paired-results.csv) contains one row per task with the source and primary score for each arm and the score under serial precedence.
 - [summary.json](evidence/summary.json) contains denominators, solved IDs and both precedence rules. [Producer code](producer/README.md) documents the serial and batched generation paths.
 

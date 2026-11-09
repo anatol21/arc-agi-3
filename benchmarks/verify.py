@@ -7,9 +7,8 @@ import tempfile
 
 def main():
     benchmarks = Path(__file__).resolve().parent
-    cluster = benchmarks.parent / 'cluster-engineering' / 'benchmarks'
-    subprocess.run([sys.executable, cluster / 'internal-128/verify.py'], check=True)
-    held_out = cluster / 'held-out-138'
+    subprocess.run([sys.executable, benchmarks / 'internal-128/verify.py'], check=True)
+    held_out = benchmarks / 'held-out-138'
     with tempfile.TemporaryDirectory() as folder:
         subprocess.run([sys.executable, held_out / 'code/summarize.py', '--out', folder], check=True)
         for name in ('summary.json', 'paired-results.csv'):

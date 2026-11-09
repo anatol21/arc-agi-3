@@ -17,7 +17,7 @@ directories below contain the reviewed public evidence. See the app’s
 
 ## Benchmark results
 
-The [completed cluster benchmarks](cluster-engineering/benchmarks/) include generated model responses, per-task scores, producer code and CPU verification commands for both the 128-task internal evaluation and the 138-task public held-out evaluation. The [task profiles](cluster-engineering/arc-validation/) give the original prompt, one worked example and measured response lengths.
+The [benchmark reports](benchmarks/) include generated model responses, per-task scores, producer code and CPU verification commands for both the 128-task internal evaluation and the 138-task public held-out evaluation. The [task profiles](benchmarks/arc-validation/) give the original prompt, one worked example and measured response lengths.
 
 The [OpenRouter prompt study](benchmarks/openrouter-138/) reports two trials per task for five methods on the 138 public tasks, including malformed replies and provider errors.
 
