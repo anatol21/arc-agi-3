@@ -10,7 +10,7 @@ from collections import Counter
 from contextlib import ExitStack
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parents[1]))
+sys.path.insert(0, str(HERE.parents[2]))
 from apps.arc_practice.server import BenchmarkError, DatasetSchemaError, parse_model_outputs, task_prompt
 
 IDENTITY = ("task_id", "experiment_id", "trial_index")
@@ -123,7 +123,7 @@ def export(combined, checkpoint, config, dest):
     summary = summarize(rows, settings)
     dest.mkdir(parents=True, exist_ok=True)
     # The archive and end-of-run checkpoint remain private. These hashes identify exact inputs.
-    write(dest/"sources.json",{"producer_snapshot_sha256":digest(HERE.parents[1]/"apps"/"arc_practice"/"server.py"),
+    write(dest/"sources.json",{"producer_snapshot_sha256":digest(HERE.parents[2]/"apps"/"arc_practice"/"server.py"),
          "combined_export_sha256":digest(combined), "pre_resume_checkpoint_sha256":digest(checkpoint),
          "settings_sha256":digest(config), "restored_compact_rows":recovered})
     write(dest/"settings.json", settings)

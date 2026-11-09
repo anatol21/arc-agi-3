@@ -23,24 +23,24 @@ No provider reasoning traces, request identifiers, credentials or reference answ
 
 ## Code and verification
 
-[ARC Practice](../../apps/arc_practice/server.py) contains the archived local producer. `task_prompt` constructs the request, `OpenRouterClient.request_payload` adds generation settings and `ExperimentBatch._run_one` sends the request, handles retries, parses outputs and checks exact grid equality. [The application guide](../../apps/arc_practice/README.md) describes launching it with a privately supplied task file and API credentials. [The export and verification script](report.py) builds the public evidence from the historical files and calculates the summary. The private exports do not record a source commit for each API request. With the original task file, we verified the initial user-message hashes and scores for all 1,380 trials against the archived code.
+[ARC Practice](../../../apps/arc_practice/server.py) contains the archived local producer. `task_prompt` constructs the request, `OpenRouterClient.request_payload` adds generation settings and `ExperimentBatch._run_one` sends the request, handles retries, parses outputs and checks exact grid equality. [The application guide](../../../apps/arc_practice/README.md) describes launching it with a privately supplied task file and API credentials. [The export and verification script](report.py) builds the public evidence from the historical files and calculates the summary. The private exports do not record a source commit for each API request. With the original task file, we verified the initial user-message hashes and scores for all 1,380 trials against the archived code.
 
 From the repository root, reproduce the published table without making API requests:
 
 ```sh
-python3 benchmarks/openrouter-138/report.py verify
+python3 benchmarks/qwen3.8-flash/openrouter-prompt-study/report.py verify
 ```
 
 To independently recheck exact matches and original prompt identity, supply the same task-level validation file. Each reference record must have `task_id`, `train`, and `test` containing input/output pairs. Reference outputs are used only for scoring.
 
 ```sh
-python3 benchmarks/openrouter-138/report.py verify --reference /path/to/arc_validate.jsonl
+python3 benchmarks/qwen3.8-flash/openrouter-prompt-study/report.py verify --reference /path/to/arc_validate.jsonl
 ```
 
 To reconstruct this publication from the archived API exports:
 
 ```sh
-python3 benchmarks/openrouter-138/report.py export \
+python3 benchmarks/qwen3.8-flash/openrouter-prompt-study/report.py export \
   /path/to/combined-validation-20261016.json \
   /path/to/cancelled-checkpoint-20261016T183008.json \
   /path/to/batch-settings.json /path/to/new-output

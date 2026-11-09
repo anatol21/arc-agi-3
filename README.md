@@ -17,9 +17,11 @@ directories below contain the reviewed public evidence. See the app’s
 
 ## Benchmark results
 
-The [benchmark reports](benchmarks/) include generated model responses, per-task scores, producer code and CPU verification commands for both the 128-task internal evaluation and the 138-task public held-out evaluation. The [task profiles](benchmarks/arc-validation/) give the original prompt, one worked example and measured response lengths.
+The [benchmark reports](benchmarks/) include generated model responses, per-task scores, producer code and CPU verification commands for both the 128-task internal evaluation and the 138-task public held-out evaluation. The [task profiles](benchmarks/qwen3.8-flash-next/greedy-no-thinking/arc-validation/) give the original prompt, one worked example and measured response lengths.
 
-The [OpenRouter prompt study](benchmarks/openrouter-138/) reports two trials per task for five methods on the 138 public tasks, including malformed replies and provider errors.
+The [Python refinement runs](benchmarks/qwen3.8-flash-next/python-refinement/) include generated programs and partial scores for the base and checkpoint-660 arms.
+
+The [OpenRouter prompt study](benchmarks/qwen3.8-flash/openrouter-prompt-study/) reports two trials per task for five methods on the 138 public tasks, including malformed replies and provider errors.
 
 From the repository root, run `python3 benchmarks/verify.py` to reproduce the released summaries from the saved evidence without a GPU or API calls. Each benchmark README also documents how to rescore the generated answers against separately provisioned references.
 

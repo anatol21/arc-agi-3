@@ -1,0 +1,585 @@
+{
+  "report_id": "0f351d779e972b256594f4b27a030ca89b39f6732bdf354092b3eab2206e2ace",
+  "scored_at": "2026-11-02T06:42:09.481068+00:00",
+  "benchmark_id": "e4542e8071529a28725aec29ce6bd055854c8cf028e05436422e9a4117077f04",
+  "complete": false,
+  "thinking": false,
+  "python_execution": true,
+  "ttt": false,
+  "query_feedback": false,
+  "first": {
+    "protocol": "exact-grid-cap-failure-independent-grid-v2",
+    "complete": false,
+    "arms": {
+      "finetuned": {
+        "complete": false,
+        "processed_tasks": 7,
+        "total_tasks": 128,
+        "solved_tasks": 3,
+        "task_accuracy": null,
+        "processed_grids": 7,
+        "total_grids": 134,
+        "correct_grids": 3,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 1,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      },
+      "base": {
+        "complete": false,
+        "processed_tasks": 6,
+        "total_tasks": 128,
+        "solved_tasks": 2,
+        "task_accuracy": null,
+        "processed_grids": 6,
+        "total_grids": 134,
+        "correct_grids": 2,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 3,
+        "token_limit_tasks": 2,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      }
+    },
+    "paired_comparison": {
+      "paired_tasks": 6,
+      "both_correct": 1,
+      "finetuned_only_correct": 2,
+      "base_only_correct": 1,
+      "both_wrong": 2
+    }
+  },
+  "selected": {
+    "protocol": "exact-grid-cap-failure-independent-grid-v2",
+    "complete": false,
+    "arms": {
+      "finetuned": {
+        "complete": false,
+        "processed_tasks": 7,
+        "total_tasks": 128,
+        "solved_tasks": 4,
+        "task_accuracy": null,
+        "processed_grids": 7,
+        "total_grids": 134,
+        "correct_grids": 4,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 0,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      },
+      "base": {
+        "complete": false,
+        "processed_tasks": 6,
+        "total_tasks": 128,
+        "solved_tasks": 2,
+        "task_accuracy": null,
+        "processed_grids": 6,
+        "total_grids": 134,
+        "correct_grids": 2,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 0,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      }
+    },
+    "paired_comparison": {
+      "paired_tasks": 6,
+      "both_correct": 2,
+      "finetuned_only_correct": 2,
+      "base_only_correct": 0,
+      "both_wrong": 2
+    }
+  },
+  "per_task": {
+    "first": [
+      {
+        "task_id": "007bbfb7",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15660dd6",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "007bbfb7",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": true,
+        "finish_reason": "token_limit",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": true,
+        "finish_reason": "token_limit",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      }
+    ],
+    "selected": [
+      {
+        "task_id": "007bbfb7",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15660dd6",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "007bbfb7",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      }
+    ]
+  },
+  "batch_generation": {
+    "calls": 45,
+    "wall_seconds": 20527.04923456488,
+    "new_tokens": 76790,
+    "tokens_per_second": 3.7409176118063585,
+    "actual_batch_sizes": [
+      1
+    ],
+    "cost_note": "Batch time counted once. Row generation_seconds uses equal shares, not per-response latency. Includes durable generated responses awaiting controller delivery."
+  },
+  "batch_size_cap": 1
+}

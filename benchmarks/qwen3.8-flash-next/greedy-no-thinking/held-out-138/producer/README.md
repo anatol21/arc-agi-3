@@ -1,6 +1,6 @@
 # Code that produced the 138-task cluster results
 
-The held-out evaluation used ten deployed packages over several allocations. Each folder contains the Python code and launch scripts from that package. The earlier [`arc_worker` example](../../../cluster-engineering/arc_worker/) documents restart engineering for a different, BF16 experiment. The packages here ran the NF4 base and checkpoint-660 arms.
+The held-out evaluation used ten deployed packages over several allocations. Each folder contains the Python code and launch scripts from that package. The earlier [`arc_worker` example](../../../../../cluster-engineering/arc_worker/) documents restart engineering for a different, BF16 experiment. The packages here ran the NF4 base and checkpoint-660 arms.
 
 | Stage | Generation path | Output used for scoring |
 |---|---|---|

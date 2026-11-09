@@ -1,0 +1,1756 @@
+{
+  "report_id": "1180a45790c679cc2d8b1320b742a6692c9864405db39f39e4d71672b05cb4e3",
+  "scored_at": "2026-11-02T03:28:23.321551+00:00",
+  "benchmark_id": "577ee6dd2dfb0af85a46a0874b4ed38e79d45fc7b715b6f75eb7162e8f886f16",
+  "complete": false,
+  "thinking": false,
+  "python_execution": true,
+  "ttt": false,
+  "query_feedback": false,
+  "first": {
+    "protocol": "exact-grid-cap-failure-independent-grid-v2",
+    "complete": false,
+    "arms": {
+      "finetuned": {
+        "complete": false,
+        "processed_tasks": 26,
+        "total_tasks": 128,
+        "solved_tasks": 9,
+        "task_accuracy": null,
+        "processed_grids": 26,
+        "total_grids": 134,
+        "correct_grids": 9,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 2,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      },
+      "base": {
+        "complete": false,
+        "processed_tasks": 19,
+        "total_tasks": 128,
+        "solved_tasks": 5,
+        "task_accuracy": null,
+        "processed_grids": 19,
+        "total_grids": 134,
+        "correct_grids": 5,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 6,
+        "token_limit_tasks": 1,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      }
+    },
+    "paired_comparison": {
+      "paired_tasks": 18,
+      "both_correct": 4,
+      "finetuned_only_correct": 4,
+      "base_only_correct": 1,
+      "both_wrong": 9
+    }
+  },
+  "selected": {
+    "protocol": "exact-grid-cap-failure-independent-grid-v2",
+    "complete": false,
+    "arms": {
+      "finetuned": {
+        "complete": false,
+        "processed_tasks": 26,
+        "total_tasks": 128,
+        "solved_tasks": 10,
+        "task_accuracy": null,
+        "processed_grids": 26,
+        "total_grids": 134,
+        "correct_grids": 10,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 2,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      },
+      "base": {
+        "complete": false,
+        "processed_tasks": 19,
+        "total_tasks": 128,
+        "solved_tasks": 10,
+        "task_accuracy": null,
+        "processed_grids": 19,
+        "total_grids": 134,
+        "correct_grids": 10,
+        "grid_accuracy": null,
+        "invalid_json_or_grids": 0,
+        "token_limit_tasks": 0,
+        "thinking_separation_failures": 0,
+        "completed_generated_tokens": 0,
+        "completed_generation_seconds": 0
+      }
+    },
+    "paired_comparison": {
+      "paired_tasks": 18,
+      "both_correct": 7,
+      "finetuned_only_correct": 1,
+      "base_only_correct": 3,
+      "both_wrong": 7
+    }
+  },
+  "per_task": {
+    "first": [
+      {
+        "task_id": "007bbfb7",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15663ba9",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "17cae0c1",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "182e5d0f",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "195ba7dc",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1a2e2828",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e0a9b12",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e5d6875",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1fad071e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "228f6490",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "25e02866",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2697da3f",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "278e5215",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29623171",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29c11459",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2b01abd0",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3194b014",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "332efdb3",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "342dd610",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "36fdfd69",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3ad05f52",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "007bbfb7",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": true,
+        "finish_reason": "token_limit",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15663ba9",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "17cae0c1",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "182e5d0f",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "195ba7dc",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e0a9b12",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e5d6875",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1fad071e",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "25e02866",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29c11459",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2a28add5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2b01abd0",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "332efdb3",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "36fdfd69",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3ad05f52",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      }
+    ],
+    "selected": [
+      {
+        "task_id": "007bbfb7",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "025d127b",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15663ba9",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "17cae0c1",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "182e5d0f",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "195ba7dc",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1a2e2828",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e0a9b12",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "invalid",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e5d6875",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1fad071e",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": "Grid must have 1\u201330 rows and columns",
+        "grid_format_errors": [
+          "Grid must have 1\u201330 rows and columns"
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "invalid",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "228f6490",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "25e02866",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2697da3f",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "278e5215",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29623171",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29c11459",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2b01abd0",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3194b014",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "332efdb3",
+        "arm": "finetuned",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "342dd610",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "36fdfd69",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3ad05f52",
+        "arm": "finetuned",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "007bbfb7",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "00d62c1b",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "017c7c7b",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0a1d4ef5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "0c9aba6e",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "15663ba9",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "17cae0c1",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "182e5d0f",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "195ba7dc",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e0a9b12",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1e5d6875",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "1fad071e",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "25e02866",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "29c11459",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2a28add5",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "2b01abd0",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "332efdb3",
+        "arm": "base",
+        "task_correct": true,
+        "grid_correct": [
+          true
+        ],
+        "content_grid_correct": [
+          true
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "36fdfd69",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      },
+      {
+        "task_id": "3ad05f52",
+        "arm": "base",
+        "task_correct": false,
+        "grid_correct": [
+          false
+        ],
+        "content_grid_correct": [
+          false
+        ],
+        "format_error": null,
+        "grid_format_errors": [
+          null
+        ],
+        "token_cap_failure": false,
+        "finish_reason": "eos",
+        "source": "arc2_train"
+      }
+    ]
+  },
+  "batch_generation": {
+    "calls": 132,
+    "wall_seconds": 22531.272999649635,
+    "new_tokens": 292870,
+    "tokens_per_second": 12.99837785483999,
+    "actual_batch_sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15
+    ],
+    "replayed_prefix_tokens": 1319453,
+    "unpadded_prefill_tokens": 4020361,
+    "padded_prefill_tokens": 4532852,
+    "decode_slots_including_finished_row_padding": 330727,
+    "checkpoint_segments": 485,
+    "candidate_budget_unchanged": true,
+    "cost_note": "Batch time counted once. Row generation_seconds uses equal shares, not per-response latency. Includes durable generated responses awaiting controller delivery."
+  },
+  "batch_size_cap": 32
+}
