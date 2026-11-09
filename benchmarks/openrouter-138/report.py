@@ -123,7 +123,8 @@ def export(combined, checkpoint, config, dest):
     summary = summarize(rows, settings)
     dest.mkdir(parents=True, exist_ok=True)
     # The archive and end-of-run checkpoint remain private. These hashes identify exact inputs.
-    write(dest/"sources.json",{"combined_export_sha256":digest(combined), "pre_resume_checkpoint_sha256":digest(checkpoint),
+    write(dest/"sources.json",{"producer_snapshot_sha256":digest(HERE.parents[1]/"apps"/"arc_practice"/"server.py"),
+         "combined_export_sha256":digest(combined), "pre_resume_checkpoint_sha256":digest(checkpoint),
          "settings_sha256":digest(config), "restored_compact_rows":recovered})
     write(dest/"settings.json", settings)
     rows.sort(key=key)
