@@ -1,0 +1,20 @@
+# Set the SSH alias, remote workspace, account and partition names for your cluster.
+name: Example Slurm cluster
+ssh_host: lab-cluster
+remote_root: /path/to/your/workspace
+python: python3
+account: your-account
+qos: ''
+normal_min_seconds: 7200
+queue_threshold_seconds: 10800
+checkpoint_margin_seconds: 180
+poll_seconds: 30
+partitions:
+  - name: gpu
+    role: normal
+    time_limit: '06:00:00'
+    concurrency_limit: 1
+  - name: gpu_short
+    role: short
+    time_limit: '00:30:00'
+    concurrency_limit: 1

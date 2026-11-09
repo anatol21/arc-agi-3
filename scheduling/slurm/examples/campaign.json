@@ -1,0 +1,11 @@
+{
+  "workload_revision": "synthetic-example-v1",
+  "items": ["sample-A", "sample-B", "sample-C", "sample-D"],
+  "worker_command": ["python3", "example_worker.py"],
+  "partitions": ["gpu-long", "gpu-short"],
+  "cpu_partition": "cpu",
+  "gpus": 1,
+  "gpu_hours": 2,
+  "max_minutes": 120,
+  "reload_seconds": 60
+}
