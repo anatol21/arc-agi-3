@@ -4,9 +4,10 @@ Cluster Lab runs on your laptop. It uses your existing SSH connection to submit 
 
 ## Run the local example
 
-Use Python 3.10 or later on macOS or Linux. From this directory:
+Use Python 3.10 or later on macOS or Linux. Start from the repository root.
 
 ```sh
+cd cluster-engineering/dashboard
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python server.py --demo
@@ -46,6 +47,8 @@ The runnable [demo adapter](demo_adapter.py) shows how to restore progress, part
 The included ARC template can be configured to launch a compatible adapter. Its commands and data paths are placeholders. The web service binds to loopback, uses a per-session token for changes and executes adapter commands with the cluster account's permissions.
 
 ## Test
+
+From the dashboard directory, run the Python and JavaScript checks.
 
 ```sh
 .venv/bin/python -m unittest discover -s . -p 'test*.py'

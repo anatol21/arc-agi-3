@@ -38,14 +38,14 @@ class LocalLaunchTest(unittest.TestCase):
             cfg.write_text(json.dumps(campaign))
             cmd = [sys.executable, str(wrapper), str(cfg)]
             env = dict(os.environ, CUDA_VISIBLE_DEVICES='', HF_HUB_OFFLINE='1')
-            first = subprocess.run(cmd, env=env, text=True, capture_output=True, timeout=120)
+            first = subprocess.run(cmd, cwd=root, env=env, text=True, capture_output=True, timeout=120)
             self.assertEqual(first.returncode, 0, first.stderr)
             self.assertIn('ARC_BATCH 2', first.stdout)
             files = list((root / '.campaigns').glob('*/items/*.json'))
             saved = {path: path.read_bytes() for path in files}
             self.assertEqual(set(path.stem for path in files), set(campaign['items']))
             self.assertTrue(all(json.loads(raw)['status'] == 'finished' for raw in saved.values()))
-            second = subprocess.run(cmd, env=env, text=True, capture_output=True, timeout=120)
+            second = subprocess.run(cmd, cwd=root, env=env, text=True, capture_output=True, timeout=120)
             self.assertEqual(second.returncode, 0, second.stderr)
             self.assertNotIn('ARC_BATCH', second.stdout)
             self.assertEqual(saved, {path: path.read_bytes() for path in files})

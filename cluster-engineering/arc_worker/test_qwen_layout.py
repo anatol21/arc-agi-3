@@ -6,7 +6,10 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 
-from scheduling.arc_worker.qwen_bf16 import LAYOUT, cached_snapshot, expected_device, verify_geometry
+if __package__:
+    from .qwen_bf16 import LAYOUT, cached_snapshot, expected_device, verify_geometry
+else:
+    from qwen_bf16 import LAYOUT, cached_snapshot, expected_device, verify_geometry
 
 
 class QwenLayoutTests(unittest.TestCase):

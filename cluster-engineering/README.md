@@ -1,13 +1,21 @@
-# Running checkpointed inference on Slurm
+# Cluster engineering
 
 A long evaluation can use a short GPU allocation if its worker saves progress before the time limit. The next worker reloads the model, skips completed responses, and continues from saved prefixes. Queue time and GPU time are measured separately.
 
 | Component | Use |
 | --- | --- |
-| [Cluster Lab](../apps/cluster_dashboard/) | Run the dashboard locally, try its simulator, or connect a private cluster profile over SSH. |
+| [Cluster Lab](dashboard/) | Run the dashboard locally, try its simulator, or connect a private cluster profile over SSH. |
 | [Slurm scheduler](slurm/) | Choose a production partition, submit a GPU worker and a dependent CPU job, and resume unfinished work within a GPU-hour budget. |
 | [ARC inference worker](arc_worker/) | Run the direct-answer worker, interrupt a batch, and inspect which stored tokens it uses on restart. |
 | [Inference batching](inference/) | Group comparable inputs, test wider batches, and retain a smaller working width after an out-of-memory failure. |
+| [Worker runbook](agent.md) | Implement a resumable worker, test it offline and launch it on Slurm. |
+| [ARC validation profiles](arc-validation/) | Inspect prompt lengths, measured response lengths and one worked example from the 138-task evaluation. |
+
+## Start locally
+
+From the repository root, follow the [dashboard setup](dashboard/README.md) to start Cluster Lab in simulator mode, or run the [ARC worker restart test](arc_worker/README.md#run-the-offline-restart-test) using a CPU model. Both work without a cluster allocation.
+
+For a campaign already in progress, keep its checkout and config in place until it finishes. Changing the worker path in the config changes the campaign digest and selects a new journal. Use the new paths for new campaigns.
 
 ## How the production runs worked
 

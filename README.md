@@ -16,10 +16,8 @@ training data, and raw benchmark outputs local. See the app’s
 
 ## Held-out ARC validation benchmark
 
-The [held-out validation report](benchmarks/arc-validation/) covers 138 public ARC tasks from the grid benchmark. It includes the original prompt, one worked example, and machine-readable input and generation lengths for the base and checkpoint-660 model arms.
+The [held-out validation report](cluster-engineering/arc-validation/) covers 138 public ARC tasks from the grid benchmark. It includes the original prompt, one worked example, and machine-readable input and generation lengths for the base and checkpoint-660 model arms.
 
-## Cluster scheduling and inference
+## Cluster engineering
 
-[Cluster Lab and scheduling guide](scheduling/) documents queue selection, checkpointed workloads and automatic continuation within a GPU-hour budget. Start with the [local dashboard simulator](apps/cluster_dashboard/) or the [standalone Slurm scheduler](scheduling/slurm/). The [inference batching helpers](scheduling/inference/) cover length grouping and memory backoff.
-
-The [resumable ARC inference worker](scheduling/arc_worker/) includes the decoding loop, early response saves, and an offline interruption test. Follow the [worker runbook](agent.md) to adapt it and launch a budgeted campaign.
+[Cluster engineering](cluster-engineering/) contains the Cluster Lab dashboard, Slurm scheduler, batching helpers and resumable ARC inference worker. The [worker runbook](cluster-engineering/agent.md) covers local restart tests and launching a budgeted campaign.

@@ -25,4 +25,4 @@ The journal uses file locks and atomic, checksummed records. A fresh worker lear
 
 ## Run the CPU examples
 
-From this directory run `python3 -m unittest -v`. The tests use synthetic prompts and files. They demonstrate durable skips, probe and backoff behavior, bounded long-context calls, hash verification, and cleanup.
+From the repository root, run `python3 -m unittest discover -s cluster-engineering/inference -v`. The tests use synthetic prompts and files. They demonstrate durable skips, probe and backoff behavior, bounded long-context calls, hash verification, and cleanup.

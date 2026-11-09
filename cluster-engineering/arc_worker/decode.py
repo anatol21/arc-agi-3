@@ -5,8 +5,8 @@ import inspect
 import json
 import math
 
-from apps.cluster_dashboard.live_generation import generate_chunks
-from scheduling.inference.batching import TERMINAL, checksum
+from dashboard.live_generation import generate_chunks
+from inference.batching import TERMINAL, checksum
 
 # The task JSON starts directly after the final newline, as in the native benchmark.
 INSTRUCTION = """Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.

@@ -9,12 +9,11 @@ import signal
 import sys
 import time
 
-HERE = Path(__file__).resolve().parent
-REPO = HERE.parents[1]
-sys.path.insert(0, str(REPO))
-from scheduling.inference.batching import Journal, TERMINAL, choose_group
-from scheduling.slurm.checkpoint import digest, read_progress, save_item
-from scheduling.arc_worker.decode import decode_batch, prepare_tasks, workload_identity
+CLUSTER_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(CLUSTER_ROOT))
+from inference.batching import Journal, TERMINAL, choose_group
+from slurm.checkpoint import digest, read_progress, save_item
+from arc_worker.decode import decode_batch, prepare_tasks, workload_identity
 
 
 def settings_from_config(config, base):
@@ -73,7 +72,7 @@ def native_tokenizer(settings):
 
 def native_model(settings):
     if settings["backend"] == "qwen_4gpu_bf16":
-        from scheduling.arc_worker.qwen_bf16 import load_model
+        from arc_worker.qwen_bf16 import load_model
         return load_model(settings)
     import torch
     from transformers import AutoConfig, AutoModelForCausalLM

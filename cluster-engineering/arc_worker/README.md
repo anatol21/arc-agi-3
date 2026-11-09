@@ -7,7 +7,7 @@ This example publishes the direct-answer decoding and restart path from the ARC 
 Use a Unix-like system with Python 3.10+ and compatible PyTorch and Transformers packages. In an existing inference environment, run from the repository root:
 
 ```sh
-python -m unittest discover -s scheduling/arc_worker -v
+python -m unittest discover -s cluster-engineering/arc_worker -v
 ```
 
 The restart tests use a locally initialized tiny GPT-2 and controlled logits so that the two responses finish at different times. One test terminates the Python process after the first saved answer and resumes the partial row in a second interpreter. Another repairs a scheduler record from the token journal. The next forward pass includes only the unfinished task. A subsequent invocation after both answers finish can skip model loading. This tests restart behavior independently of ARC accuracy. A separate smoke test runs the scheduler wrapper twice against a locally initialized Qwen3 checkpoint. All tests run offline on CPU.
@@ -23,13 +23,13 @@ hf download Qwen/Qwen3-0.6B --revision c1899de289a04d12100db370d81485cdf75e47ca
 The worker loads local files only. From the repo root, these commands run on the current machine. Use a machine with enough memory and BF16 support. The second invocation reuses the first invocation’s durable state.
 
 ```sh
-config=scheduling/arc_worker/campaign.example.json
-python scheduling/slurm/worker.py "$config"
-python scheduling/slurm/worker.py "$config"
-python scheduling/slurm/scheduler.py status "$config"
+config=cluster-engineering/arc_worker/campaign.example.json
+python cluster-engineering/slurm/worker.py "$config"
+python cluster-engineering/slurm/worker.py "$config"
+python cluster-engineering/slurm/scheduler.py status "$config"
 ```
 
-The example uses `python3` from `PATH` to start `worker.py`, so activate the inference environment before running the wrapper. For a private campaign, copy the config beside its task file or set `tasks_file` to its full path. Set `worker_command` to the absolute interpreter and the absolute `scheduling/arc_worker/worker.py` path in your checkout. Substitute site partitions and an appropriate budget before submitting to Slurm. Follow the [worker runbook](../../agent.md) for the scheduler commands.
+The example uses `python3` from `PATH` to start `worker.py`, so activate the inference environment before running the wrapper. For a private campaign, copy the config beside its task file or set `tasks_file` to its full path. Set `worker_command` to the absolute interpreter and the absolute `cluster-engineering/arc_worker/worker.py` path in your checkout. Substitute site partitions and an appropriate budget before submitting to Slurm. Follow the [worker runbook](../agent.md) for the scheduler commands.
 
 ## What is saved
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Loopback-only dashboard server. Run: python apps/cluster_dashboard/server.py --demo."""
+"""Loopback-only dashboard server. Run: python3 cluster-engineering/dashboard/server.py --demo."""
 from __future__ import annotations
 import argparse
 import json

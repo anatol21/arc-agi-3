@@ -7,18 +7,18 @@ This is the portable version of the scheduler used for the cluster benchmarks. A
 From the repository root, run these commands with Python 3.10 or later on a Unix-like system:
 
 ```sh
-cd scheduling/slurm
-python3 -m unittest discover -s . -p test_scheduler.py -v
-python3 worker.py examples/campaign.json
-python3 worker.py examples/campaign.json
-python3 scheduler.py status examples/campaign.json
+slurm=cluster-engineering/slurm
+python3 -m unittest discover -s "$slurm" -p test_scheduler.py -v
+python3 "$slurm/worker.py" "$slurm/examples/campaign.json"
+python3 "$slurm/worker.py" "$slurm/examples/campaign.json"
+python3 "$slurm/scheduler.py" status "$slurm/examples/campaign.json"
 ```
 
 The synthetic worker commits one item per invocation. Two invocations on a fresh example directory finish two distinct items. The tests use an in-memory Slurm command simulator to exercise queue choice, interruption, duplicate submission recovery, and budget enforcement. Neither the tests nor these example worker invocations request cluster resources.
 
 ## Configure a workload
 
-Copy `examples/campaign.json` to a private project directory on storage shared by the login and compute nodes. Place this package on shared storage too. The configuration, worker entry point, Python executable, and scheduler scripts must remain accessible to GPU jobs and CPU watchers. Worker commands run in the configuration file's directory. For example, copy `examples/example_worker.py` beside the new configuration before using the sample command.
+Copy the [example campaign](examples/campaign.json) to a private project directory on storage shared by the login and compute nodes. Place this package on shared storage too. The configuration, worker entry point, Python executable, and scheduler scripts must remain accessible to GPU jobs and CPU watchers. Worker commands run in the configuration file's directory. For example, copy the [example worker](examples/example_worker.py) beside the new configuration before using the sample command.
 
 | Field | Meaning |
 |---|---|
@@ -42,10 +42,13 @@ The worker receives `CAMPAIGN_DIR`, `CAMPAIGN_ID` and `CAMPAIGN_CONFIG`. It read
 
 ## Submit and monitor
 
+From the repository root, supply your private campaign config.
+
 ```sh
-python3 scheduler.py probe /shared/project/campaign.json
-python3 scheduler.py launch /shared/project/campaign.json
-python3 scheduler.py status /shared/project/campaign.json
+config=/shared/project/campaign.json
+python3 cluster-engineering/slurm/scheduler.py probe "$config"
+python3 cluster-engineering/slurm/scheduler.py launch "$config"
+python3 cluster-engineering/slurm/scheduler.py status "$config"
 ```
 
 `probe` calls `scontrol` and `sbatch --test-only` for the partitions in the configuration. An ETA is a scheduler estimate that may change. `launch` creates the GPU job and a CPU job with an `afterany` dependency on that GPU job. The CPU job settles final usage and submits a successor if eligible work and budget remain. `status` reads the local campaign files. Slurm's `squeue` remains authoritative for pending and running jobs. Configure scheduler accounting and allow compute nodes to invoke the Slurm CLI before using automatic continuation.

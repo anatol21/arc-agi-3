@@ -116,12 +116,12 @@ class InferenceResumeTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             configuration(Path(tmp))
             root = Path(tmp) / "state"
-            script = ("from scheduling.arc_worker.test_worker import allocation_process; "
+            script = ("from arc_worker.test_worker import allocation_process; "
                       "import sys; allocation_process(*sys.argv[1:])")
 
             def launch(mode):
                 return subprocess.run([sys.executable, "-c", script, tmp, mode],
-                                      cwd=Path(__file__).resolve().parents[2], text=True,
+                                      cwd=Path(__file__).resolve().parents[1], text=True,
                                       capture_output=True, timeout=60)
 
             crash = launch("crash")
