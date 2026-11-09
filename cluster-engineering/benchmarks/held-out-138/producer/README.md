@@ -1,0 +1,14 @@
+# Code that produced the 138-task cluster results
+
+The held-out evaluation used ten deployed packages over several allocations. Each folder contains the Python code and launch scripts from that package. The earlier [`arc_worker` example](../../../arc_worker/) documents restart engineering for a different, BF16 experiment. The packages here ran the NF4 base and checkpoint-660 arms.
+
+| Stage | Generation path | Output used for scoring |
+|---|---|---|
+| Serial evaluation | [Native runner](arc-flash-eval138-v1/run_benchmark.py), [benchmark recipe](arc-flash-eval138-v1/benchmark-recipe.json) and [loader settings](arc-flash-eval138-v1/inference-config.json) | A decoded response per task and arm in the prediction journal. The [original scorer](arc-flash-eval138-v1/protocol.py) parses JSON and checks each query grid. |
+| Serial debug and pilot | [Debug runner](arc-flash-eval138-debug-v1/debug_runner.py) and [pilot runner](arc-flash-eval138-pilot-v1/pilot_runner.py) | Scored responses for the subset completed within each allocation. The pilot could reuse finished debug responses. |
+| Batched evaluation | [First utilization run](arc-flash-eval138-util-v1/run.py), [second](arc-flash-eval138-util-v2/run.py) and [third](arc-flash-eval138-util-v3/run.py) | Terminal rows from batch journals, respecting the per-item context and output limits. |
+| Dashboard continuation | [First dashboard worker](arc-flash-eval138-dashboard-v1/run.py), [v4](arc-flash-eval138-dashboard-v4/run.py), [v5](arc-flash-eval138-dashboard-v5/run.py) and [v6](arc-flash-eval138-dashboard-v6/run.py) | Saved prefixes and completed responses across restarts. The [v6 decoding loop](arc-flash-eval138-dashboard-v6/batched.py) saves terminal rows during generation. |
+
+The [source index](source-index.json) gives the deployed and published SHA-256 for every file. All 132 Python, shell, Slurm and prompt files matched their deployed package manifests. Nine generated config and recipe files were captured alongside them. Of these 141 files, 120 retain their exact bytes. The 21 edited files replace private workspace paths or site-specific shell settings. `export_sources.py` reproduces the export from a provisioned private workspace.
+
+For an **offline replay of the reported scores**, use [the evidence and commands in the results guide](../README.md). For a **new generation run**, the archived runners expect the original base weights, tokenizer, checkpoint-660 adapter, compatible Axolotl/bitsandbytes runtime, staged data and site workspace. The dashboard continuation packages also depend on the original run journals and launch manifests. Their verification checks are tied to historical file hashes. To port a generation run, configure the new workspace and create new manifests and receipts for it. The public snapshot preserves the historical checks and excludes private model files, runtime receipts, Slurm account details and labeled datasets.

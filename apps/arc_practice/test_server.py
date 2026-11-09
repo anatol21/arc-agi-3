@@ -507,7 +507,7 @@ class BenchmarkTests(unittest.TestCase):
         self.assertIn(DEFAULT_CORE_INSTRUCTION, prompt)
         custom = task_prompt(indexed_task, "", "First identify the invariant before solving.")
         self.assertTrue(custom.startswith("First identify the invariant before solving."))
-        self.assertIn("Return exactly one JSON object", custom)
+        self.assertIn("Return exactly one complete JSON object", custom)
         self.assertNotIn('[[3,3],[3,0]]', prompt)
         self.assertNotIn("task_id", prompt)
 
@@ -717,7 +717,7 @@ class ExperimentBatchTests(unittest.TestCase):
         self.assertFalse(manager.batch.thread.is_alive())
 
     def test_batch_uses_a_shared_cohort_and_global_cap(self) -> None:
-        fake = FakeOpenRouter(["not-json"] * 12, delay_seconds=0.01)
+        fake = FakeOpenRouter(["not-json"] * 24, delay_seconds=0.01)
         manager = ExperimentBatchManager(self.registry, lambda _: fake)
         manager.start(self.config())
         self.wait_for_batch(manager)
@@ -726,6 +726,7 @@ class ExperimentBatchTests(unittest.TestCase):
         self.assertEqual(status["configured_trial_count"], 12)
         self.assertEqual(status["completed_trial_count"], 12)
         self.assertLessEqual(fake.max_active, 2)
+        self.assertEqual(len(fake.requests), 24)  # Initial attempt and one repair per trial.
         self.assertEqual(len(status["cohort"]), 2)
         self.assertEqual({item["completed_trials"] for item in status["experiments"]}, {6})
         self.assertEqual({item["target_trials"] for item in status["experiments"]}, {6})
@@ -832,7 +833,7 @@ class ApiTests(unittest.TestCase):
         self.assertNotIn("output", public_fields)
 
     def test_batch_api_reports_reliability_failures_without_exposing_secrets(self) -> None:
-        fake = FakeOpenRouter(["not-json"])
+        fake = FakeOpenRouter(["not-json", "still invalid"])
         self.server.experiment_batches = ExperimentBatchManager(self.registry, lambda _: fake)
         self.request_json("/api/benchmark/batch/start", {
             "dataset_id": "arc_validate",

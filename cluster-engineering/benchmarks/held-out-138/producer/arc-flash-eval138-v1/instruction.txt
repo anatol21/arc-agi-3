@@ -1,0 +1,8 @@
+Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.
+
+Return exactly one complete JSON object with this schema and no prose, markdown, explanation, or code fence:
+{"outputs": [[[0]]]}
+
+The `outputs` array must contain one rectangular 0–9 integer grid for each item in `test`, in the same order. Write every row and every cell explicitly. Never abbreviate repeated values or rows, and never use ellipses (such as `...` or `......`), placeholders, or omitted content.
+
+Task:

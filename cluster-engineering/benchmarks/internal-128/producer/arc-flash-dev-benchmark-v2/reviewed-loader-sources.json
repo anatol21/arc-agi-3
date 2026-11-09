@@ -1,0 +1,36 @@
+{
+  "axolotl": {
+    "cli/config.py": {
+      "sha256": "a2d02a287aa622c58376235b97cabda0a5a0a7a0ed6a745004d947868a117491",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/cli/config.py"
+    },
+    "cli/utils/load.py": {
+      "sha256": "0251bd4376d07c3a7addf50c0655b082bf17ea2efd4772dcdb3fa7ef82a3e642",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/cli/utils/load.py"
+    },
+    "loaders/model.py": {
+      "sha256": "6efe62ebbcacdacb064c46f18589d32418ac18388ce754fd8757e2bd6f6ff98d",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/loaders/model.py"
+    },
+    "loaders/adapter.py": {
+      "sha256": "9f0bf6adf55c3733753c86c06f738a67930cabdedafdf7f3710c5e269888b217",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/loaders/adapter.py"
+    },
+    "loaders/patch_manager.py": {
+      "sha256": "c55dabe1068871ba4e9f5c5ed6156bbcf3753a54e4a988a8b7e2b961582b7510",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/loaders/patch_manager.py"
+    },
+    "loaders/tokenizer.py": {
+      "sha256": "30fd2b0a127b375e4b321e4585ff7d8e7dc04da23c9f63b933fdb31724cd68a6",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/loaders/tokenizer.py"
+    },
+    "utils/config/__init__.py": {
+      "sha256": "59ea445d90aaca49446e129eaa2412c8274170d4d07a0c0d6b022d351de44122",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/utils/config/__init__.py"
+    },
+    "utils/schemas/config.py": {
+      "sha256": "37ebbf16d8ce2f6a60b4883bb32722088e94bc355ce69d003d0ac432d75fd72f",
+      "source": "https://github.com/axolotl-ai-cloud/axolotl/blob/v0.20.0/src/axolotl/utils/schemas/config.py"
+    }
+  }
+}

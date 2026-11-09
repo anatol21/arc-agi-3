@@ -1,0 +1,22 @@
+{
+  "name": "arc-flash-dev-benchmark-v2",
+  "files_sha256": {
+    "run_benchmark.py": "13c42a26aac3b641dc80efc0a18a7a8d0b5b1656dbe6e4dab8a067a8bbdd8e1a",
+    "score_benchmark.py": "c7a30d1770a985cec0409ea0c0f3d6398fa8b826a39f8e3a0ece710a03aea491",
+    "stage_benchmark.py": "9fcc3e7cf333b25f0cf177c412060a94a19732023ec3bb53bae38ff0d31d9032",
+    "protocol.py": "48ccc7adcd3c1eeba375305e3824ee82f1fb10ea9f06c10f4d15f57fb303ce6d",
+    "configuration.py": "99929f2dddbf2eed17a02754964db2743fb0da5a4146483b8f11c85bbd581e66",
+    "common.py": "4c8dbebfc3b17c77a1dd472c193451c7d6f28ea0b2977babcfa51cda37ef0507",
+    "inspect_run.py": "5deb37b0c433832e017f1966ea15f0b25196fb143011d7c8463b8c347209934b",
+    "checkpoint_validation.py": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "ple_placement.py": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "runtime_identity.py": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "run_checks.py": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "reviewed-loader-sources.json": "c566e310afd9e0ad8fc3281c2ed1441f170db02cd87b104319642b03fab15c73",
+    "guarded_train.py": "1097fe475615614bce0e0a9c8f7e51234dde24cbdc972dcc8213d15fd2bc9316",
+    "cuda_loss_context.py": "69713432f18034614d9b0f0b337e855f91e7aba811edd785a1e1c465511305c6",
+    "data-manifest.json": "cfa553371c954417232e24773bcc38f2047003af7620d577a91289d8bd302d3d",
+    "training-package-manifest.json": "6077f10ebed2261abffcd87bba0b7cbdfc7be19237c6c7f555a6f964c38b5a18",
+    "benchmark.sbatch": "e798861a3b66dcb5dd6a38a76b403eea123813305a5a2131582a97066e8acfd8"
+  }
+}

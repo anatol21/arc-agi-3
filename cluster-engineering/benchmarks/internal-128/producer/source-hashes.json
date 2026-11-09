@@ -1,0 +1,112 @@
+[
+  {
+    "file": "arc-flash-dev-benchmark-v2/run_benchmark.py",
+    "original_sha256": "13c42a26aac3b641dc80efc0a18a7a8d0b5b1656dbe6e4dab8a067a8bbdd8e1a",
+    "published_sha256": "13c42a26aac3b641dc80efc0a18a7a8d0b5b1656dbe6e4dab8a067a8bbdd8e1a"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/score_benchmark.py",
+    "original_sha256": "c7a30d1770a985cec0409ea0c0f3d6398fa8b826a39f8e3a0ece710a03aea491",
+    "published_sha256": "c7a30d1770a985cec0409ea0c0f3d6398fa8b826a39f8e3a0ece710a03aea491"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/stage_benchmark.py",
+    "original_sha256": "541367c4f6bf39a72d9e4f889ac3dbfb59d8542a6ed2ae964d443b07edb1f4c4",
+    "published_sha256": "9fcc3e7cf333b25f0cf177c412060a94a19732023ec3bb53bae38ff0d31d9032"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/protocol.py",
+    "original_sha256": "48ccc7adcd3c1eeba375305e3824ee82f1fb10ea9f06c10f4d15f57fb303ce6d",
+    "published_sha256": "48ccc7adcd3c1eeba375305e3824ee82f1fb10ea9f06c10f4d15f57fb303ce6d"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/configuration.py",
+    "original_sha256": "99929f2dddbf2eed17a02754964db2743fb0da5a4146483b8f11c85bbd581e66",
+    "published_sha256": "99929f2dddbf2eed17a02754964db2743fb0da5a4146483b8f11c85bbd581e66"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/common.py",
+    "original_sha256": "5c3c1bc95ba5b41ff986f63ffb6ed17f13decb4ba7099322e6f293d94b446a96",
+    "published_sha256": "4c8dbebfc3b17c77a1dd472c193451c7d6f28ea0b2977babcfa51cda37ef0507"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/inspect_run.py",
+    "original_sha256": "5deb37b0c433832e017f1966ea15f0b25196fb143011d7c8463b8c347209934b",
+    "published_sha256": "5deb37b0c433832e017f1966ea15f0b25196fb143011d7c8463b8c347209934b"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/checkpoint_validation.py",
+    "original_sha256": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "published_sha256": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/ple_placement.py",
+    "original_sha256": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "published_sha256": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/runtime_identity.py",
+    "original_sha256": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "published_sha256": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/run_checks.py",
+    "original_sha256": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "published_sha256": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/reviewed-loader-sources.json",
+    "original_sha256": "c566e310afd9e0ad8fc3281c2ed1441f170db02cd87b104319642b03fab15c73",
+    "published_sha256": "c566e310afd9e0ad8fc3281c2ed1441f170db02cd87b104319642b03fab15c73"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/guarded_train.py",
+    "original_sha256": "609bc1861daf17a0532c2f5d53ec0dbe60d26ddacd64e559347f7fc910c2679e",
+    "published_sha256": "1097fe475615614bce0e0a9c8f7e51234dde24cbdc972dcc8213d15fd2bc9316"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/cuda_loss_context.py",
+    "original_sha256": "82b8da77cf764c8949c89451945e94c7d9f52bafc1b19580ded8226daf6aedb3",
+    "published_sha256": "69713432f18034614d9b0f0b337e855f91e7aba811edd785a1e1c465511305c6"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/data-manifest.json",
+    "original_sha256": "11465bad4423644c8def8fbd4dc7acfd36c4786867d217738b9fb2f32677e24f",
+    "published_sha256": "cfa553371c954417232e24773bcc38f2047003af7620d577a91289d8bd302d3d"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/training-package-manifest.json",
+    "original_sha256": "057a9f1029502e379f7b0a940ec61487375861b689f4ca89f1e2378dfe510b3c",
+    "published_sha256": "6077f10ebed2261abffcd87bba0b7cbdfc7be19237c6c7f555a6f964c38b5a18"
+  },
+  {
+    "file": "arc-flash-dev-benchmark-v2/benchmark.sbatch",
+    "original_sha256": "13cfee1e8247ebadc37cf25099e23ccf25a9c8cb0f72b8cf7975653ff0af9530",
+    "published_sha256": "e798861a3b66dcb5dd6a38a76b403eea123813305a5a2131582a97066e8acfd8"
+  },
+  {
+    "file": "arc-flash-benchmark-budget-v1/launch.py",
+    "original_sha256": "c58b3dc0a665c6730b628bd533fa74b72d81ec34009c358ab140ca88b0d31616",
+    "published_sha256": "c58b3dc0a665c6730b628bd533fa74b72d81ec34009c358ab140ca88b0d31616"
+  },
+  {
+    "file": "arc-flash-benchmark-budget-v1/budget_common.py",
+    "original_sha256": "fc2cf480d9cfaa7c48647a44475161f689a7e87d45cb724a314b0d6fd4466319",
+    "published_sha256": "26984cc499b1a05235968f0697225427a47c744f6a15a7cf6e09c31ada5b0606"
+  },
+  {
+    "file": "arc-flash-benchmark-budget-v1/stage_budget.py",
+    "original_sha256": "669945bc6ad9f1ec37750b7b0b8ed443cfa888ebe0081a5ee5c33958975bc6bc",
+    "published_sha256": "669945bc6ad9f1ec37750b7b0b8ed443cfa888ebe0081a5ee5c33958975bc6bc"
+  },
+  {
+    "file": "arc-flash-benchmark-budget-v1/deadline.py",
+    "original_sha256": "ebb39d114de81e4418e6e116eb3bcc4b419938419f632782d597d1eba12c9313",
+    "published_sha256": "ebb39d114de81e4418e6e116eb3bcc4b419938419f632782d597d1eba12c9313"
+  },
+  {
+    "file": "arc-flash-benchmark-budget-v1/run_full.sbatch",
+    "original_sha256": "21e3f90a6b265652f608e2fbe4f684eeaab71d93da7378aa4dba1aeeea137fb9",
+    "published_sha256": "702ff1c6f5a0c6cb23efdeb003ace633de6734870e56e6a1e2283f17ce08a60a"
+  }
+]

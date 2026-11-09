@@ -1,0 +1,11 @@
+{
+  "name": "arc-flash-benchmark-budget-v1",
+  "files_sha256": {
+    "launch.py": "c58b3dc0a665c6730b628bd533fa74b72d81ec34009c358ab140ca88b0d31616",
+    "budget_common.py": "26984cc499b1a05235968f0697225427a47c744f6a15a7cf6e09c31ada5b0606",
+    "stage_budget.py": "669945bc6ad9f1ec37750b7b0b8ed443cfa888ebe0081a5ee5c33958975bc6bc",
+    "deadline.py": "ebb39d114de81e4418e6e116eb3bcc4b419938419f632782d597d1eba12c9313",
+    "run_full.sbatch": "702ff1c6f5a0c6cb23efdeb003ace633de6734870e56e6a1e2283f17ce08a60a",
+    "benchmark-package-manifest.json": "60d10777abd98bebb3ab6f6f973aa30bac62098b3527a84997e9ceb2f9477028"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "tasks": 138,
+  "logical_trials": 1380,
+  "methods": {
+    "experiment_1": {
+      "label": "ZS Python Synthesis",
+      "logical_trials": 276,
+      "statuses": {
+        "correct": 19,
+        "incorrect": 187,
+        "malformed_response": 64,
+        "provider_error": 6
+      },
+      "solved_at_least_once": [
+        "1e97544e",
+        "2ba387bc",
+        "4aab4007",
+        "53fb4810",
+        "604001fa",
+        "67b4a34d",
+        "903d1b4a",
+        "af22c60d",
+        "bf45cf4b",
+        "c663677b",
+        "e66aafb8",
+        "e95e3d8e",
+        "f4081712"
+      ]
+    },
+    "experiment_2": {
+      "label": "1S Python Synthesis",
+      "logical_trials": 276,
+      "statuses": {
+        "correct": 19,
+        "incorrect": 186,
+        "malformed_response": 64,
+        "provider_error": 7
+      },
+      "solved_at_least_once": [
+        "1e97544e",
+        "2ba387bc",
+        "31f7f899",
+        "4aab4007",
+        "67b4a34d",
+        "903d1b4a",
+        "af22c60d",
+        "bf45cf4b",
+        "c663677b",
+        "e66aafb8",
+        "e95e3d8e"
+      ]
+    },
+    "experiment_3": {
+      "label": "Python Self-Refinement",
+      "logical_trials": 276,
+      "statuses": {
+        "correct": 29,
+        "incorrect": 174,
+        "malformed_response": 66,
+        "provider_error": 7
+      },
+      "solved_at_least_once": [
+        "1818057f",
+        "2ba387bc",
+        "38007db0",
+        "45a5af55",
+        "4aab4007",
+        "53fb4810",
+        "58f5dbd5",
+        "604001fa",
+        "67b4a34d",
+        "8f215267",
+        "903d1b4a",
+        "af22c60d",
+        "b0039139",
+        "bf45cf4b",
+        "c663677b",
+        "e66aafb8",
+        "e95e3d8e",
+        "f4081712"
+      ]
+    },
+    "experiment_4": {
+      "label": "NL Rule Induction CoT",
+      "logical_trials": 276,
+      "statuses": {
+        "correct": 13,
+        "incorrect": 198,
+        "malformed_response": 60,
+        "provider_error": 5
+      },
+      "solved_at_least_once": [
+        "1e97544e",
+        "2ba387bc",
+        "4aab4007",
+        "67b4a34d",
+        "af22c60d",
+        "bf45cf4b",
+        "c663677b",
+        "e66aafb8",
+        "e95e3d8e"
+      ]
+    },
+    "experiment_5": {
+      "label": "ZS ARC DSL",
+      "logical_trials": 276,
+      "statuses": {
+        "correct": 24,
+        "incorrect": 188,
+        "malformed_response": 59,
+        "provider_error": 5
+      },
+      "solved_at_least_once": [
+        "1e97544e",
+        "2ba387bc",
+        "31f7f899",
+        "45a5af55",
+        "4aab4007",
+        "604001fa",
+        "67b4a34d",
+        "903d1b4a",
+        "af22c60d",
+        "bf45cf4b",
+        "c4d067a0",
+        "c663677b",
+        "e66aafb8",
+        "e95e3d8e"
+      ]
+    }
+  },
+  "solved_by_any_method": [
+    "1818057f",
+    "1e97544e",
+    "2ba387bc",
+    "31f7f899",
+    "38007db0",
+    "45a5af55",
+    "4aab4007",
+    "53fb4810",
+    "58f5dbd5",
+    "604001fa",
+    "67b4a34d",
+    "8f215267",
+    "903d1b4a",
+    "af22c60d",
+    "b0039139",
+    "bf45cf4b",
+    "c4d067a0",
+    "c663677b",
+    "e66aafb8",
+    "e95e3d8e",
+    "f4081712"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "protocol": "strict greedy task accuracy; all query grids exact; one candidate; no repair or TTT",
+  "complete": true,
+  "arms": {
+    "finetuned": {
+      "complete": true,
+      "processed_tasks": 128,
+      "total_tasks": 128,
+      "solved_tasks": 33,
+      "task_accuracy": 0.2578125,
+      "processed_grids": 134,
+      "total_grids": 134,
+      "correct_grids": 34,
+      "grid_accuracy": 0.2537313432835821,
+      "invalid_json_or_grids": 4,
+      "token_limit_tasks": 1
+    },
+    "base": {
+      "complete": true,
+      "processed_tasks": 128,
+      "total_tasks": 128,
+      "solved_tasks": 19,
+      "task_accuracy": 0.1484375,
+      "processed_grids": 134,
+      "total_grids": 134,
+      "correct_grids": 20,
+      "grid_accuracy": 0.14925373134328357,
+      "invalid_json_or_grids": 4,
+      "token_limit_tasks": 0
+    }
+  },
+  "paired_comparison": {
+    "paired_tasks": 128,
+    "both_correct": 16,
+    "finetuned_only_correct": 17,
+    "base_only_correct": 3,
+    "both_wrong": 92
+  },
+  "benchmark_id": "8e5b2d2a7570f35729a53225f4ecaa0efa8a405abec05634e5f76e5a498451b1",
+  "global_step": 660,
+  "adapter_sha256": "febc869b37a58e4d5c500cd20bb8335e7de99c230f66ae39f4159e8ab5e542db",
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "num_return_sequences": 1,
+    "max_new_tokens": 8192,
+    "use_cache": true,
+    "enable_thinking": false,
+    "context": 18432,
+    "seed": 42,
+    "budget_policy": "min(max_new_tokens, context minus full prompt length), identical for both arms"
+  },
+  "split": "dev",
+  "protected_evaluation_used": false,
+  "ttt": false
+}

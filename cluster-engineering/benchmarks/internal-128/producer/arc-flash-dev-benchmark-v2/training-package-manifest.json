@@ -1,0 +1,22 @@
+{
+  "files_sha256": {
+    "README.md": "111a59d40148a0507580730f936b932c400d992b5d97db09be9e3051ac4f5553",
+    "checkpoint_validation.py": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "cpu_compatibility.py": "d9a798a66acf51b088d659d06c0d3c34c1596f322d089af539fe876a22f59eca",
+    "cuda_loss_context.py": "82b8da77cf764c8949c89451945e94c7d9f52bafc1b19580ded8226daf6aedb3",
+    "export_checkpoint.py": "4f68fd97f8c7fa468e479bda24840ab6085ecf41f3fa1136877f3e19371c2229",
+    "gpu-device-debug-evidence.json": "40226cddd000214fc21a3508282abef2780e09170cda03919aec26bc838650c9",
+    "guarded_train.py": "609bc1861daf17a0532c2f5d53ec0dbe60d26ddacd64e559347f7fc910c2679e",
+    "loss_normalization.py": "f347480cabef6287d8296776848ed125356e43f7c5cf794f6a523e7e99435e3b",
+    "numeric_checks.py": "d2f9b11eedd15c3d1d15f9479d040d6d4f16b6513805d6a30a5a90d3367fa1e4",
+    "original-v5-manifest.json": "4a2d8f6709603d69465ca843e86925e0adb13c830d24219ed6ab207b07881fc4",
+    "ple_placement.py": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "prepared_data_checks.py": "f7121f122e10e3538f3790891e8c10f219d98292745fc8c694573129df50c9a7",
+    "reviewed-kernels.json": "32e68e54ef3097bbd52bd3bd2bae714ef41e228afdb575001b5f4edfc69d8014",
+    "run_checks.py": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "runtime_guardrails.py": "6cb84d016a14648d7a7390e5163a04a05163644da6acf201efdb6e9a022600bb",
+    "runtime_identity.py": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "stage_full_run.py": "a6984a06d055a3e629deeb8da28412bb1bca410b53f5ee50a896c27fd99ae7aa",
+    "train_arc.sbatch": "0b70492bc1bc10e66a95169d93a178bc2bd773a65b5ce4a537aac6423d9595c4"
+  }
+}

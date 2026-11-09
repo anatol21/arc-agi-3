@@ -1,0 +1,848 @@
+[
+  {
+    "path": "arc-flash-eval138-v1/benchmark-recipe.json",
+    "deployed_sha256": "25655bf845a7254b6788f660477b8b193738b8a3f3ab0e39d60c415848d62877",
+    "published_sha256": "d8dc20cb078917b8c9dc2fb1d8a0e025e9d8e3f88cb52eeeec8fe3de2d860bba",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-v1/benchmark.sbatch",
+    "deployed_sha256": "77d5b2c9f493924c1b7e1dfa7cd07d10d80c57146a9fba0b076600b78eb8eec8",
+    "published_sha256": "87608b8f2495de8cbed2fd48764444c45e65c82ba7a06fc673071b971124ecf1",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/checkpoint_validation.py",
+    "deployed_sha256": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "published_sha256": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/common.py",
+    "deployed_sha256": "2b2c8fee379759479be18543dd04743a71bd25f599bee60e9605f22da741e658",
+    "published_sha256": "f9bfaff97b7558536741271461ff63e44cca9ceb88e1eae6eed58e84026e90ea",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/configuration.py",
+    "deployed_sha256": "99929f2dddbf2eed17a02754964db2743fb0da5a4146483b8f11c85bbd581e66",
+    "published_sha256": "99929f2dddbf2eed17a02754964db2743fb0da5a4146483b8f11c85bbd581e66",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/cpu_compatibility.py",
+    "deployed_sha256": "d9a798a66acf51b088d659d06c0d3c34c1596f322d089af539fe876a22f59eca",
+    "published_sha256": "d9a798a66acf51b088d659d06c0d3c34c1596f322d089af539fe876a22f59eca",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/cuda_loss_context.py",
+    "deployed_sha256": "82b8da77cf764c8949c89451945e94c7d9f52bafc1b19580ded8226daf6aedb3",
+    "published_sha256": "82b8da77cf764c8949c89451945e94c7d9f52bafc1b19580ded8226daf6aedb3",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/deadline.py",
+    "deployed_sha256": "ebb39d114de81e4418e6e116eb3bcc4b419938419f632782d597d1eba12c9313",
+    "published_sha256": "ebb39d114de81e4418e6e116eb3bcc4b419938419f632782d597d1eba12c9313",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/evaluation_data.py",
+    "deployed_sha256": "fa0ece365245fb9fe0502866197737f3d8450b9cf9d5e553bdce5cf2c8e8cd12",
+    "published_sha256": "fa0ece365245fb9fe0502866197737f3d8450b9cf9d5e553bdce5cf2c8e8cd12",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/export_checkpoint.py",
+    "deployed_sha256": "4f68fd97f8c7fa468e479bda24840ab6085ecf41f3fa1136877f3e19371c2229",
+    "published_sha256": "4f68fd97f8c7fa468e479bda24840ab6085ecf41f3fa1136877f3e19371c2229",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/guarded_train.py",
+    "deployed_sha256": "609bc1861daf17a0532c2f5d53ec0dbe60d26ddacd64e559347f7fc910c2679e",
+    "published_sha256": "609bc1861daf17a0532c2f5d53ec0dbe60d26ddacd64e559347f7fc910c2679e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/inference-config.json",
+    "deployed_sha256": "85fcf679a034736f50421e6d60f553f812b66c8cc1875e753f73fc35cd58641f",
+    "published_sha256": "e364c451b09982793bb9ebd717570fdabd56d54be28f102c4da44ad33bd704a5",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-v1/inspect_run.py",
+    "deployed_sha256": "5deb37b0c433832e017f1966ea15f0b25196fb143011d7c8463b8c347209934b",
+    "published_sha256": "5deb37b0c433832e017f1966ea15f0b25196fb143011d7c8463b8c347209934b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/instruction.txt",
+    "deployed_sha256": "7551bb066bcd504feb550a4a2c12b5dd81c67f2fa6660e1da25edc6a47d7783f",
+    "published_sha256": "7551bb066bcd504feb550a4a2c12b5dd81c67f2fa6660e1da25edc6a47d7783f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/launch.py",
+    "deployed_sha256": "c02a36daa55a6d20577804f75c99b308ef267a3f44d3cb4238940a985d33ae3f",
+    "published_sha256": "c02a36daa55a6d20577804f75c99b308ef267a3f44d3cb4238940a985d33ae3f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/loss_normalization.py",
+    "deployed_sha256": "f347480cabef6287d8296776848ed125356e43f7c5cf794f6a523e7e99435e3b",
+    "published_sha256": "f347480cabef6287d8296776848ed125356e43f7c5cf794f6a523e7e99435e3b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/numeric_checks.py",
+    "deployed_sha256": "d2f9b11eedd15c3d1d15f9479d040d6d4f16b6513805d6a30a5a90d3367fa1e4",
+    "published_sha256": "d2f9b11eedd15c3d1d15f9479d040d6d4f16b6513805d6a30a5a90d3367fa1e4",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/ple_placement.py",
+    "deployed_sha256": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "published_sha256": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/prepared_data_checks.py",
+    "deployed_sha256": "f7121f122e10e3538f3790891e8c10f219d98292745fc8c694573129df50c9a7",
+    "published_sha256": "f7121f122e10e3538f3790891e8c10f219d98292745fc8c694573129df50c9a7",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/protocol.py",
+    "deployed_sha256": "2bc8d2c5b59476a477cfe7ca89281d791bd856598751fe8e730e736dd136f850",
+    "published_sha256": "2bc8d2c5b59476a477cfe7ca89281d791bd856598751fe8e730e736dd136f850",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/run_benchmark.py",
+    "deployed_sha256": "13c42a26aac3b641dc80efc0a18a7a8d0b5b1656dbe6e4dab8a067a8bbdd8e1a",
+    "published_sha256": "13c42a26aac3b641dc80efc0a18a7a8d0b5b1656dbe6e4dab8a067a8bbdd8e1a",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/run_checks.py",
+    "deployed_sha256": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "published_sha256": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/runtime_guardrails.py",
+    "deployed_sha256": "6cb84d016a14648d7a7390e5163a04a05163644da6acf201efdb6e9a022600bb",
+    "published_sha256": "6cb84d016a14648d7a7390e5163a04a05163644da6acf201efdb6e9a022600bb",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/runtime_identity.py",
+    "deployed_sha256": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "published_sha256": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/score_benchmark.py",
+    "deployed_sha256": "f745bf223ba90c87a54ecefe86326aa69eb171ba8bae9f73447bb086ac4ed856",
+    "published_sha256": "f745bf223ba90c87a54ecefe86326aa69eb171ba8bae9f73447bb086ac4ed856",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/stage_benchmark.py",
+    "deployed_sha256": "74cc2b19a6a393e98e2d87515bbe9e50ecc199e4d4cec830666ce30ed8e1b450",
+    "published_sha256": "74cc2b19a6a393e98e2d87515bbe9e50ecc199e4d4cec830666ce30ed8e1b450",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-v1/stage_full_run.py",
+    "deployed_sha256": "a6984a06d055a3e629deeb8da28412bb1bca410b53f5ee50a896c27fd99ae7aa",
+    "published_sha256": "89abed348b6da875eee8132888923fad35c1557836ab69b2c23140daa856360e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/debug.sbatch",
+    "deployed_sha256": "9644892b5193e410b5b2e0a6d0f25b31252d6cd33a99945a09295b1162251a7e",
+    "published_sha256": "682842815f4015aaa3498fe12089636360db7abfde702a9ca52a52509e20a161",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/debug_common.py",
+    "deployed_sha256": "e574b1d653e29e6f23a9156d3831cc0dcd3e1e5b529e8728b29ec7fc65afcade",
+    "published_sha256": "e574b1d653e29e6f23a9156d3831cc0dcd3e1e5b529e8728b29ec7fc65afcade",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/debug_runner.py",
+    "deployed_sha256": "94c65d21035e7ed2c49361f0057acf15266c2c55567247bb4775bb3f250dfd64",
+    "published_sha256": "94c65d21035e7ed2c49361f0057acf15266c2c55567247bb4775bb3f250dfd64",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/launch.py",
+    "deployed_sha256": "9a6d58948d27f597e09ed8f9231c4cea90b76dc2a6a691515f16fdad26e6d2d4",
+    "published_sha256": "9a6d58948d27f597e09ed8f9231c4cea90b76dc2a6a691515f16fdad26e6d2d4",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/reuse_debug.py",
+    "deployed_sha256": "959ca3d783b4c663612c12cd05655605fd42c37562376cdaba2f13d15b35faff",
+    "published_sha256": "959ca3d783b4c663612c12cd05655605fd42c37562376cdaba2f13d15b35faff",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/score_debug.py",
+    "deployed_sha256": "df10bc409f7f846268c9296ec57b01b95053e22a8c81490fd9ef0c771e421b27",
+    "published_sha256": "df10bc409f7f846268c9296ec57b01b95053e22a8c81490fd9ef0c771e421b27",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-debug-v1/stage.py",
+    "deployed_sha256": "4d08c32b458a330200c1bca44f08794bfa56f3cb0ae21b0798c06d5c54dc77bc",
+    "published_sha256": "4d08c32b458a330200c1bca44f08794bfa56f3cb0ae21b0798c06d5c54dc77bc",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/launch.py",
+    "deployed_sha256": "42f1775f01c4b021b095ad8448cd4015527f26332b286d2b20953063c8afff07",
+    "published_sha256": "42f1775f01c4b021b095ad8448cd4015527f26332b286d2b20953063c8afff07",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/pilot.sbatch",
+    "deployed_sha256": "c8272bf8f4f918537cbf53cffe0281629ed3657e321118b15a6763ba852bcf3e",
+    "published_sha256": "1091f5055b4d752d51d2a6a8677f6fdbf3e249a6de80387b5d837b14e264a52f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/pilot_common.py",
+    "deployed_sha256": "db54286b23e988c1b7cb0d0218d2e3c60b73ba45e6a5890b5dadea130770fb20",
+    "published_sha256": "db54286b23e988c1b7cb0d0218d2e3c60b73ba45e6a5890b5dadea130770fb20",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/pilot_runner.py",
+    "deployed_sha256": "95c660374d95e306389a350cdf267936ddf3dc261a8a6ad232006a83d4542ad9",
+    "published_sha256": "95c660374d95e306389a350cdf267936ddf3dc261a8a6ad232006a83d4542ad9",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/reuse_pilot.py",
+    "deployed_sha256": "6ef1d0a86a3e2104fbc3a98b5bc1cff37c4924a9587f0b524039c6d1e9d5362e",
+    "published_sha256": "6ef1d0a86a3e2104fbc3a98b5bc1cff37c4924a9587f0b524039c6d1e9d5362e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/score_pilot.py",
+    "deployed_sha256": "ab217f40c2d3b215490297a78399fd4986b21dc89ac2d6af46ab29b8fdb34cca",
+    "published_sha256": "ab217f40c2d3b215490297a78399fd4986b21dc89ac2d6af46ab29b8fdb34cca",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-pilot-v1/stage.py",
+    "deployed_sha256": "b2f6bdf461eeacb81e9a4a3d93475ba9691925ce00374d9755285eeb8e764f3d",
+    "published_sha256": "b2f6bdf461eeacb81e9a4a3d93475ba9691925ce00374d9755285eeb8e764f3d",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/batched.py",
+    "deployed_sha256": "2e6eee63c014b0f5ab51fe62d37636dccfa853c19ce0a0b45648ef5cedd14c5b",
+    "published_sha256": "2e6eee63c014b0f5ab51fe62d37636dccfa853c19ce0a0b45648ef5cedd14c5b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/bridge.py",
+    "deployed_sha256": "ad66b3faa0e9ba031a5e8ef8f7421b105dfcff146d1eeeec25157807ff2b44e4",
+    "published_sha256": "ad66b3faa0e9ba031a5e8ef8f7421b105dfcff146d1eeeec25157807ff2b44e4",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/debug.sbatch",
+    "deployed_sha256": "a66f0a299e4713954a10e0bde6a9356db1dd2d6e13d83183136facf8971750ea",
+    "published_sha256": "ae0d5ac88323c408ef8103f0aa1c0051ead611c1686e135edabd818526c24de3",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/inference-config.json",
+    "deployed_sha256": "dc70d5d55363704d7e9e0d1ddd91636adfb1029688353ce91abb8827b7ce7f36",
+    "published_sha256": "6cbd790f6d0b30fab5f00dbf0d77ef72716299ea7f5527156c812fcca0ecdf98",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/journal.py",
+    "deployed_sha256": "e949bc133058fca91b1bc5c5a1bd90160741366e723195c7e0336e57761ec620",
+    "published_sha256": "e949bc133058fca91b1bc5c5a1bd90160741366e723195c7e0336e57761ec620",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/policy.py",
+    "deployed_sha256": "baec6ed7ce50fc112d9e3978b342c8b1aae32c07f526564cf94ad32ce7125f81",
+    "published_sha256": "baec6ed7ce50fc112d9e3978b342c8b1aae32c07f526564cf94ad32ce7125f81",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/run.py",
+    "deployed_sha256": "dc91b2bdd25621e6e67111c191fdf71ccf23aa684e03d691846095c8e09a0b2b",
+    "published_sha256": "dc91b2bdd25621e6e67111c191fdf71ccf23aa684e03d691846095c8e09a0b2b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/score.py",
+    "deployed_sha256": "dcd1c843f156917ada7968cbc520fc07ce0290b05baa52acfe832eed2d6915cd",
+    "published_sha256": "dcd1c843f156917ada7968cbc520fc07ce0290b05baa52acfe832eed2d6915cd",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/stage.py",
+    "deployed_sha256": "6ce08c5527109e35105b5961629c0aa3645051cada3bbe7e256134ef2665ab49",
+    "published_sha256": "6ce08c5527109e35105b5961629c0aa3645051cada3bbe7e256134ef2665ab49",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v1/telemetry.py",
+    "deployed_sha256": "4d59fb447b5089cdf871aaa84d2e4a04b77d04b4f6c80d1dba6a3fdcbba860b6",
+    "published_sha256": "4d59fb447b5089cdf871aaa84d2e4a04b77d04b4f6c80d1dba6a3fdcbba860b6",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/batched.py",
+    "deployed_sha256": "2e6eee63c014b0f5ab51fe62d37636dccfa853c19ce0a0b45648ef5cedd14c5b",
+    "published_sha256": "2e6eee63c014b0f5ab51fe62d37636dccfa853c19ce0a0b45648ef5cedd14c5b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/bridge.py",
+    "deployed_sha256": "b2293643b4ea48b6c0c62ca356e7c68c9e044b4fb9eee4f1c383294fa28a6fb9",
+    "published_sha256": "b2293643b4ea48b6c0c62ca356e7c68c9e044b4fb9eee4f1c383294fa28a6fb9",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/debug.sbatch",
+    "deployed_sha256": "14e309fa6efaef6c5548fe54c91d745b73550dc013e9056be9f47fa97da1dbf2",
+    "published_sha256": "c8400f250075ff017d04a5a00c6c782829a4062202968026e2e30cebd263f456",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/inference-config.json",
+    "deployed_sha256": "d46114b7e5a9ffdd7193f998b4be28855b4f3b2c177d768ef360fe165a7f774e",
+    "published_sha256": "711459b2ad581c5f58eb798f19285da1c02db4fa03747cd941c48d84458eca14",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/journal.py",
+    "deployed_sha256": "e949bc133058fca91b1bc5c5a1bd90160741366e723195c7e0336e57761ec620",
+    "published_sha256": "e949bc133058fca91b1bc5c5a1bd90160741366e723195c7e0336e57761ec620",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/policy.py",
+    "deployed_sha256": "050ca48ff582a380a3c3c4f338a151439fd4af72964d81eddcd83214c0adb273",
+    "published_sha256": "050ca48ff582a380a3c3c4f338a151439fd4af72964d81eddcd83214c0adb273",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/run.py",
+    "deployed_sha256": "e0cde1e0591099681f2be21294f99781c1a7699e98dd12bdbe24f9f57658c1c8",
+    "published_sha256": "e0cde1e0591099681f2be21294f99781c1a7699e98dd12bdbe24f9f57658c1c8",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/scheduling.py",
+    "deployed_sha256": "4504450a251ad5a3660d0c9bef7cbf9ec61c8ab238a50e2c72d78f8f89c6ae9f",
+    "published_sha256": "4504450a251ad5a3660d0c9bef7cbf9ec61c8ab238a50e2c72d78f8f89c6ae9f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/score.py",
+    "deployed_sha256": "87643748e0801d1e1d51d554f3a2f3c7a465d237a746d5b538a7eb1ab2a2489f",
+    "published_sha256": "87643748e0801d1e1d51d554f3a2f3c7a465d237a746d5b538a7eb1ab2a2489f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/stage.py",
+    "deployed_sha256": "45a6d8e7cd3b46a246f9d9fbe6e271597d2f3fe543f374e0f5813c6fbc8a7183",
+    "published_sha256": "45a6d8e7cd3b46a246f9d9fbe6e271597d2f3fe543f374e0f5813c6fbc8a7183",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v2/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/batched.py",
+    "deployed_sha256": "75e109038aeb183d34c3feb95376025f838ed8488f28b777febb45040966db32",
+    "published_sha256": "75e109038aeb183d34c3feb95376025f838ed8488f28b777febb45040966db32",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/bridge.py",
+    "deployed_sha256": "984ebe2217e199cb21144af7edc345bb87e0fbaa26eb02dfc9154bd149a0805c",
+    "published_sha256": "984ebe2217e199cb21144af7edc345bb87e0fbaa26eb02dfc9154bd149a0805c",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/debug.sbatch",
+    "deployed_sha256": "adcaeff76e6775aac3777dc1b8281e5999a42c7868f66a3ad200662a4308e18f",
+    "published_sha256": "03c1e00e9437aec17d2a1503e1fdffb5c7b600cabbf1b9d6b1ab85bc8dc9decd",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/eligibility.py",
+    "deployed_sha256": "8a50c6f1ffffe9a963cb422ba7b89aa12d335b0e557afc31abbf3f888ec062a9",
+    "published_sha256": "8a50c6f1ffffe9a963cb422ba7b89aa12d335b0e557afc31abbf3f888ec062a9",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/inference-config.json",
+    "deployed_sha256": "fc1e29683e79cea99d92937514a7af30efd688944b1d478331592d676ba75a1b",
+    "published_sha256": "97021629a2cc42d31a10695f4dab6c7f8ae017664fc57ceef6badfd6e9f60e3a",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/journal.py",
+    "deployed_sha256": "0b6a8a55d01ab5b3b3c59ee9c770f574191448658f75aeb325c128d2ae77e828",
+    "published_sha256": "0b6a8a55d01ab5b3b3c59ee9c770f574191448658f75aeb325c128d2ae77e828",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/policy.py",
+    "deployed_sha256": "22aad9e6911e1e58e730158ca72c27881c11e15db2c1ca54f680f0b897f6209a",
+    "published_sha256": "22aad9e6911e1e58e730158ca72c27881c11e15db2c1ca54f680f0b897f6209a",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/run.py",
+    "deployed_sha256": "8568b6f3040a2568f768767584fd906c1d6fbc24e2a8abcfa00b0d8181e12d07",
+    "published_sha256": "8568b6f3040a2568f768767584fd906c1d6fbc24e2a8abcfa00b0d8181e12d07",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/scheduling.py",
+    "deployed_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "published_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/score.py",
+    "deployed_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "published_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/stage.py",
+    "deployed_sha256": "4ce4af8a2f020c86e1405702cff796306ab8e9957868586a94060d465c1c59b5",
+    "published_sha256": "4ce4af8a2f020c86e1405702cff796306ab8e9957868586a94060d465c1c59b5",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-util-v3/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/batched.py",
+    "deployed_sha256": "75e109038aeb183d34c3feb95376025f838ed8488f28b777febb45040966db32",
+    "published_sha256": "75e109038aeb183d34c3feb95376025f838ed8488f28b777febb45040966db32",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/bridge.py",
+    "deployed_sha256": "f9cc3ff3168f57a95721ecc3dd584f7f1b1c7e30f45a51bf73c62107e86178c9",
+    "published_sha256": "f9cc3ff3168f57a95721ecc3dd584f7f1b1c7e30f45a51bf73c62107e86178c9",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/dashboard_adapter.py",
+    "deployed_sha256": "dacb5a99e1cddd955176878ecd3594313d45b69f2b4a0f29e1bb3aefe7b6eb9b",
+    "published_sha256": "dacb5a99e1cddd955176878ecd3594313d45b69f2b4a0f29e1bb3aefe7b6eb9b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/eligibility.py",
+    "deployed_sha256": "6998cacf985d93b993218c0a92e7624d7056553d271e048a9b843cb7329f851b",
+    "published_sha256": "6998cacf985d93b993218c0a92e7624d7056553d271e048a9b843cb7329f851b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/inference-config.json",
+    "deployed_sha256": "d733b61220bc9b48dfd14e7f159e166186077227c81ee9745839c49530272b9c",
+    "published_sha256": "17771e3fb32b488e3d6d5ba706c3fa4a0ffe267207672f0cda440ab9de98d791",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/journal.py",
+    "deployed_sha256": "0b6a8a55d01ab5b3b3c59ee9c770f574191448658f75aeb325c128d2ae77e828",
+    "published_sha256": "0b6a8a55d01ab5b3b3c59ee9c770f574191448658f75aeb325c128d2ae77e828",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/launch.sh",
+    "deployed_sha256": "c3a535a0983a8a7def8bd6a3e97d55ffa46e4b8c49bfdffd78efb6585d6010b6",
+    "published_sha256": "4179b25697e59f273f3fe077a60c6081659a29e595b489713dea0b321e22707e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/policy.py",
+    "deployed_sha256": "96849cf8bece53c2a78e5c24947d71537f2ea1733ad17c41275e337e60f1b9fc",
+    "published_sha256": "96849cf8bece53c2a78e5c24947d71537f2ea1733ad17c41275e337e60f1b9fc",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/run.py",
+    "deployed_sha256": "5593a33ff9d454a315ad2894f02bb11d105e6f537f88e237ce67a07276064ba6",
+    "published_sha256": "5593a33ff9d454a315ad2894f02bb11d105e6f537f88e237ce67a07276064ba6",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/scheduling.py",
+    "deployed_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "published_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/score.py",
+    "deployed_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "published_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/stage.py",
+    "deployed_sha256": "471c639596093cbf0e1775c15a4a8cf5b879dba6fb96e7fedd842ddfac4fd277",
+    "published_sha256": "471c639596093cbf0e1775c15a4a8cf5b879dba6fb96e7fedd842ddfac4fd277",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v1/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/admission.py",
+    "deployed_sha256": "1ec645fa7bd727a94a1777efe59ebc19a8c9ffb513e656db35909956c9c5595a",
+    "published_sha256": "1ec645fa7bd727a94a1777efe59ebc19a8c9ffb513e656db35909956c9c5595a",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/batched.py",
+    "deployed_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "published_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/bridge.py",
+    "deployed_sha256": "eb38c4af6be0f15e08fb9babb145da8396797bbc275d2cc834d126f682a0f599",
+    "published_sha256": "eb38c4af6be0f15e08fb9babb145da8396797bbc275d2cc834d126f682a0f599",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/cold.py",
+    "deployed_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "published_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/dashboard_adapter.py",
+    "deployed_sha256": "8efcdf33da3bf4d2e22f2e77322eedf7f5c7825174a6cc6b039b3e3f02459c36",
+    "published_sha256": "8efcdf33da3bf4d2e22f2e77322eedf7f5c7825174a6cc6b039b3e3f02459c36",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/eligibility.py",
+    "deployed_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "published_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/inference-config.json",
+    "deployed_sha256": "ddac963a5b1410530d4a3fb2ce00aab786e79fab86d50301fa6dc6c55cc54988",
+    "published_sha256": "cbe67fcc96e513cf81448f50f3066980bb0955f42a31d89ad4cf82f9df773f15",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/journal.py",
+    "deployed_sha256": "3c011ae2c890ab3c18d89d3f9aa01f64e2ac493ef50346078cc33d166395f739",
+    "published_sha256": "3c011ae2c890ab3c18d89d3f9aa01f64e2ac493ef50346078cc33d166395f739",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/launch.sh",
+    "deployed_sha256": "f8f16afa73caecbd8d642ede3714a6d2efb19ce8f48847534ec8b9c5a2b53913",
+    "published_sha256": "3c1b6337e6914d34ff798b7d8b713c82365ad9f2ee38900d82cf92db92cfe797",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/policy.py",
+    "deployed_sha256": "96849cf8bece53c2a78e5c24947d71537f2ea1733ad17c41275e337e60f1b9fc",
+    "published_sha256": "96849cf8bece53c2a78e5c24947d71537f2ea1733ad17c41275e337e60f1b9fc",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/run.py",
+    "deployed_sha256": "6b3279f1288e384f37441b307207d6351f77d14ff6313b7531898a18eaef5114",
+    "published_sha256": "6b3279f1288e384f37441b307207d6351f77d14ff6313b7531898a18eaef5114",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/scheduling.py",
+    "deployed_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "published_sha256": "a70a114d30f4f7f2ed785da152737c16851d16a0647eef433e5910e00a9f5b58",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/score.py",
+    "deployed_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "published_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/stage.py",
+    "deployed_sha256": "471c639596093cbf0e1775c15a4a8cf5b879dba6fb96e7fedd842ddfac4fd277",
+    "published_sha256": "471c639596093cbf0e1775c15a4a8cf5b879dba6fb96e7fedd842ddfac4fd277",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v4/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/admission.py",
+    "deployed_sha256": "b3bb25549365898ea2392c8209687880e8885c84d56c4c5dd1526e5abd3c68a2",
+    "published_sha256": "b3bb25549365898ea2392c8209687880e8885c84d56c4c5dd1526e5abd3c68a2",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/batched.py",
+    "deployed_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "published_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/bridge.py",
+    "deployed_sha256": "e550d92a451ac337a0139dc3c59993dc5a4a126efcd8624ec1d372a67d282278",
+    "published_sha256": "e550d92a451ac337a0139dc3c59993dc5a4a126efcd8624ec1d372a67d282278",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/cold.py",
+    "deployed_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "published_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/dashboard_adapter.py",
+    "deployed_sha256": "4f8e3a1248d11ecd5e0832ad3f150ed43c18f8f9531712f8f00076cac2aeea69",
+    "published_sha256": "4f8e3a1248d11ecd5e0832ad3f150ed43c18f8f9531712f8f00076cac2aeea69",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/eligibility.py",
+    "deployed_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "published_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/inference-config.json",
+    "deployed_sha256": "ddac963a5b1410530d4a3fb2ce00aab786e79fab86d50301fa6dc6c55cc54988",
+    "published_sha256": "cbe67fcc96e513cf81448f50f3066980bb0955f42a31d89ad4cf82f9df773f15",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/journal.py",
+    "deployed_sha256": "6bf4f95c6f0ae15f73535a514536cd759189a330796415fcaa7971eefdae7b9f",
+    "published_sha256": "6bf4f95c6f0ae15f73535a514536cd759189a330796415fcaa7971eefdae7b9f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/launch.sh",
+    "deployed_sha256": "4d27ec49d0d302a0d95f96fe18fb3997783056e848e8fdf93cff76200c7fdc97",
+    "published_sha256": "81911b4a6d3cab7b78fe0c47244ba0b86cb2b345c23557cffcd8a6118b9906a4",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/policy.py",
+    "deployed_sha256": "59b938d829461923b7aeb99453cf85428dcb5035056225fd525b19cdc73c416b",
+    "published_sha256": "59b938d829461923b7aeb99453cf85428dcb5035056225fd525b19cdc73c416b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/run.py",
+    "deployed_sha256": "6499dfbafa08956df514c6e739a185d9654de5d030f01be498f5fa756f1431e9",
+    "published_sha256": "6499dfbafa08956df514c6e739a185d9654de5d030f01be498f5fa756f1431e9",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/scheduling.py",
+    "deployed_sha256": "43958719f00087c9a3a582e4e7d1e5992a3ebdc8bea8ba41e0f03cd063bef585",
+    "published_sha256": "43958719f00087c9a3a582e4e7d1e5992a3ebdc8bea8ba41e0f03cd063bef585",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/score.py",
+    "deployed_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "published_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/stage.py",
+    "deployed_sha256": "b763debc68c64f629b696cdb8fcbd203176b8ae5e566127a1420bd35c2c69c06",
+    "published_sha256": "b763debc68c64f629b696cdb8fcbd203176b8ae5e566127a1420bd35c2c69c06",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v5/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/admission.py",
+    "deployed_sha256": "641131aadb9cd2449d81bcd9f110acaa5e306efd5cb78cff45620541be0281bb",
+    "published_sha256": "641131aadb9cd2449d81bcd9f110acaa5e306efd5cb78cff45620541be0281bb",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/batched.py",
+    "deployed_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "published_sha256": "c1ea0389dfecb71b76c720b8facea68e9de51561a58f439042022d90834202e5",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/bridge.py",
+    "deployed_sha256": "cc268de5ce1b774ce92525d2e49b56f1981737c74accc923aea3249f9032a372",
+    "published_sha256": "cc268de5ce1b774ce92525d2e49b56f1981737c74accc923aea3249f9032a372",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/cold.py",
+    "deployed_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "published_sha256": "13455f2b6503a55761824b6ec8531fbdb348b13d9955ca3d1b3c30a40f482004",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/dashboard_adapter.py",
+    "deployed_sha256": "4f8e3a1248d11ecd5e0832ad3f150ed43c18f8f9531712f8f00076cac2aeea69",
+    "published_sha256": "4f8e3a1248d11ecd5e0832ad3f150ed43c18f8f9531712f8f00076cac2aeea69",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/eligibility.py",
+    "deployed_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "published_sha256": "7b8d126ac78e8e2a57d301c7a67ca4d7997b723be6a30b6747864b1ca778639e",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/inference-config.json",
+    "deployed_sha256": "ddac963a5b1410530d4a3fb2ce00aab786e79fab86d50301fa6dc6c55cc54988",
+    "published_sha256": "cbe67fcc96e513cf81448f50f3066980bb0955f42a31d89ad4cf82f9df773f15",
+    "in_package_manifest": false
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/journal.py",
+    "deployed_sha256": "6bf4f95c6f0ae15f73535a514536cd759189a330796415fcaa7971eefdae7b9f",
+    "published_sha256": "6bf4f95c6f0ae15f73535a514536cd759189a330796415fcaa7971eefdae7b9f",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/launch.sh",
+    "deployed_sha256": "651e6fd50c88ce642eeb0c6c081e5fbb53bb43d9a9a48bc94892cb99a653ff33",
+    "published_sha256": "0069920097e023785a772cc6b78a48de1c5c1d65dcd08d04dbe6047463169a99",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/policy.py",
+    "deployed_sha256": "59b938d829461923b7aeb99453cf85428dcb5035056225fd525b19cdc73c416b",
+    "published_sha256": "59b938d829461923b7aeb99453cf85428dcb5035056225fd525b19cdc73c416b",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/records.py",
+    "deployed_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "published_sha256": "5dbff3ffd3a4c2acc712f29ba5141604e1073bc60188b5aa228a16052afe0985",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/retry_queue.py",
+    "deployed_sha256": "82dc413ac5cc82cf15258195a65ebcfe9a5131b802c5a9a8f5eb0ae6d59fb50a",
+    "published_sha256": "82dc413ac5cc82cf15258195a65ebcfe9a5131b802c5a9a8f5eb0ae6d59fb50a",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/run.py",
+    "deployed_sha256": "d506294d278f007694db2dd6ad90d1ad491146448180be7b6ebe9b76a18dd905",
+    "published_sha256": "d506294d278f007694db2dd6ad90d1ad491146448180be7b6ebe9b76a18dd905",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/scheduling.py",
+    "deployed_sha256": "43958719f00087c9a3a582e4e7d1e5992a3ebdc8bea8ba41e0f03cd063bef585",
+    "published_sha256": "43958719f00087c9a3a582e4e7d1e5992a3ebdc8bea8ba41e0f03cd063bef585",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/score.py",
+    "deployed_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "published_sha256": "695ceca494120c790ae297be65f6b2b80f8d3b7f823351d91fdd3f2b0d2c2eef",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/settlement.py",
+    "deployed_sha256": "7b355b7c8065d7fbee7efb4c2016f652b8100257a71b399f35a2031f6b9ee2e4",
+    "published_sha256": "7b355b7c8065d7fbee7efb4c2016f652b8100257a71b399f35a2031f6b9ee2e4",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/stage.py",
+    "deployed_sha256": "90777cfddce0fd773f2e808e19d5edcc5fd4e919bc9d5e1e668c259653d521ae",
+    "published_sha256": "90777cfddce0fd773f2e808e19d5edcc5fd4e919bc9d5e1e668c259653d521ae",
+    "in_package_manifest": true
+  },
+  {
+    "path": "arc-flash-eval138-dashboard-v6/telemetry.py",
+    "deployed_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "published_sha256": "b63c3a1ba31612cdfdffd74625ffb5e7a1ac89750be506362e0635240065c791",
+    "in_package_manifest": true
+  }
+]

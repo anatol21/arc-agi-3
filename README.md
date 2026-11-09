@@ -10,13 +10,18 @@ It supports ARC task JSONL files, a 30×30 runtime grid cap, protected evaluatio
 answers, configurable core instructions, run exports, and an inspector for the
 exact local model request, response, parsed prediction, and available reasoning.
 
-The application does not include datasets. Keep ARC, GoogleDS, BARC, synthetic
-training data, and raw benchmark outputs local. See the app’s
+The application reads locally provisioned datasets. Keep training data, reference
+answers, credentials and private run exports outside version control. The benchmark
+directories below contain the reviewed public evidence. See the app’s
 [README](apps/arc_practice/README.md) for setup and launch instructions.
 
-## Held-out ARC validation benchmark
+## Benchmark results
 
-The [held-out validation report](cluster-engineering/arc-validation/) covers 138 public ARC tasks from the grid benchmark. It includes the original prompt, one worked example, and machine-readable input and generation lengths for the base and checkpoint-660 model arms.
+The [completed cluster benchmarks](cluster-engineering/benchmarks/) include generated model responses, per-task scores, producer code and CPU verification commands for both the 128-task internal evaluation and the 138-task public held-out evaluation. The [task profiles](cluster-engineering/arc-validation/) give the original prompt, one worked example and measured response lengths.
+
+The [OpenRouter prompt study](benchmarks/openrouter-138/) reports two trials per task for five methods on the 138 public tasks, including malformed replies and provider errors.
+
+From the repository root, run `python3 benchmarks/verify.py` to reproduce the released summaries from the saved evidence without a GPU or API calls. Each benchmark README also documents how to rescore the generated answers against separately provisioned references.
 
 ## Cluster engineering
 
