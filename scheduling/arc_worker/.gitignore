@@ -1,0 +1,3 @@
+.campaigns/
+*.private.json
+*.private.jsonl

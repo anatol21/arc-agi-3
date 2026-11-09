@@ -6,6 +6,7 @@ A long evaluation can use a short GPU allocation if its worker saves progress be
 | --- | --- |
 | [Cluster Lab](../apps/cluster_dashboard/) | Run the dashboard locally, try its simulator, or connect a private cluster profile over SSH. |
 | [Slurm scheduler](slurm/) | Choose a production partition, submit a GPU worker and a dependent CPU job, and resume unfinished work within a GPU-hour budget. |
+| [ARC inference worker](arc_worker/) | Run the direct-answer worker, interrupt a batch, and inspect which stored tokens it uses on restart. |
 | [Inference batching](inference/) | Group comparable inputs, test wider batches, and retain a smaller working width after an out-of-memory failure. |
 
 ## How the production runs worked

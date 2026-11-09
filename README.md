@@ -21,3 +21,5 @@ The [held-out validation report](benchmarks/arc-validation/) covers 138 public A
 ## Cluster scheduling and inference
 
 [Cluster Lab and scheduling guide](scheduling/) documents queue selection, checkpointed workloads and automatic continuation within a GPU-hour budget. Start with the [local dashboard simulator](apps/cluster_dashboard/) or the [standalone Slurm scheduler](scheduling/slurm/). The [inference batching helpers](scheduling/inference/) cover length grouping and memory backoff.
+
+The [resumable ARC inference worker](scheduling/arc_worker/) includes the decoding loop, early response saves, and an offline interruption test. Follow the [worker runbook](agent.md) to adapt it and launch a budgeted campaign.
