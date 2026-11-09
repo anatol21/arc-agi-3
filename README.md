@@ -11,5 +11,9 @@ answers, configurable core instructions, run exports, and an inspector for the
 exact local model request, response, parsed prediction, and available reasoning.
 
 The application does not include datasets. Keep ARC, GoogleDS, BARC, synthetic
-training data, and benchmark outputs local. See the app’s
+training data, and raw benchmark outputs local. See the app’s
 [README](apps/arc_practice/README.md) for setup and launch instructions.
+
+## Held-out ARC validation benchmark
+
+The [held-out validation report](benchmarks/arc-validation/) covers 138 public ARC tasks from the grid benchmark. It includes the original prompt, one worked example, and machine-readable input and generation lengths for the base and checkpoint-660 model arms.
