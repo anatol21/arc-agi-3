@@ -13,6 +13,10 @@ The 128 internal tasks came from the training-source collection and were held ou
 
 Each directory includes the generated responses, per-task decisions, historical generation and scoring code, and commands to check the report on CPU. The [validation task profiles](qwen3.8-flash-next/greedy-no-thinking/arc-validation/) include the original prompt, a worked example and token counts.
 
+## Qwen3.8-Flash-Next · BF16 sampled direct answers
+
+The [BF16 sampling report](qwen3.8-flash-next/bf16-sampling/) contains 276 scored responses on 138 public tasks. Each strategy solved the same five tasks.
+
 ## Qwen3.8-Flash-Next · Python refinement
 
 The [Python refinement report](qwen3.8-flash-next/python-refinement/) covers three partial experiments with sandboxed execution on the internal validation split. Each run includes generated programs and per-task scores.

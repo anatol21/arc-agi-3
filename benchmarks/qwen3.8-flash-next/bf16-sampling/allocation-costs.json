@@ -1,0 +1,141 @@
+{
+  "continuation_allocations": [
+    {
+      "allocation": 1,
+      "partition": "dev_gpu_h100",
+      "new_responses": 56,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1804,
+      "gpus": 4,
+      "gpu_seconds": 7216
+    },
+    {
+      "allocation": 2,
+      "partition": "dev_gpu_h100",
+      "new_responses": 31,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1803,
+      "gpus": 4,
+      "gpu_seconds": 7212
+    },
+    {
+      "allocation": 3,
+      "partition": "dev_gpu_h100",
+      "new_responses": 25,
+      "state": "COMPLETED",
+      "elapsed_seconds": 1798,
+      "gpus": 4,
+      "gpu_seconds": 7192
+    },
+    {
+      "allocation": 4,
+      "partition": "dev_gpu_h100",
+      "new_responses": 22,
+      "state": "COMPLETED",
+      "elapsed_seconds": 1800,
+      "gpus": 4,
+      "gpu_seconds": 7200
+    },
+    {
+      "allocation": 5,
+      "partition": "dev_gpu_h100",
+      "new_responses": 18,
+      "state": "COMPLETED",
+      "elapsed_seconds": 1800,
+      "gpus": 4,
+      "gpu_seconds": 7200
+    },
+    {
+      "allocation": 6,
+      "partition": "dev_gpu_h100",
+      "new_responses": 21,
+      "state": "COMPLETED",
+      "elapsed_seconds": 1797,
+      "gpus": 4,
+      "gpu_seconds": 7188
+    },
+    {
+      "allocation": 7,
+      "partition": "dev_gpu_h100",
+      "new_responses": 12,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1804,
+      "gpus": 4,
+      "gpu_seconds": 7216
+    },
+    {
+      "allocation": 8,
+      "partition": "dev_gpu_h100",
+      "new_responses": 20,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1805,
+      "gpus": 4,
+      "gpu_seconds": 7220
+    },
+    {
+      "allocation": 9,
+      "partition": "dev_gpu_h100",
+      "new_responses": 9,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1806,
+      "gpus": 4,
+      "gpu_seconds": 7224
+    },
+    {
+      "allocation": 10,
+      "partition": "dev_gpu_h100",
+      "new_responses": 10,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1808,
+      "gpus": 4,
+      "gpu_seconds": 7232
+    },
+    {
+      "allocation": 11,
+      "partition": "dev_gpu_h100",
+      "new_responses": 5,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1813,
+      "gpus": 4,
+      "gpu_seconds": 7252
+    },
+    {
+      "allocation": 12,
+      "partition": "dev_gpu_h100",
+      "new_responses": 5,
+      "state": "FAILED",
+      "elapsed_seconds": 1183,
+      "gpus": 4,
+      "gpu_seconds": 4732
+    },
+    {
+      "allocation": 13,
+      "partition": "dev_gpu_h100",
+      "new_responses": 0,
+      "state": "COMPLETED",
+      "elapsed_seconds": 535,
+      "gpus": 4,
+      "gpu_seconds": 2140
+    },
+    {
+      "allocation": 14,
+      "partition": "dev_gpu_h100",
+      "new_responses": 12,
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1811,
+      "gpus": 4,
+      "gpu_seconds": 7244
+    },
+    {
+      "allocation": 15,
+      "partition": "dev_gpu_h100",
+      "new_responses": 6,
+      "state": "COMPLETED",
+      "elapsed_seconds": 1687,
+      "gpus": 4,
+      "gpu_seconds": 6748
+    }
+  ],
+  "continuation_gpu_seconds": 100216,
+  "sampling_pilot_gpu_seconds": 2940
+}

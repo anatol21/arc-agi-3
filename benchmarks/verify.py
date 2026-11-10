@@ -17,6 +17,13 @@ def main():
             if (Path(folder) / name).read_bytes() != (held_out / 'evidence' / name).read_bytes():
                 raise ValueError(f'Held-out result does not reproduce: {name}')
     print('Held-out results match the published summary and all 138 paired rows.', flush=True)
+    sampling = benchmarks / 'qwen3.8-flash-next/bf16-sampling'
+    with tempfile.TemporaryDirectory() as folder:
+        subprocess.run([sys.executable, sampling / 'report.py', '--out', folder], check=True)
+        for name in ('summary.json', 'paired-results.csv'):
+            if (Path(folder) / name).read_bytes() != (sampling / name).read_bytes():
+                raise ValueError(f'BF16 sampling result does not reproduce: {name}')
+    print('Verified BF16 sampling results for both strategies on all 138 tasks.', flush=True)
     refinement = benchmarks / 'qwen3.8-flash-next/python-refinement'
     for variant in ('thinking-on', 'serial-no-thinking', 'length-batched-no-thinking'):
         folder = refinement / variant

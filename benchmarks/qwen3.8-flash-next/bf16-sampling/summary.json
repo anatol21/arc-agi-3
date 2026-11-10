@@ -1,0 +1,54 @@
+{
+  "low_nucleus": {
+    "sampling": {
+      "seed": 42,
+      "temperature": 0.2,
+      "top_k": 0,
+      "top_p": 0.95
+    },
+    "tasks": 138,
+    "grids": 185,
+    "exact_task_ids": [
+      "4aab4007",
+      "c663677b",
+      "ca8f78db",
+      "e66aafb8",
+      "e95e3d8e"
+    ],
+    "exact_grids": 5,
+    "format_errors": 12,
+    "token_limited": 4
+  },
+  "instruct_sampling": {
+    "sampling": {
+      "seed": 42,
+      "temperature": 0.7,
+      "top_k": 20,
+      "top_p": 0.8
+    },
+    "tasks": 138,
+    "grids": 185,
+    "exact_task_ids": [
+      "4aab4007",
+      "c663677b",
+      "ca8f78db",
+      "e66aafb8",
+      "e95e3d8e"
+    ],
+    "exact_grids": 5,
+    "format_errors": 13,
+    "token_limited": 6
+  },
+  "paired": {
+    "both": [
+      "4aab4007",
+      "c663677b",
+      "ca8f78db",
+      "e66aafb8",
+      "e95e3d8e"
+    ],
+    "low_nucleus_only": [],
+    "instruct_sampling_only": [],
+    "neither": 133
+  }
+}
