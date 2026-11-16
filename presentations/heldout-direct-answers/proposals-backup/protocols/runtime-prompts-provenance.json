@@ -1,0 +1,29 @@
+{
+  "direct_128": "User content of all 128 development SFT records has the stored instruction prefix. Evaluation strips the assistant answer.",
+  "direct_138": "Fixed prefix plus compact train/test JSON as built in evaluation_data.render. Used in NF4 greedy and both BF16 sampling conditions. All twelve serialized BF16 pilot inputs checked against their actual saved messages. The other 126 are staged through the same sealed prompt bank.",
+  "python": "The held-out worker imports controller from arc-flash-python-nothink-v2. Its message text is retained while the tokenizer runs with enable_thinking=True, reasoning_effort=xhigh. The probe suffix and assistant/user observation history apply only before the first candidate. First-pass visible payload uses json.dumps(..., ensure_ascii=False), including default spaces. Context-limit retries can use compact serialization.",
+  "direct_file": "exact fixed user prefix includes final newline; no chat-template wrappers",
+  "solver_system_file": "exact shared system message, original line endings, before optional B suffix",
+  "probe_suffix_file": "exact B suffix, joined to system by a newline",
+  "source_sha256": {
+    "artifacts/cluster/arc-flash-eval138-v1/instruction.txt": "7551bb066bcd504feb550a4a2c12b5dd81c67f2fa6660e1da25edc6a47d7783f",
+    "artifacts/cluster/arc-flash-eval138-v1/evaluation_data.py": "fa0ece365245fb9fe0502866197737f3d8450b9cf9d5e553bdce5cf2c8e8cd12",
+    "artifacts/cluster/arc-agi3-data-v1/sft/dev.jsonl": "299dd859e3f48078d5f587183b90ae747ff16169693adcbe3395c6c59012705b",
+    "artifacts/cluster/arc-agi3-data-v1/evaluation/tasks.jsonl": "9f8493c03d11ee4c0d85b291d7bb527e733be4e6a92a0566e5ca41330f3cc6fd",
+    "artifacts/cluster/arc-bf16-sampling-debug-8488924/sampling-plan.json": "e0080c79c7979f9396851ceb8a48a2d79263058d2444e3da14f94c13ecc4c3b0",
+    "artifacts/cluster/arc-flash-python-nothink-v2/controller.py": "16a4eb791e752f802cd08e3bd79ff550acd80fa02146cfc8818248a171967b76",
+    "experiments/python_exploration_pilot/protocol_pilot.py": "abaac1e07046fa8e8101b90b7696d9256a5c89632abc9f4771a0b6be72df29ed",
+    "experiments/python_exploration_pilot/heldout/panel.py": "8f924b88f7f5ad9b0ec1905d2561048ee41032f9a4aad603f2aca4ed44ea0c43",
+    "experiments/python_exploration_pilot/worker.py": "f642e96c2a8f13f1f6782b070aec77edb46f8217d7a6a446f85252a45e453fe9",
+    "experiments/python_exploration_pilot/decoding.py": "9fbfee165bf1bac7369eb39d9ffa56091b986d56ce919e6b0586fffcfe6fe6a4",
+    "artifacts/cluster/arc-bf16-sampling-validation-v1/sample_cont_stage.py": "b239217bf97cc99f6298d8eb4a3443eb9626e91921e81d796333e1c98f45f7a0",
+    "artifacts/cluster/arc-bf16-sampling-validation-v1/continuation_stage.py": "56fc82c9aa5d370884d8b67add33a302b7dcedd9c248b2142cad846ac9bad2bd"
+  },
+  "saved_repair_journal_sha256": "9129cfef0a68f713bfced7039566fb892df1a2bcac9c8d390f028051a1526459",
+  "saved_repair_relative_path": "arc-python-heldout-length-v1/B/tasks/cbebaa4b.json",
+  "probe_reply_template": {
+    "if_one_call": "Python output:\n<observation>\nContinue.",
+    "if_two_calls": "Python output:\n<observation>\nReturn the complete solver in one fenced python block.",
+    "substitution": "<observation> replaced by returned console output or bounded error text (up to 256 tokens). No accepted calls in the snapshot. The two-call branch rebuilds both prior observation turns with the solver directive."
+  }
+}

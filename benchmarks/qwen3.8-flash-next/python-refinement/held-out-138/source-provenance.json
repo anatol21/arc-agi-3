@@ -1,0 +1,207 @@
+{
+  "python-first-pass/PROTOCOL.md": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/PROTOCOL.md",
+    "source_sha256": "145aba6fd0c95c17a264a916163eab832cda87b926f3766d4ec049ec6584d85f",
+    "published_sha256": "145aba6fd0c95c17a264a916163eab832cda87b926f3766d4ec049ec6584d85f"
+  },
+  "python-first-pass/build_maps.py": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/build_maps.py",
+    "source_sha256": "b80667c41ade1a67658bde3ba014d601a6862a016bb64e9b3344d6d46af4fabc",
+    "published_sha256": "b80667c41ade1a67658bde3ba014d601a6862a016bb64e9b3344d6d46af4fabc"
+  },
+  "python-first-pass/map-A.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/map-A.tex",
+    "source_sha256": "18703d4b91f86f7f69b30edfd415bdab07511e0a302b77dbd4dc41df29908adc",
+    "published_sha256": "18703d4b91f86f7f69b30edfd415bdab07511e0a302b77dbd4dc41df29908adc"
+  },
+  "python-first-pass/map-B.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/map-B.tex",
+    "source_sha256": "e4c46b4e2ba53f5dc2d1f6ac02b858cb199eb3311f367a3a10a441138c443d54",
+    "published_sha256": "e4c46b4e2ba53f5dc2d1f6ac02b858cb199eb3311f367a3a10a441138c443d54"
+  },
+  "python-first-pass/slides.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/slides.tex",
+    "source_sha256": "35c936c4197163f6646d310e7d43482bb4fe5f78a4659b12520448cbe4cd5e3e",
+    "published_sha256": "35c936c4197163f6646d310e7d43482bb4fe5f78a4659b12520448cbe4cd5e3e"
+  },
+  "python-first-pass/snapshot.json": {
+    "origin": "heldout-direct-answers-source.zip#python-first-pass/snapshot.json",
+    "source_sha256": "fea937b9678b0d112d0754b1d5b01c44ef459912044dbe11728277fd906edfde",
+    "published_sha256": "fea937b9678b0d112d0754b1d5b01c44ef459912044dbe11728277fd906edfde"
+  },
+  "python-case-audit/build_audit.py": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/build_audit.py",
+    "source_sha256": "ec12bf7a19ce8b207f4033c1f32ee22d6f70c681edfc4ea6874b59cc5fb388a5",
+    "published_sha256": "ec12bf7a19ce8b207f4033c1f32ee22d6f70c681edfc4ea6874b59cc5fb388a5"
+  },
+  "python-case-audit/case-records.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/case-records.json",
+    "source_sha256": "6e1f6c938865f19d5b3ac4f166a1388b76ccca783daef5fcf7e155be7ce0fb2d",
+    "published_sha256": "6e1f6c938865f19d5b3ac4f166a1388b76ccca783daef5fcf7e155be7ce0fb2d"
+  },
+  "python-case-audit/cases.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/cases.tex",
+    "source_sha256": "7adbc39ee87cb846f1badf98745369f082c9dcc429c3d179f0949a7c7346c4fe",
+    "published_sha256": "7adbc39ee87cb846f1badf98745369f082c9dcc429c3d179f0949a7c7346c4fe"
+  },
+  "python-case-audit/copied.pdf": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/copied.pdf",
+    "source_sha256": "c263aa14ceea8fbe09c053ed68a66b390b6dba966086fa6d7299e469db94c087",
+    "published_sha256": "c263aa14ceea8fbe09c053ed68a66b390b6dba966086fa6d7299e469db94c087"
+  },
+  "python-case-audit/counts.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/counts.json",
+    "source_sha256": "79df0e003374459f0d259aab571f0e9c0b820d728c3aea566c50138fc6496d93",
+    "published_sha256": "79df0e003374459f0d259aab571f0e9c0b820d728c3aea566c50138fc6496d93"
+  },
+  "python-case-audit/crosswalk.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/crosswalk.tex",
+    "source_sha256": "abc2027c786d1cc3717fb020e83df94ddc9c7fed98b3321708b50baf40619938",
+    "published_sha256": "abc2027c786d1cc3717fb020e83df94ddc9c7fed98b3321708b50baf40619938"
+  },
+  "python-case-audit/deadlines.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/deadlines.tex",
+    "source_sha256": "92113b1ffe6c76a24988cfd85c212a270d751c4c7ad7845e3733e8697e584bdf",
+    "published_sha256": "92113b1ffe6c76a24988cfd85c212a270d751c4c7ad7845e3733e8697e584bdf"
+  },
+  "python-case-audit/draw_grids.py": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/draw_grids.py",
+    "source_sha256": "0088dad200843cb56d1a688ecc9efa1e0207467e25b7a11c156d29b743073936",
+    "published_sha256": "0088dad200843cb56d1a688ecc9efa1e0207467e25b7a11c156d29b743073936"
+  },
+  "python-case-audit/e95e3d8e-B-candidate0.py": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/e95e3d8e-B-candidate0.py",
+    "source_sha256": "deb86e17f2e45e23d66cdeec5d34c9b14b5ac574c0bf2924beb894384dac9223",
+    "published_sha256": "deb86e17f2e45e23d66cdeec5d34c9b14b5ac574c0bf2924beb894384dac9223"
+  },
+  "python-case-audit/e95e3d8e-trace.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/e95e3d8e-trace.json",
+    "source_sha256": "18782557d0eb376a07cd3f31629868216c21924e7fac9187328104bfc0614d95",
+    "published_sha256": "18782557d0eb376a07cd3f31629868216c21924e7fac9187328104bfc0614d95"
+  },
+  "python-case-audit/failures.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/failures.tex",
+    "source_sha256": "6ab73b85d9ff20bdb45ce9bacb2399d7ce942e6964978179249c951cdb34154f",
+    "published_sha256": "6ab73b85d9ff20bdb45ce9bacb2399d7ce942e6964978179249c951cdb34154f"
+  },
+  "python-case-audit/figures.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/figures.json",
+    "source_sha256": "ea6b5403dcc1166632cd8e47c5a6183d3bbbc0b4da10bd17ef02fab4f444aa14",
+    "published_sha256": "ea6b5403dcc1166632cd8e47c5a6183d3bbbc0b4da10bd17ef02fab4f444aa14"
+  },
+  "python-case-audit/per-task-audit.csv": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/per-task-audit.csv",
+    "source_sha256": "7e0ba8928dccbd09c5972cab2804e8d56206f4b80100c1f6ee3c2c4d61fbf85f",
+    "published_sha256": "7e0ba8928dccbd09c5972cab2804e8d56206f4b80100c1f6ee3c2c4d61fbf85f"
+  },
+  "python-case-audit/prefix-markers.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/prefix-markers.json",
+    "source_sha256": "422751a21d689e34de650f9a7addffd8a7c329565b36ae24deeb796aa35665f9",
+    "published_sha256": "422751a21d689e34de650f9a7addffd8a7c329565b36ae24deeb796aa35665f9"
+  },
+  "python-case-audit/prior-results.json": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/prior-results.json",
+    "source_sha256": "0f91d813d22ea41f04e01ceaad1706f7b0453917d4629e3e305ecc593b856c1b",
+    "published_sha256": "0f91d813d22ea41f04e01ceaad1706f7b0453917d4629e3e305ecc593b856c1b"
+  },
+  "python-case-audit/solution.tex": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/solution.tex",
+    "source_sha256": "f28eb243ef517464ca17f471333bee012bc3eb806cc055b7f4c53a5bcc81ece8",
+    "published_sha256": "f28eb243ef517464ca17f471333bee012bc3eb806cc055b7f4c53a5bcc81ece8"
+  },
+  "python-case-audit/solved-tile.pdf": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/solved-tile.pdf",
+    "source_sha256": "ca12a173b4b495ad89dc09369de3ed7ccfba79fe16a0b1028fb769444c8e2418",
+    "published_sha256": "ca12a173b4b495ad89dc09369de3ed7ccfba79fe16a0b1028fb769444c8e2418"
+  },
+  "python-case-audit/wrong-cells.pdf": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/wrong-cells.pdf",
+    "source_sha256": "3d8bfbe237ee91d891b51d8ead8d6548e2a4c1625fbc66fe0461fc68e57d52f3",
+    "published_sha256": "3d8bfbe237ee91d891b51d8ead8d6548e2a4c1625fbc66fe0461fc68e57d52f3"
+  },
+  "python-case-audit/wrong-size.pdf": {
+    "origin": "heldout-direct-answers-source.zip#python-case-audit/wrong-size.pdf",
+    "source_sha256": "9d3a517d5d275ca9ed36f1447d13fa67bbcb7b8d4a886c36e3cace0c90aed653",
+    "published_sha256": "9d3a517d5d275ca9ed36f1447d13fa67bbcb7b8d4a886c36e3cace0c90aed653"
+  },
+  "producer/arc-python-heldout-length-v1/debug.sbatch": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/debug.sbatch",
+    "source_sha256": "41b008daeff9c66bf73afaf55a66c6486f302980b41ee2c4bfca71a02fc76147",
+    "published_sha256": "aa61fc7513bb0609ef280a10c8c3c3e1e7be867014ebf6a485fe5f9ec7099a40"
+  },
+  "producer/arc-python-heldout-length-v1/decoding.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/decoding.py",
+    "source_sha256": "14fdaac562d482dd180b1e9ff0fa7c5fb7353724a4c522af40da56ed8f7972da",
+    "published_sha256": "14fdaac562d482dd180b1e9ff0fa7c5fb7353724a4c522af40da56ed8f7972da"
+  },
+  "producer/arc-python-heldout-length-v1/launch.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/launch.py",
+    "source_sha256": "5de4b33ed6703aaf4f942125120429af380f6c8865d9146c08bede64eacbedff",
+    "published_sha256": "5de4b33ed6703aaf4f942125120429af380f6c8865d9146c08bede64eacbedff"
+  },
+  "producer/arc-python-heldout-length-v1/memory_preflight.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/memory_preflight.py",
+    "source_sha256": "59757ee90d053a8c10917e709fac1d244b91d22513c09bb65f866189cb649a87",
+    "published_sha256": "59757ee90d053a8c10917e709fac1d244b91d22513c09bb65f866189cb649a87"
+  },
+  "producer/arc-python-heldout-length-v1/panel.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/panel.py",
+    "source_sha256": "8f924b88f7f5ad9b0ec1905d2561048ee41032f9a4aad603f2aca4ed44ea0c43",
+    "published_sha256": "8f924b88f7f5ad9b0ec1905d2561048ee41032f9a4aad603f2aca4ed44ea0c43"
+  },
+  "producer/arc-python-heldout-length-v1/protocol_pilot.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/protocol_pilot.py",
+    "source_sha256": "6f1ebd1cb4b382949481420ea26c942cd24c4807fdf7982fec94bcae8248169c",
+    "published_sha256": "6f1ebd1cb4b382949481420ea26c942cd24c4807fdf7982fec94bcae8248169c"
+  },
+  "producer/arc-python-heldout-length-v1/reference.json": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/reference.json",
+    "source_sha256": "29acb85f74030bdf3b4f90d5c5fa49a94138677456ea91dd6f600312848c6b37",
+    "published_sha256": "29acb85f74030bdf3b4f90d5c5fa49a94138677456ea91dd6f600312848c6b37"
+  },
+  "producer/arc-python-heldout-length-v1/retry30.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/retry30.py",
+    "source_sha256": "9b7ce66e9d8c07615aa5a607209d6aeae2cfd75c623a2b2855a2e0600e8e7174",
+    "published_sha256": "9b7ce66e9d8c07615aa5a607209d6aeae2cfd75c623a2b2855a2e0600e8e7174"
+  },
+  "producer/arc-python-heldout-length-v1/retry30.sbatch": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/retry30.sbatch",
+    "source_sha256": "07c4d4cb7d96e95c842c88b2d5be401c54f3cf12d3f15cf01167659faad9ff77",
+    "published_sha256": "781005001a0bd124755d144d46ea6b25fc9ce8c80d2d586c73802e5fb1c40cc6"
+  },
+  "producer/arc-python-heldout-length-v1/score.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/score.py",
+    "source_sha256": "136a88a34e2c6ec20e627e161394d333ddbcfa33479885485711994007a369a1",
+    "published_sha256": "136a88a34e2c6ec20e627e161394d333ddbcfa33479885485711994007a369a1"
+  },
+  "producer/arc-python-heldout-length-v1/visible.jsonl": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/visible.jsonl",
+    "source_sha256": "9f8493c03d11ee4c0d85b291d7bb527e733be4e6a92a0566e5ca41330f3cc6fd",
+    "published_sha256": "9f8493c03d11ee4c0d85b291d7bb527e733be4e6a92a0566e5ca41330f3cc6fd"
+  },
+  "producer/arc-python-heldout-length-v1/watch.sbatch": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/watch.sbatch",
+    "source_sha256": "a31e9dd4ae310a5bbd7bd2ee31750e902f2f594f70ac63c83dffd9a82b8df498",
+    "published_sha256": "1ac3c02c828f89e74b78b2b7cbc48dad2356e19194961f5643d6bcc127d3d8e1"
+  },
+  "producer/arc-python-heldout-length-v1/worker.py": {
+    "origin": "local held-out deployment generator#arc-python-heldout-length-v1/worker.py",
+    "source_sha256": "333167bc5e9507538c88757353078d090f7464880ac401376c350288b29c7378",
+    "published_sha256": "333167bc5e9507538c88757353078d090f7464880ac401376c350288b29c7378"
+  },
+  "producer/arc-flash-cache-pilot-v1/stage.py": {
+    "origin": "artifacts/cluster/arc-flash-cache-pilot-v1/stage.py",
+    "source_sha256": "a37ecb39c4d7089feefe787166f8e8002a8728b0c57ef55d9c265d398059c896",
+    "published_sha256": "a37ecb39c4d7089feefe787166f8e8002a8728b0c57ef55d9c265d398059c896"
+  },
+  "producer/arc-flash-cache-pilot-v1/runtime.py": {
+    "origin": "artifacts/cluster/arc-flash-cache-pilot-v1/runtime.py",
+    "source_sha256": "5ec597509c33ffc942b790452179a4b0252351fd2d9b7224aaa80d7c73c8556a",
+    "published_sha256": "5ec597509c33ffc942b790452179a4b0252351fd2d9b7224aaa80d7c73c8556a"
+  },
+  "producer/arc-python-base-speed-v1/cold.py": {
+    "origin": "experiments/cluster_python_base_speed/cold.py",
+    "source_sha256": "babe5179c738d0307df72b4255f779ec8165c2e09767e1490b4a4357974663c2",
+    "published_sha256": "babe5179c738d0307df72b4255f779ec8165c2e09767e1490b4a4357974663c2"
+  }
+}

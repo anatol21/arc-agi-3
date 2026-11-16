@@ -1,0 +1,247 @@
+{
+  "producer/worker.py": {
+    "origin": "experiments/python_exploration_pilot/worker.py",
+    "source_sha256": "f642e96c2a8f13f1f6782b070aec77edb46f8217d7a6a446f85252a45e453fe9",
+    "published_sha256": "f642e96c2a8f13f1f6782b070aec77edb46f8217d7a6a446f85252a45e453fe9"
+  },
+  "producer/preflight_panel.py": {
+    "origin": "experiments/python_exploration_pilot/preflight_panel.py",
+    "source_sha256": "29e89d28b6f460ca342cf69079617b89958c63a35cb670e22ff487553fed6fce",
+    "published_sha256": "29e89d28b6f460ca342cf69079617b89958c63a35cb670e22ff487553fed6fce"
+  },
+  "producer/debug.sbatch": {
+    "origin": "experiments/python_exploration_pilot/debug.sbatch",
+    "source_sha256": "9d4efa5fdfdee28712c4ec3a057565d32b4af8a6a26d32ce912ba0375580f5e2",
+    "published_sha256": "655ff390febc921108b8d7986413f3dc972ed44f71a0c0591ebeb7dfce869cdd"
+  },
+  "producer/decoding.py": {
+    "origin": "experiments/python_exploration_pilot/decoding.py",
+    "source_sha256": "9fbfee165bf1bac7369eb39d9ffa56091b986d56ce919e6b0586fffcfe6fe6a4",
+    "published_sha256": "9fbfee165bf1bac7369eb39d9ffa56091b986d56ce919e6b0586fffcfe6fe6a4"
+  },
+  "producer/reference.json": {
+    "origin": "experiments/python_exploration_pilot/reference.json",
+    "source_sha256": "29acb85f74030bdf3b4f90d5c5fa49a94138677456ea91dd6f600312848c6b37",
+    "published_sha256": "29acb85f74030bdf3b4f90d5c5fa49a94138677456ea91dd6f600312848c6b37"
+  },
+  "producer/README.md": {
+    "origin": "experiments/python_exploration_pilot/README.md",
+    "source_sha256": "383b98b0fce6bba0538602f812016a7cb284e85901ebc72b07817d99f34c72c6",
+    "published_sha256": "383b98b0fce6bba0538602f812016a7cb284e85901ebc72b07817d99f34c72c6"
+  },
+  "producer/test_pilot.py": {
+    "origin": "experiments/python_exploration_pilot/test_pilot.py",
+    "source_sha256": "d41d122c2b04df43bb686a64f82b1e19ade5ab3161d953f2d5698315c561caf4",
+    "published_sha256": "d41d122c2b04df43bb686a64f82b1e19ade5ab3161d953f2d5698315c561caf4"
+  },
+  "producer/memory_preflight.py": {
+    "origin": "experiments/python_exploration_pilot/memory_preflight.py",
+    "source_sha256": "59757ee90d053a8c10917e709fac1d244b91d22513c09bb65f866189cb649a87",
+    "published_sha256": "59757ee90d053a8c10917e709fac1d244b91d22513c09bb65f866189cb649a87"
+  },
+  "producer/replay.py": {
+    "origin": "experiments/python_exploration_pilot/replay.py",
+    "source_sha256": "b9825d26726036d1706b1a8694ad63669bdb374abf73a9db59bcf971e24223d9",
+    "published_sha256": "b9825d26726036d1706b1a8694ad63669bdb374abf73a9db59bcf971e24223d9"
+  },
+  "producer/launch.py": {
+    "origin": "experiments/python_exploration_pilot/launch.py",
+    "source_sha256": "844a4e68311fac97fd2786cc71836a82848c9148f32ca9c90d4a6325777fb5df",
+    "published_sha256": "844a4e68311fac97fd2786cc71836a82848c9148f32ca9c90d4a6325777fb5df"
+  },
+  "producer/protocol_pilot.py": {
+    "origin": "experiments/python_exploration_pilot/protocol_pilot.py",
+    "source_sha256": "abaac1e07046fa8e8101b90b7696d9256a5c89632abc9f4771a0b6be72df29ed",
+    "published_sha256": "abaac1e07046fa8e8101b90b7696d9256a5c89632abc9f4771a0b6be72df29ed"
+  },
+  "producer/watch.sbatch": {
+    "origin": "experiments/python_exploration_pilot/watch.sbatch",
+    "source_sha256": "ea9ab97af1256fdbb1c765df5c8987c9a1f886a7f0991b7200009db76fb666c0",
+    "published_sha256": "239a0026c786afa488046f0a69f8f36d8bd5732548150a49f3d2cd98d8f03000"
+  },
+  "producer/PLAN.md": {
+    "origin": "experiments/python_exploration_pilot/PLAN.md",
+    "source_sha256": "f48208590ce0e9a99ddeb115d612238f58705d04b3c3426539a55267dacf038d",
+    "published_sha256": "f48208590ce0e9a99ddeb115d612238f58705d04b3c3426539a55267dacf038d"
+  },
+  "producer/verify_code_resume.py": {
+    "origin": "experiments/python_exploration_pilot/verify_code_resume.py",
+    "source_sha256": "81360dbffa7b4582b9267cf8c3c2a2fcc84807dbba4e7c319b045bcc6af17dd6",
+    "published_sha256": "81360dbffa7b4582b9267cf8c3c2a2fcc84807dbba4e7c319b045bcc6af17dd6"
+  },
+  "producer/report.py": {
+    "origin": "experiments/python_exploration_pilot/report.py",
+    "source_sha256": "3ee5e9e7b03319040de726c90a58de4e0c55de909a56e7c3ebc5f06f7af9122d",
+    "published_sha256": "3ee5e9e7b03319040de726c90a58de4e0c55de909a56e7c3ebc5f06f7af9122d"
+  },
+  "producer/heldout/package.py": {
+    "origin": "experiments/python_exploration_pilot/heldout/package.py",
+    "source_sha256": "288c66934aa68907a36614ea27d21540a9293ff7d59166ebfafc26d6849e0ceb",
+    "published_sha256": "288c66934aa68907a36614ea27d21540a9293ff7d59166ebfafc26d6849e0ceb"
+  },
+  "producer/heldout/retry30.py": {
+    "origin": "experiments/python_exploration_pilot/heldout/retry30.py",
+    "source_sha256": "9b7ce66e9d8c07615aa5a607209d6aeae2cfd75c623a2b2855a2e0600e8e7174",
+    "published_sha256": "9b7ce66e9d8c07615aa5a607209d6aeae2cfd75c623a2b2855a2e0600e8e7174"
+  },
+  "producer/heldout/launch.py": {
+    "origin": "experiments/python_exploration_pilot/heldout/launch.py",
+    "source_sha256": "5de4b33ed6703aaf4f942125120429af380f6c8865d9146c08bede64eacbedff",
+    "published_sha256": "5de4b33ed6703aaf4f942125120429af380f6c8865d9146c08bede64eacbedff"
+  },
+  "producer/heldout/PLAN.md": {
+    "origin": "experiments/python_exploration_pilot/heldout/PLAN.md",
+    "source_sha256": "145aba6fd0c95c17a264a916163eab832cda87b926f3766d4ec049ec6584d85f",
+    "published_sha256": "145aba6fd0c95c17a264a916163eab832cda87b926f3766d4ec049ec6584d85f"
+  },
+  "producer/heldout/panel.py": {
+    "origin": "experiments/python_exploration_pilot/heldout/panel.py",
+    "source_sha256": "8f924b88f7f5ad9b0ec1905d2561048ee41032f9a4aad603f2aca4ed44ea0c43",
+    "published_sha256": "8f924b88f7f5ad9b0ec1905d2561048ee41032f9a4aad603f2aca4ed44ea0c43"
+  },
+  "producer/heldout/score.py": {
+    "origin": "experiments/python_exploration_pilot/heldout/score.py",
+    "source_sha256": "136a88a34e2c6ec20e627e161394d333ddbcfa33479885485711994007a369a1",
+    "published_sha256": "136a88a34e2c6ec20e627e161394d333ddbcfa33479885485711994007a369a1"
+  },
+  "producer/forced_code/package.py": {
+    "origin": "experiments/python_exploration_pilot/forced_code/package.py",
+    "source_sha256": "99ee15e6a4526fb195f7cc9782f1d17ec8ffcb4f27af0e8ba8f49d910162f3d7",
+    "published_sha256": "99ee15e6a4526fb195f7cc9782f1d17ec8ffcb4f27af0e8ba8f49d910162f3d7"
+  },
+  "producer/forced_code/budget.py": {
+    "origin": "experiments/python_exploration_pilot/forced_code/budget.py",
+    "source_sha256": "f923431b15ba7e079186ba7341f7bc749035ae3b07a190c88979e5b3ecb5ea88",
+    "published_sha256": "f923431b15ba7e079186ba7341f7bc749035ae3b07a190c88979e5b3ecb5ea88"
+  },
+  "producer/forced_code/continuation.py": {
+    "origin": "experiments/python_exploration_pilot/forced_code/continuation.py",
+    "source_sha256": "1d42475f0ee03a6f0eb6a5ef29cba829345d3f7c0549d012a328d72e0ee4d09b",
+    "published_sha256": "1d42475f0ee03a6f0eb6a5ef29cba829345d3f7c0549d012a328d72e0ee4d09b"
+  },
+  "evidence/paired-blocks/AX/allocation.json": {
+    "origin": "original paired block journals#AX/allocation.json",
+    "source_sha256": "6311810d39c04cab59c33b6a0d1645d67471e1db3dcfd320ddc05c1fa492f8e8",
+    "published_sha256": "6311810d39c04cab59c33b6a0d1645d67471e1db3dcfd320ddc05c1fa492f8e8"
+  },
+  "evidence/paired-blocks/BX/allocation.json": {
+    "origin": "original paired block journals#BX/allocation.json",
+    "source_sha256": "96914c6b78d9c14badd0a97e49966ca49aa1b49f9930ec9f40f333ae75ecde65",
+    "published_sha256": "96914c6b78d9c14badd0a97e49966ca49aa1b49f9930ec9f40f333ae75ecde65"
+  },
+  "evidence/paired-blocks/AY/allocation.json": {
+    "origin": "original paired block journals#AY/allocation.json",
+    "source_sha256": "fdf9f149c06ad80e43309ad38367f25966e808a26190c4c1069f48bfc7391909",
+    "published_sha256": "fdf9f149c06ad80e43309ad38367f25966e808a26190c4c1069f48bfc7391909"
+  },
+  "evidence/paired-blocks/BY/allocation.json": {
+    "origin": "original paired block journals#BY/allocation.json",
+    "source_sha256": "a62ebbeb6d001026f316c7ed08d1e060e764053f6246f4ff9869c62de764276f",
+    "published_sha256": "a62ebbeb6d001026f316c7ed08d1e060e764053f6246f4ff9869c62de764276f"
+  },
+  "evidence/paired-blocks/AX/tasks/1b60fb0c.json": {
+    "origin": "original paired block journals#AX/tasks/1b60fb0c.json",
+    "source_sha256": "9e612ed6010a072450de7a7c2f4bc26a799b1d5942c8cdedb199dade73f49678",
+    "published_sha256": "9e612ed6010a072450de7a7c2f4bc26a799b1d5942c8cdedb199dade73f49678"
+  },
+  "evidence/paired-blocks/AX/tasks/29c11459.json": {
+    "origin": "original paired block journals#AX/tasks/29c11459.json",
+    "source_sha256": "3df59c82613de000e6b74f9a66e30656a677710ec2de2c058af73ddee186444f",
+    "published_sha256": "3df59c82613de000e6b74f9a66e30656a677710ec2de2c058af73ddee186444f"
+  },
+  "evidence/paired-blocks/AX/tasks/342dd610.json": {
+    "origin": "original paired block journals#AX/tasks/342dd610.json",
+    "source_sha256": "5fadbc3c4a05ec82f7ec0d589770c0238a3236e77f6d187406b59170851231e3",
+    "published_sha256": "5fadbc3c4a05ec82f7ec0d589770c0238a3236e77f6d187406b59170851231e3"
+  },
+  "evidence/paired-blocks/AX/tasks/6455b5f5.json": {
+    "origin": "original paired block journals#AX/tasks/6455b5f5.json",
+    "source_sha256": "a49265e9133d8634125777d1b072432e254a6e728197144b5685e558a3712b49",
+    "published_sha256": "a49265e9133d8634125777d1b072432e254a6e728197144b5685e558a3712b49"
+  },
+  "evidence/paired-blocks/BX/tasks/1b60fb0c.json": {
+    "origin": "original paired block journals#BX/tasks/1b60fb0c.json",
+    "source_sha256": "9f1db9b3ae8d9c6785fc0a2fdd821f357623b6056d2b6807b7cdb61567c79d66",
+    "published_sha256": "9f1db9b3ae8d9c6785fc0a2fdd821f357623b6056d2b6807b7cdb61567c79d66"
+  },
+  "evidence/paired-blocks/BX/tasks/29c11459.json": {
+    "origin": "original paired block journals#BX/tasks/29c11459.json",
+    "source_sha256": "29862cbc60d1516185aaae552c30442287055feb357ce01c9072b2f4a8c596f6",
+    "published_sha256": "29862cbc60d1516185aaae552c30442287055feb357ce01c9072b2f4a8c596f6"
+  },
+  "evidence/paired-blocks/BX/tasks/342dd610.json": {
+    "origin": "original paired block journals#BX/tasks/342dd610.json",
+    "source_sha256": "1c0cdb55cf0c6dca90f16bdb4a5ec04247218d57cce86c5a92f584a1d5c2fd06",
+    "published_sha256": "1c0cdb55cf0c6dca90f16bdb4a5ec04247218d57cce86c5a92f584a1d5c2fd06"
+  },
+  "evidence/paired-blocks/BX/tasks/6455b5f5.json": {
+    "origin": "original paired block journals#BX/tasks/6455b5f5.json",
+    "source_sha256": "a99955fe90654d404cb2f38da305f57b7c402ab50acd24fad1eeea8047344800",
+    "published_sha256": "a99955fe90654d404cb2f38da305f57b7c402ab50acd24fad1eeea8047344800"
+  },
+  "evidence/paired-blocks/AY/tasks/5792cb4d.json": {
+    "origin": "original paired block journals#AY/tasks/5792cb4d.json",
+    "source_sha256": "14d8e147404b44b795174611c70afce806f5e5771cb204c5a1fd9a2ccb9ff3e7",
+    "published_sha256": "14d8e147404b44b795174611c70afce806f5e5771cb204c5a1fd9a2ccb9ff3e7"
+  },
+  "evidence/paired-blocks/AY/tasks/6ca952ad.json": {
+    "origin": "original paired block journals#AY/tasks/6ca952ad.json",
+    "source_sha256": "d5cad4b7df90d9fd7899991a89c7eec10cbf22aa88b6cb09527fac2b0909c89b",
+    "published_sha256": "d5cad4b7df90d9fd7899991a89c7eec10cbf22aa88b6cb09527fac2b0909c89b"
+  },
+  "evidence/paired-blocks/AY/tasks/d93c6891.json": {
+    "origin": "original paired block journals#AY/tasks/d93c6891.json",
+    "source_sha256": "85daa8bf6fb081da73409cea312db0692538cb099da57cee4fd92b32a7a3e3f7",
+    "published_sha256": "85daa8bf6fb081da73409cea312db0692538cb099da57cee4fd92b32a7a3e3f7"
+  },
+  "evidence/paired-blocks/AY/tasks/e633a9e5.json": {
+    "origin": "original paired block journals#AY/tasks/e633a9e5.json",
+    "source_sha256": "6f12fb9d41bd28633d3b10137225fd0fed3bc9e2f55d80e5f4cb16829a6203c8",
+    "published_sha256": "6f12fb9d41bd28633d3b10137225fd0fed3bc9e2f55d80e5f4cb16829a6203c8"
+  },
+  "evidence/paired-blocks/BY/tasks/5792cb4d.json": {
+    "origin": "original paired block journals#BY/tasks/5792cb4d.json",
+    "source_sha256": "1de550ebdc9037f27336dea098a62f840c55556f345a276f46f627486add04a3",
+    "published_sha256": "1de550ebdc9037f27336dea098a62f840c55556f345a276f46f627486add04a3"
+  },
+  "evidence/paired-blocks/BY/tasks/6ca952ad.json": {
+    "origin": "original paired block journals#BY/tasks/6ca952ad.json",
+    "source_sha256": "ac4662487351acb867fc9c3b319343fff621ee2e1a4f80223bcf643afa56a350",
+    "published_sha256": "ac4662487351acb867fc9c3b319343fff621ee2e1a4f80223bcf643afa56a350"
+  },
+  "evidence/paired-blocks/BY/tasks/d93c6891.json": {
+    "origin": "original paired block journals#BY/tasks/d93c6891.json",
+    "source_sha256": "5d2a14fe14c1f0bed3206c8e2667d1ae91856ffe7eeb2d74a1238b2494149eb7",
+    "published_sha256": "5d2a14fe14c1f0bed3206c8e2667d1ae91856ffe7eeb2d74a1238b2494149eb7"
+  },
+  "evidence/paired-blocks/BY/tasks/e633a9e5.json": {
+    "origin": "original paired block journals#BY/tasks/e633a9e5.json",
+    "source_sha256": "c27944ce450a2a10114e84a3201a38f76f9c9d5df8b0a71b5b9babdfc90e1c66",
+    "published_sha256": "c27944ce450a2a10114e84a3201a38f76f9c9d5df8b0a71b5b9babdfc90e1c66"
+  },
+  "evidence/forced-code-AX/29c11459.json": {
+    "origin": "artifacts/cluster/arc-forced-code-8583418/29c11459.json",
+    "source_sha256": "aa8488ed2e96bd5ffc421733974395ea094b7accaa5f06f285d191572f812abc",
+    "published_sha256": "aa8488ed2e96bd5ffc421733974395ea094b7accaa5f06f285d191572f812abc"
+  },
+  "evidence/forced-code-AX/29c11459.py": {
+    "origin": "artifacts/cluster/arc-forced-code-8583418/29c11459.py",
+    "source_sha256": "7653864386b1403790ec6bcd3ffb06708df852c9068460c70ca086cae806aeab",
+    "published_sha256": "7653864386b1403790ec6bcd3ffb06708df852c9068460c70ca086cae806aeab"
+  },
+  "evidence/forced-code-AX/342dd610.json": {
+    "origin": "artifacts/cluster/arc-forced-code-8583418/342dd610.json",
+    "source_sha256": "2c7a5347d9b2b09c00daa8408e129e156ae5d5c88212efae281c6bb45c89f6c1",
+    "published_sha256": "2c7a5347d9b2b09c00daa8408e129e156ae5d5c88212efae281c6bb45c89f6c1"
+  },
+  "evidence/forced-code-AX/342dd610.py": {
+    "origin": "artifacts/cluster/arc-forced-code-8583418/342dd610.py",
+    "source_sha256": "49814852143aa8663fa398b999d7b0c1c788a5e52a589acf44879066bcff22f7",
+    "published_sha256": "49814852143aa8663fa398b999d7b0c1c788a5e52a589acf44879066bcff22f7"
+  },
+  "evidence/forced-code-AX/allocation.json": {
+    "origin": "artifacts/cluster/arc-forced-code-8583418/allocation.json",
+    "source_sha256": "2380a23074e515783b8027e1d489dd14f284be79336ecb0dd9ce85d45dd07688",
+    "published_sha256": "2380a23074e515783b8027e1d489dd14f284be79336ecb0dd9ce85d45dd07688"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "path": "artifacts/arc_practice/full-validation-2x-20261016/cancelled-batch.json",
+      "sha256": "718927b72fb8c4f89cd02de3b82d3ab4b2049122b5de486817db5cde44668ffd"
+    },
+    {
+      "path": "artifacts/arc_practice/full-validation-2x-20261016/completed-validation-20261016T183455Z.json",
+      "sha256": "be3367ed469e2476c35df8fd7d0481c814544a2781e796232bcb01a4c043d1fa"
+    }
+  ],
+  "prompt_and_setting_identity_between_initial_and_continuation": true,
+  "conditions": 5,
+  "task_counts": [
+    2,
+    136
+  ],
+  "total_validation_tasks": 138,
+  "model": "qwen/qwen3.8-flash",
+  "complete_task_specific_wire_prompts_reconstructed": false
+}

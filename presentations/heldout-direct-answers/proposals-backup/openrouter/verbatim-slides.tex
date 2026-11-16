@@ -1,0 +1,649 @@
+% Full verbatim fields from saved-experiment-configurations.json.
+% Visual line wrapping, paragraph spacing and column breaks are typesetting only.
+\begingroup
+\renewcommand{\sectiontag}{Backup\quad Historical OpenRouter prompts}
+\renewcommand{\readurl}{run:proposals-backup/openrouter/full-prompts.pdf}
+\renewcommand{\readsource}{Saved prompt fields}
+\newcommand{\orText}[1]{\noindent\mbox{\strut #1}\par}
+\newcommand{\orGap}{\vspace{1.2mm}}
+
+\begin{frame}[t]{Python synthesis and refinement\enspace {\color{muted}\fontsize{16}{18}\selectfont shared core\enspace 1/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{You\ are\ an\ expert\ solver\ of\ Abstract\ Reasoning}
+\orText{Corpus\ (ARC-AGI)\ tasks.}
+\orGap
+\orText{Each\ task\ contains\ training\ examples}
+\orText{consisting\ of\ input\ and\ output\ grids,\ followed}
+\orText{by\ one\ or\ more\ unseen\ test\ inputs.}
+\orGap
+\orText{Your\ objective\ is\ to\ infer\ a\ single\ general}
+\orText{transformation\ rule\ that\ explains\ every}
+\orText{training\ example\ and\ apply\ that\ rule\ to\ every}
+\orText{test\ input.}
+\orGap
+\orText{Reason\ about\ the\ task\ as\ a\ program\ synthesis}
+\orText{problem.\ A\ useful\ conceptual\ representation}
+\orText{is:}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{def\ solve(grid):}
+\orText{\ \ \ \ ...}
+\orGap
+\orText{The\ inferred\ transformation\ must\ reproduce}
+\orText{every\ training\ output\ exactly.}
+\orGap
+\orText{When\ searching\ for\ a\ transformation,\ consider}
+\orText{operations\ such\ as:}
+\orGap
+\orText{-\ Cropping,\ extraction,\ and\ connected}
+\orText{components}
+\orText{-\ Object\ detection,\ counting,\ grouping,\ and}
+\orText{filtering}
+\orText{-\ Reflection,\ rotation,\ translation,\ and}
+\orText{scaling}
+\orText{-\ Pattern\ repetition,\ tiling,\ and\ symmetry}
+\orText{-\ Color\ mapping\ and\ conditional\ recoloring}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Python synthesis and refinement\enspace {\color{muted}\fontsize{16}{18}\selectfont shared core\enspace 2/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{-\ Object\ relationships\ and\ relative\ positions}
+\orText{-\ Row\ and\ column\ operations}
+\orText{-\ Copying,\ extending,\ completing,\ or\ moving}
+\orText{patterns}
+\orText{-\ Compositions\ of\ multiple\ transformations}
+\orGap
+\orText{Do\ not\ assume\ that\ input\ and\ output\ dimensions}
+\orText{are\ equal.}
+\orText{Do\ not\ assume\ that\ the\ input\ should\ be\ copied}
+\orText{unchanged.}
+\orText{Do\ not\ infer\ rules\ from\ the\ test\ input\ that}
+\orText{contradict\ the\ training\ examples.}
+\orGap
+\orText{Prefer\ concise,\ generalizable\ transformations}
+\orText{over\ rules\ containing\ arbitrary\ special\ cases.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{Before\ answering,\ verify\ that\ your\ inferred}
+\orText{rule\ is\ consistent\ with\ every\ training}
+\orText{example.}
+\orGap
+\orText{Your\ final\ response\ must\ contain\ ONLY\ a\ valid}
+\orText{JSON\ object\ of\ the\ following\ form:}
+\orGap
+\orText{\{"outputs":\ [[[0]]]\}}
+\orGap
+\orText{Replace\ the\ example\ grid\ with\ the\ actual}
+\orText{predicted\ output\ grids.}
+\orGap
+\orText{The\ outputs\ array\ must\ contain\ exactly\ one}
+\orText{rectangular\ grid\ for\ each\ test\ input,}
+\orText{preserving\ their\ order.}
+\orGap
+\orText{Do\ not\ output\ Python\ code,\ reasoning,}
+\orText{explanations,\ markdown,\ or\ additional\ JSON}
+\orText{fields\ in\ the\ final\ answer.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Zero-shot Python synthesis\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 1/1}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\orText{ZERO-SHOT\ PROGRAM\ SYNTHESIS}
+\orGap
+\orText{Solve\ the\ task\ without\ relying\ on\ any\ demonstration\ from\ another\ ARC\ problem.}
+\orGap
+\orText{Internally:}
+\orGap
+\orText{1.\ Analyze\ all\ training\ input-output\ pairs.}
+\orText{2.\ Infer\ candidate\ transformations.}
+\orText{3.\ Express\ the\ strongest\ candidate\ conceptually\ as\ a\ deterministic\ solve(grid)\ program.}
+\orText{4.\ Check\ whether\ that\ program\ reproduces\ every\ training\ output\ exactly.}
+\orText{5.\ Reject\ or\ revise\ any\ candidate\ that\ fails\ even\ one\ training\ example.}
+\orText{6.\ Prefer\ the\ simplest\ fully\ consistent\ program.}
+\orText{7.\ Apply\ the\ resulting\ program\ to\ each\ test\ input.}
+\orGap
+\orText{Do\ not\ commit\ to\ the\ first\ visually\ plausible\ pattern.\ Validate\ the\ transformation\ globally}
+\orText{across\ all\ training\ examples\ before\ producing\ the\ final\ prediction.}
+\end{frame}
+\begin{frame}[t]{One-shot Python synthesis\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 1/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{ONE-SHOT\ PROGRAM\ SYNTHESIS}
+\orGap
+\orText{The\ following\ solved\ ARC\ example\ demonstrates}
+\orText{the\ desired\ problem-solving\ procedure.}
+\orGap
+\orText{The\ transformation\ shown\ in\ this\ example\ is}
+\orText{specific\ to\ that\ task.\ Do\ NOT\ assume\ that\ the}
+\orText{new\ task\ uses\ reflection,\ repetition,\ tiling,}
+\orText{or\ any\ other\ operation\ from\ the\ demonstration}
+\orText{unless\ its\ own\ training\ examples\ independently}
+\orText{justify\ it.}
+\orGap
+\orText{EXAMPLE\ TASK}
+\orGap
+\orText{\{}
+\orText{\ \ "train":\ [}
+\orText{\ \ \ \ \{}
+\orText{\ \ \ \ \ \ "input":\ [[8,6],[6,4]],}
+\orText{\ \ \ \ \ \ "output":\ [}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{\ \ \ \ \ \ \ \ [8,6,8,6,8,6],}
+\orText{\ \ \ \ \ \ \ \ [6,4,6,4,6,4],}
+\orText{\ \ \ \ \ \ \ \ [6,8,6,8,6,8],}
+\orText{\ \ \ \ \ \ \ \ [4,6,4,6,4,6],}
+\orText{\ \ \ \ \ \ \ \ [8,6,8,6,8,6],}
+\orText{\ \ \ \ \ \ \ \ [6,4,6,4,6,4]}
+\orText{\ \ \ \ \ \ ]}
+\orText{\ \ \ \ \},}
+\orText{\ \ \ \ \{}
+\orText{\ \ \ \ \ \ "input":\ [[7,9],[4,3]],}
+\orText{\ \ \ \ \ \ "output":\ [}
+\orText{\ \ \ \ \ \ \ \ [7,9,7,9,7,9],}
+\orText{\ \ \ \ \ \ \ \ [4,3,4,3,4,3],}
+\orText{\ \ \ \ \ \ \ \ [9,7,9,7,9,7],}
+\orText{\ \ \ \ \ \ \ \ [3,4,3,4,3,4],}
+\orText{\ \ \ \ \ \ \ \ [7,9,7,9,7,9],}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{One-shot Python synthesis\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 2/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{\ \ \ \ \ \ \ \ [4,3,4,3,4,3]}
+\orText{\ \ \ \ \ \ ]}
+\orText{\ \ \ \ \}}
+\orText{\ \ ],}
+\orText{\ \ "test":\ [}
+\orText{\ \ \ \ \{}
+\orText{\ \ \ \ \ \ "input":\ [[3,2],[7,8]]}
+\orText{\ \ \ \ \}}
+\orText{\ \ ]}
+\orText{\}}
+\orGap
+\orText{EXAMPLE\ ANALYSIS}
+\orGap
+\orText{Both\ training\ examples\ follow\ the\ same}
+\orText{transformation.}
+\orGap
+\orText{The\ input\ grid\ is\ vertically\ expanded\ by}
+\orText{concatenating:}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{1.\ The\ original\ rows.}
+\orText{2.\ The\ original\ rows\ with\ each\ row}
+\orText{horizontally\ reflected.}
+\orText{3.\ The\ original\ rows\ again.}
+\orGap
+\orText{Each\ resulting\ row\ is\ then\ repeated\ three}
+\orText{times\ horizontally.}
+\orGap
+\orText{The\ transformation\ can\ therefore\ be}
+\orText{represented\ as:}
+\orGap
+\orText{def\ solve(grid):}
+\orText{\ \ \ \ reflected\ =\ [row[::-1]\ for\ row\ in\ grid]}
+\orText{\ \ \ \ rows\ =\ grid\ +\ reflected\ +\ grid}
+\orText{\ \ \ \ return\ [row\ *\ 3\ for\ row\ in\ rows]}
+\orGap
+\orText{The\ program\ reproduces\ both\ training\ examples}
+\orText{exactly.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{One-shot Python synthesis\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 3/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{Applied\ to\ the\ test\ input,\ it\ gives:}
+\orGap
+\orText{\{}
+\orText{\ \ "outputs":\ [}
+\orText{\ \ \ \ [}
+\orText{\ \ \ \ \ \ [3,2,3,2,3,2],}
+\orText{\ \ \ \ \ \ [7,8,7,8,7,8],}
+\orText{\ \ \ \ \ \ [2,3,2,3,2,3],}
+\orText{\ \ \ \ \ \ [8,7,8,7,8,7],}
+\orText{\ \ \ \ \ \ [3,2,3,2,3,2],}
+\orText{\ \ \ \ \ \ [7,8,7,8,7,8]}
+\orText{\ \ \ \ ]}
+\orText{\ \ ]}
+\orText{\}}
+\orGap
+\orText{END\ OF\ EXAMPLE}
+\orGap
+\orText{Now\ solve\ the\ NEW\ ARC\ task.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{Use\ the\ same\ methodological\ process:}
+\orGap
+\orText{1.\ Analyze\ the\ new\ training\ pairs.}
+\orText{2.\ Infer\ a\ transformation\ specific\ to\ the\ new}
+\orText{task.}
+\orText{3.\ Formulate\ it\ internally\ as\ a\ concise\ Python}
+\orText{solve(grid)\ function.}
+\orText{4.\ Validate\ it\ against\ every\ new\ training}
+\orText{example.}
+\orText{5.\ Revise\ it\ if\ any\ training\ example\ is\ not}
+\orText{reproduced\ exactly.}
+\orText{6.\ Apply\ the\ validated\ transformation\ to\ every}
+\orText{test\ input.}
+\orGap
+\orText{Do\ not\ reuse\ the\ demonstration\ transformation}
+\orText{unless\ the\ new\ training\ examples\ independently}
+\orText{require\ it.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Python self-refinement\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 1/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{PROGRAM\ SYNTHESIS\ WITH\ ITERATIVE\ VERIFICATION}
+\orGap
+\orText{Use\ an\ execution-oriented\ generate-test-repair}
+\orText{procedure.}
+\orGap
+\orText{Internally\ perform\ the\ following\ process:}
+\orGap
+\orText{PHASE\ 1\ \textemdash{}\ HYPOTHESIS}
+\orGap
+\orText{Analyze\ all\ training\ input-output\ pairs\ and}
+\orText{formulate\ a\ precise\ transformation\ hypothesis.}
+\orGap
+\orText{PHASE\ 2\ \textemdash{}\ PROGRAM}
+\orGap
+\orText{Translate\ the\ hypothesis\ into\ a\ deterministic}
+\orText{Python-style\ function:}
+\orGap
+\orText{def\ solve(grid):}
+\orText{\ \ \ \ ...}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{Do\ not\ produce\ the\ function\ in\ the\ final}
+\orText{response.\ It\ is\ an\ internal\ representation}
+\orText{used\ to\ make\ the\ transformation\ precise.}
+\orGap
+\orText{PHASE\ 3\ \textemdash{}\ TRAINING\ VERIFICATION}
+\orGap
+\orText{For\ EACH\ training\ example\ independently:}
+\orGap
+\orText{1.\ Simulate\ execution\ of\ the\ candidate\ program}
+\orText{on\ the\ training\ input.}
+\orText{2.\ Determine\ the\ complete\ predicted\ grid.}
+\orText{3.\ Compare\ its\ dimensions\ with\ the\ expected}
+\orText{output.}
+\orText{4.\ Compare\ every\ predicted\ cell\ with\ the}
+\orText{expected\ output.}
+\orText{5.\ Mark\ the\ candidate\ as\ valid\ only\ if\ the}
+\orText{grids\ match\ exactly.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Python self-refinement\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 2/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{PHASE\ 4\ \textemdash{}\ REPAIR}
+\orGap
+\orText{If\ any\ training\ example\ fails:}
+\orGap
+\orText{1.\ Identify\ the\ first\ assumption\ responsible}
+\orText{for\ the\ mismatch.}
+\orText{2.\ Reject\ or\ modify\ that\ assumption.}
+\orText{3.\ Construct\ a\ revised\ program.}
+\orText{4.\ Repeat\ verification\ against\ ALL\ training}
+\orText{examples,\ including\ examples\ that\ previously}
+\orText{passed.}
+\orGap
+\orText{Perform\ up\ to\ three\ candidate/repair}
+\orText{iterations\ if\ necessary.}
+\orGap
+\orText{Do\ not\ repair\ a\ program\ by\ adding\ arbitrary}
+\orText{conditions\ tied\ to\ individual\ training}
+\orText{examples.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{PHASE\ 5\ \textemdash{}\ SELECTION}
+\orGap
+\orText{If\ several\ transformations\ reproduce\ all}
+\orText{training\ examples,\ select\ the\ one\ with:}
+\orGap
+\orText{1.\ fewer\ arbitrary\ conditions,}
+\orText{2.\ fewer\ transformation\ steps,}
+\orText{3.\ stronger\ object\ or\ relational\ generality,}
+\orText{4.\ less\ dependence\ on\ absolute\ coordinates}
+\orText{when\ a\ relative\ rule\ explains\ the\ data.}
+\orGap
+\orText{Only\ after\ obtaining\ a\ candidate\ consistent}
+\orText{with\ every\ training\ example\ should\ you\ apply}
+\orText{it\ to\ the\ test\ input.}
+\orGap
+\orText{Return\ only\ the\ required\ final\ JSON.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Natural-language rule induction\enspace {\color{muted}\fontsize{16}{18}\selectfont core\enspace 1/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{You\ are\ an\ expert\ solver\ of\ Abstract\ Reasoning}
+\orText{Corpus\ (ARC-AGI)\ tasks.}
+\orGap
+\orText{Each\ task\ contains\ training\ examples}
+\orText{consisting\ of\ input\ and\ output\ grids,\ followed}
+\orText{by\ one\ or\ more\ unseen\ test\ inputs.}
+\orGap
+\orText{Your\ objective\ is\ to\ infer\ the\ latent\ abstract}
+\orText{rule\ that\ explains\ every\ training\ example\ and}
+\orText{apply\ that\ rule\ to\ every\ test\ input.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{Reason\ primarily\ in\ terms\ of\ objects,}
+\orText{properties,\ relationships,\ invariants,\ and}
+\orText{transformations\ rather\ than\ immediately}
+\orText{translating\ the\ task\ into\ code.}
+\orGap
+\orText{Possible\ concepts\ include:}
+\orGap
+\orText{-\ Objects\ and\ connected\ components}
+\orText{-\ Colors\ and\ object\ identities}
+\orText{-\ Size,\ shape,\ orientation,\ and\ topology}
+\orText{-\ Counting\ and\ cardinality}
+\orText{-\ Relative\ positions\ and\ spatial\ relationships}
+\orText{-\ Symmetry\ and\ repetition}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Natural-language rule induction\enspace {\color{muted}\fontsize{16}{18}\selectfont core\enspace 2/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{-\ Movement\ and\ correspondence}
+\orText{-\ Selection\ and\ filtering}
+\orText{-\ Completion\ and\ extrapolation}
+\orText{-\ Row\ and\ column\ structure}
+\orText{-\ Conditional\ transformations}
+\orText{-\ Compositions\ of\ multiple\ relations}
+\orGap
+\orText{The\ inferred\ rule\ must\ explain\ every\ training}
+\orText{input-output\ pair.}
+\orGap
+\orText{Prefer\ a\ single\ coherent\ abstract\ rule\ over}
+\orText{independent\ descriptions\ of\ individual}
+\orText{examples.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{Your\ final\ response\ must\ contain\ ONLY\ a\ valid}
+\orText{JSON\ object:}
+\orGap
+\orText{\{"outputs":\ [[[0]]]\}}
+\orGap
+\orText{The\ outputs\ array\ must\ contain\ exactly\ one}
+\orText{rectangular\ grid\ for\ each\ test\ input,}
+\orText{preserving\ their\ order.}
+\orGap
+\orText{Do\ not\ include\ reasoning,\ explanations,}
+\orText{markdown,\ or\ additional\ fields\ in\ the\ final}
+\orText{response.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Natural-language rule induction\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 1/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{EXPLICIT\ NATURAL-LANGUAGE\ RULE\ INDUCTION}
+\orGap
+\orText{Before\ predicting\ the\ test\ output,\ perform\ an}
+\orText{explicit\ internal\ chain\ of\ abstraction.}
+\orGap
+\orText{STEP\ 1\ \textemdash{}\ SCENE\ DECOMPOSITION}
+\orGap
+\orText{For\ each\ training\ pair,\ identify:}
+\orGap
+\orText{-\ relevant\ objects\ or\ regions,}
+\orText{-\ colors,}
+\orText{-\ shapes,}
+\orText{-\ sizes,}
+\orText{-\ counts,}
+\orText{-\ locations,}
+\orText{-\ symmetries,}
+\orText{-\ repetitions,}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{-\ relationships\ between\ objects.}
+\orGap
+\orText{STEP\ 2\ \textemdash{}\ INVARIANTS}
+\orGap
+\orText{Determine\ what\ properties\ remain\ unchanged}
+\orText{between\ input\ and\ output.}
+\orGap
+\orText{STEP\ 3\ \textemdash{}\ CHANGES}
+\orGap
+\orText{Determine\ exactly\ what\ properties\ change.}
+\orGap
+\orText{STEP\ 4\ \textemdash{}\ RELATIONAL\ RULE}
+\orGap
+\orText{Describe\ the\ transformation\ internally\ as\ a}
+\orText{general\ natural-language\ rule.}
+\orGap
+\orText{The\ rule\ should\ state\ WHAT\ entities\ are}
+\orText{selected,\ WHY\ they\ are\ selected,\ and\ HOW\ they}
+\orText{are\ transformed.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Natural-language rule induction\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 2/2}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{Avoid\ descriptions\ tied\ to\ arbitrary}
+\orText{coordinates\ unless\ absolute\ position\ is}
+\orText{demonstrably\ part\ of\ the\ rule.}
+\orGap
+\orText{STEP\ 5\ \textemdash{}\ CROSS-EXAMPLE\ VALIDATION}
+\orGap
+\orText{Apply\ the\ proposed\ natural-language\ rule}
+\orText{independently\ to\ every\ training\ input.}
+\orGap
+\orText{Reject\ the\ rule\ if\ it\ fails\ to\ explain\ any}
+\orText{training\ output\ exactly.}
+\orGap
+\orText{STEP\ 6\ \textemdash{}\ ALTERNATIVE\ HYPOTHESES}
+\orGap
+\orText{If\ the\ training\ examples\ permit\ multiple}
+\orText{plausible\ interpretations,\ compare\ them\ and}
+\orText{prefer\ the\ rule\ that:}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{-\ explains\ all\ examples,}
+\orText{-\ uses\ fewer\ arbitrary\ assumptions,}
+\orText{-\ relies\ on\ stable\ object\ relationships,}
+\orText{-\ generalizes\ naturally\ to\ different\ grid}
+\orText{sizes\ and\ positions.}
+\orGap
+\orText{STEP\ 7\ \textemdash{}\ TEST\ APPLICATION}
+\orGap
+\orText{Apply\ the\ resulting\ abstract\ rule\ to\ the\ test}
+\orText{input\ or\ inputs.}
+\orGap
+\orText{Keep\ this\ reasoning\ in\ the\ requested\ reasoning}
+\orText{trace.}
+\orGap
+\orText{The\ visible\ final\ answer\ must\ contain\ only\ the}
+\orText{required\ JSON\ output.}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Zero-shot ARC DSL\enspace {\color{muted}\fontsize{16}{18}\selectfont core\enspace 1/1}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\orText{You\ are\ an\ expert\ solver\ of\ Abstract\ Reasoning\ Corpus\ (ARC-AGI)\ tasks.}
+\orGap
+\orText{Solve\ each\ task\ by\ synthesizing\ a\ transformation\ from\ a\ compact\ ARC\ domain-specific\ language}
+\orText{(DSL).}
+\orGap
+\orText{The\ transformation\ must\ reproduce\ every\ training\ output\ exactly\ and\ then\ generalize\ to\ each}
+\orText{test\ input.}
+\orGap
+\orText{Your\ final\ response\ must\ contain\ ONLY\ a\ valid\ JSON\ object:}
+\orGap
+\orText{\{"outputs":\ [[[0]]]\}}
+\orGap
+\orText{Replace\ the\ example\ grid\ with\ the\ actual\ predicted\ output\ grids.}
+\orGap
+\orText{The\ outputs\ array\ must\ contain\ exactly\ one\ rectangular\ grid\ for\ each\ test\ input,\ preserving}
+\orText{their\ order.}
+\orGap
+\orText{Do\ not\ output\ the\ DSL\ program,\ reasoning,\ explanations,\ markdown,\ or\ additional\ JSON\ fields\ in}
+\orText{the\ final\ answer.}
+\end{frame}
+\begin{frame}[t]{Zero-shot ARC DSL\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 1/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{ZERO-SHOT\ DSL\ PROGRAM\ SYNTHESIS}
+\orGap
+\orText{Represent\ the\ transformation\ internally\ using}
+\orText{compositions\ of\ the\ following\ abstract}
+\orText{primitives.}
+\orGap
+\orText{GRID\ TRANSFORMATIONS}
+\orGap
+\orText{IDENTITY(grid)}
+\orText{ROT90(grid)}
+\orText{ROT180(grid)}
+\orText{ROT270(grid)}
+\orText{FLIP\_H(grid)}
+\orText{FLIP\_V(grid)}
+\orText{TRANSPOSE(grid)}
+\orText{CROP(grid,\ region)}
+\orText{CONCAT\_H(a,\ b)}
+\orText{CONCAT\_V(a,\ b)}
+\orText{TILE(grid,\ rows,\ cols)}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{REPEAT\_ROWS(grid,\ n)}
+\orText{REPEAT\_COLS(grid,\ n)}
+\orGap
+\orText{OBJECT\ OPERATIONS}
+\orGap
+\orText{OBJECTS(grid)}
+\orText{CONNECTED\_COMPONENTS(grid)}
+\orText{BBOX(object)}
+\orText{MASK(object)}
+\orText{COLOR(object)}
+\orText{SIZE(object)}
+\orText{WIDTH(object)}
+\orText{HEIGHT(object)}
+\orText{POSITION(object)}
+\orText{COUNT(objects)}
+\orText{LARGEST(objects)}
+\orText{SMALLEST(objects)}
+\orText{FILTER\_COLOR(objects,\ color)}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Zero-shot ARC DSL\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 2/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{FILTER\_SIZE(objects,\ condition)}
+\orText{FILTER\_SHAPE(objects,\ condition)}
+\orGap
+\orText{SPATIAL\ RELATIONS}
+\orGap
+\orText{ABOVE(a,\ b)}
+\orText{BELOW(a,\ b)}
+\orText{LEFT\_OF(a,\ b)}
+\orText{RIGHT\_OF(a,\ b)}
+\orText{INSIDE(a,\ b)}
+\orText{CONTAINS(a,\ b)}
+\orText{TOUCHING(a,\ b)}
+\orText{ALIGNED\_ROW(a,\ b)}
+\orText{ALIGNED\_COLUMN(a,\ b)}
+\orText{OVERLAPS(a,\ b)}
+\orGap
+\orText{TRANSFORMATIONS}
+\orGap
+\orText{MOVE(object,\ dr,\ dc)}
+\orText{COPY(object,\ position)}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{RECOLOR(entity,\ source\_color,\ target\_color)}
+\orText{FILL(region,\ color)}
+\orText{DELETE(object)}
+\orText{SCALE(object,\ factor)}
+\orText{REFLECT(object,\ axis)}
+\orText{ROTATE(object,\ angle)}
+\orGap
+\orText{STRUCTURAL\ OPERATIONS}
+\orGap
+\orText{ROWS(grid)}
+\orText{COLUMNS(grid)}
+\orText{SELECT(condition)}
+\orText{MAP(operation,\ collection)}
+\orText{COUNT(collection)}
+\orText{REPEAT(pattern,\ n)}
+\orText{EXTEND(pattern,\ direction)}
+\orText{COMPLETE(pattern)}
+\orText{COMPOSE(operation1,\ operation2,\ ...)}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]{Zero-shot ARC DSL\enspace {\color{muted}\fontsize{16}{18}\selectfont modifier\enspace 3/3}}
+\vspace{1.5mm}\fontsize{11.8}{13.7}\selectfont\ttfamily\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\textwidth}
+\orText{You\ may\ use\ parameters\ inferred\ from\ the}
+\orText{input,\ such\ as:}
+\orGap
+\orText{-\ object\ count,}
+\orText{-\ dimensions,}
+\orText{-\ relative\ displacement,}
+\orText{-\ bounding\ boxes,}
+\orText{-\ colors,}
+\orText{-\ symmetry\ axes,}
+\orText{-\ repeated\ intervals.}
+\orGap
+\orText{Do\ not\ assume\ that\ the\ primitive\ vocabulary}
+\orText{implies\ that\ every\ task\ uses\ objects\ or}
+\orText{geometry.\ Use\ only\ the\ operations\ justified\ by}
+\orText{the\ examples.}
+\orGap
+\orText{SEARCH\ PROCEDURE}
+\orGap
+\orText{1.\ Parse\ each\ training\ grid\ into\ potentially}
+\orText{relevant\ structures.}
+\end{column}
+\begin{column}{0.485\textwidth}
+\orText{2.\ Generate\ candidate\ DSL\ expressions\ or\ short}
+\orText{DSL\ programs.}
+\orText{3.\ Prefer\ compositions\ containing\ few}
+\orText{primitives.}
+\orText{4.\ Apply\ each\ candidate\ to\ ALL\ training}
+\orText{examples.}
+\orText{5.\ Reject\ any\ candidate\ that\ does\ not\ exactly}
+\orText{reproduce\ every\ expected\ output.}
+\orText{6.\ If\ several\ candidates\ fit,\ prefer\ the}
+\orText{candidate\ based\ on\ relational\ properties}
+\orText{rather\ than\ arbitrary\ absolute\ coordinates.}
+\orText{7.\ Apply\ the\ best\ consistent\ DSL\ program\ to}
+\orText{every\ test\ input.}
+\orGap
+\orText{Do\ not\ simply\ describe\ the\ transformation}
+\orText{visually.\ Make\ the\ internal\ rule\ operational}
+\orText{enough\ that\ it\ could\ be\ executed}
+\orText{deterministically.}
+\end{column}
+\end{columns}
+\end{frame}
+\endgroup

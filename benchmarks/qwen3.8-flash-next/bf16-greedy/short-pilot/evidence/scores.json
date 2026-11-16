@@ -1,0 +1,218 @@
+{
+  "benchmark_id": "b0bc62947697ba1fa5cfbc3ba6d66bbf1bed47dea6f115a05eb8ddfb080a5d0a",
+  "model": "original precision, base only",
+  "nf4_reference": "Historical first completion per task; batching and GPU placement may differ",
+  "base": {
+    "complete": true,
+    "processed_tasks": 12,
+    "total_tasks": 12,
+    "solved_tasks": 0,
+    "task_accuracy": 0.0,
+    "processed_grids": 18,
+    "total_grids": 18,
+    "correct_grids": 0,
+    "grid_accuracy": 0.0,
+    "invalid_json_or_grids": 2,
+    "token_limit_tasks": 0
+  },
+  "tasks": [
+    {
+      "task_id": "08573cc6",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 512,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 535,
+      "nf4_package": "arc-flash-eval138-debug-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "20270e3b",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false,
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 455,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 338,
+      "nf4_package": "arc-flash-eval138-util-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "28a6681f",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 305,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 567,
+      "nf4_package": "arc-flash-eval138-util-v3",
+      "same_response_text": false
+    },
+    {
+      "task_id": "3dc255db",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 473,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 473,
+      "nf4_package": "arc-flash-eval138-util-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "4c3d4a41",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false,
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 965,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 648,
+      "nf4_package": "arc-flash-eval138-util-v3",
+      "same_response_text": false
+    },
+    {
+      "task_id": "78332cb0",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false,
+        false
+      ],
+      "format_error": "Grid must be rectangular",
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 587,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 658,
+      "nf4_package": "arc-flash-eval138-dashboard-v4",
+      "same_response_text": false
+    },
+    {
+      "task_id": "7b5033c1",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": "Expecting value: line 1 column 4056 (char 4055)",
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 2429,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 111,
+      "nf4_package": "arc-flash-eval138-util-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "b0039139",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false,
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 695,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 512,
+      "nf4_package": "arc-flash-eval138-util-v2",
+      "same_response_text": false
+    },
+    {
+      "task_id": "d35bdbdc",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false,
+        false,
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 905,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 610,
+      "nf4_package": "arc-flash-eval138-util-v3",
+      "same_response_text": false
+    },
+    {
+      "task_id": "dbff022c",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 512,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 344,
+      "nf4_package": "arc-flash-eval138-util-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "e8686506",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 80,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 255,
+      "nf4_package": "arc-flash-eval138-util-v1",
+      "same_response_text": false
+    },
+    {
+      "task_id": "eee78d87",
+      "arm": "base",
+      "task_correct": false,
+      "grid_correct": [
+        false
+      ],
+      "format_error": null,
+      "finish_reason": "eos",
+      "source": null,
+      "generated_tokens": 773,
+      "nf4_exact": false,
+      "nf4_generated_tokens": 799,
+      "nf4_package": "arc-flash-eval138-dashboard-v1",
+      "same_response_text": false
+    }
+  ]
+}

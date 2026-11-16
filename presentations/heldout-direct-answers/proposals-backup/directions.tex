@@ -1,0 +1,11 @@
+\begin{frame}[t]{Next experiments}
+\med
+\begin{tabular}{@{}>{\raggedright\arraybackslash\bfseries}p{40mm}>{\raggedright\arraybackslash}p{169mm}@{}}
+Python validation & Close the first pass on all 138 tasks in each arm. Resume eligible unfinished tasks under the 30-minute cumulative limit. Count new grids and exact solves separately for the first pass and the retries.\\[3mm]
+Synthetic puzzles only & Train a fresh LoRA adapter on verified BARC-style input/output pairs. Split by generator family and remove overlaps with the validation set.\\[3mm]
+Games and puzzles & Train another adapter solely on board transformations from games and logic puzzles. Derive each target grid from an executable rule. Match the synthetic arm's training budget.\\[3mm]
+ARC-AGI-3 & Connect a public game to the model. Encode its frames and available actions, execute one action per turn and verify the saved trajectory by replay. Record levels completed and actions taken.\\
+\end{tabular}
+\vfill
+\smallbody For both new adapters, reuse the NF4 base with BF16 compute, LoRA settings and direct greedy prompt. Compare paired task outcomes with the adapter off and with checkpoint-660. The 138 public tasks have already been inspected.
+\end{frame}

@@ -1,0 +1,1761 @@
+{
+ "policy": "Native whole-task exact match. First archived completion for NF4; one completion per sampler for BF16. OpenRouter counts any exact trial across five prompt conditions with two trials apiece; model, prompt, sampling and attempt budgets differ. A null BF16 greedy pilot value means outside its 12-task cohort.",
+ "strict_conditions": {
+  "base": "NF4 base",
+  "finetuned": "NF4 checkpoint-660",
+  "low_nucleus": "BF16 low nucleus",
+  "instruct_sampling": "BF16 instruct"
+ },
+ "sources": {
+  "research/evidence/direct-answer-audit/audit.json": "2fa1fd332ded814abf2edf6b60b354216e6133b2aa34318a0d73ac6ad72f68a5",
+  "artifacts/arc_practice/full-validation-2x-20261016/cancelled-batch.json": "718927b72fb8c4f89cd02de3b82d3ab4b2049122b5de486817db5cde44668ffd",
+  "artifacts/arc_practice/full-validation-2x-20261016/completed-validation-20261016T183455Z.json": "be3367ed469e2476c35df8fd7d0481c814544a2781e796232bcb01a4c043d1fa",
+  "artifacts/cluster/arc-agi3-data-v1/scoring/answers.jsonl": "d247b386927ce8bcb39ce9387499cb24b2dadf90dc64850165f363dbef9c92ea",
+  "artifacts/cluster/arc-bf16-base-debug-8487396/allocations/8487396/scores.json": "cf6d6149c9e87881c2961efb55701d1f9f0cb50fa676530ba213a5e0d2507b8f"
+ },
+ "release": "e37ec8b840155c28c843b175cf1f2116d5c5d8cc",
+ "tasks": {
+  "08573cc6": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "0934a4d8": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "135a2760": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "136b0064": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "13e47133": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "142ca369": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "16b78196": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "16de56c4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "1818057f": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 1,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "195c6913": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "1ae2feb7": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "1e97544e": {
+   "strict": {
+    "base": false,
+    "finetuned": true,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 5,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_5": 2,
+    "experiment_1": 1,
+    "experiment_2": 1,
+    "experiment_4": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "20270e3b": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "20a9e565": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "21897d95": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "221dfab4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "247ef758": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "269e22fb": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "271d71e2": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "28a6681f": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "291dc1e1": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "2b83f449": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "2ba387bc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 8,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_4": 1,
+    "experiment_5": 2,
+    "experiment_2": 2,
+    "experiment_3": 2,
+    "experiment_1": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "2c181942": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "2d0172a1": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "31f7f899": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 3,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_5": 2,
+    "experiment_2": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "332f06d7": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "35ab12c3": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "36a08778": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "38007db0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 2,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "3a25b0d8": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "3dc255db": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "3e6067c3": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "3ed85e70": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "409aa875": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "446ef5d2": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "45a5af55": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 4,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_5": 2,
+    "experiment_3": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "477d2879": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "47996f11": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "4a21e3da": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "4aab4007": {
+   "strict": {
+    "base": true,
+    "finetuned": true,
+    "low_nucleus": true,
+    "instruct_sampling": true
+   },
+   "openrouter_exact_trials": 8,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_2": 2,
+    "experiment_3": 1,
+    "experiment_5": 2,
+    "experiment_1": 2,
+    "experiment_4": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "4c3d4a41": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "4c416de3": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "4c7dc4dd": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "4e34c42c": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "53fb4810": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 2,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 1,
+    "experiment_1": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "5545f144": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "55783887": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "581f7754": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "58490d8a": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "58f5dbd5": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 1,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "5961cc34": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "5dbc8537": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "604001fa": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 3,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_1": 1,
+    "experiment_3": 1,
+    "experiment_5": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "62593bfd": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "64efde09": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "65b59efc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "67b4a34d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 9,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 2,
+    "experiment_4": 2,
+    "experiment_5": 1,
+    "experiment_1": 2,
+    "experiment_2": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "67e490f4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "6e453dd6": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "6e4f6532": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "6ffbe589": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "71e489b6": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7491f3cf": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7666fa5d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "78332cb0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "79fb03f4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7b0280bc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7b3084d4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7b5033c1": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "7b80bb43": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7c66cb00": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "7ed72f31": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "800d221b": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "80a900e0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "8698868d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "88bcf3b4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "88e364bc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "89565ca0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "898e7135": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "8b7bacbf": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "8b9c3697": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "8e5c0c38": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "8f215267": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 1,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "8f3a5a89": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "903d1b4a": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 5,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_5": 1,
+    "experiment_1": 1,
+    "experiment_2": 1,
+    "experiment_3": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "929ab4e9": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "9385bd28": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "97d7923e": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "981571dc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "9aaea919": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "9bbf930d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a251c730": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a25697e4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a32d8b75": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a395ee82": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a47bf94d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "a6f40cea": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "aa4ec2a5": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "abc82100": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "af22c60d": {
+   "strict": {
+    "base": true,
+    "finetuned": true,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 9,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_4": 2,
+    "experiment_5": 2,
+    "experiment_2": 2,
+    "experiment_3": 2,
+    "experiment_1": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "b0039139": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 1,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 1
+   },
+   "bf16_greedy_pilot": false
+  },
+  "b10624e5": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "b5ca7ac4": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "b6f77b65": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "b99e7126": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "b9e38dc0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "bf45cf4b": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 9,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_1": 2,
+    "experiment_2": 2,
+    "experiment_3": 2,
+    "experiment_4": 1,
+    "experiment_5": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "c4d067a0": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 1,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_5": 1
+   },
+   "bf16_greedy_pilot": null
+  },
+  "c663677b": {
+   "strict": {
+    "base": true,
+    "finetuned": true,
+    "low_nucleus": true,
+    "instruct_sampling": true
+   },
+   "openrouter_exact_trials": 10,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_2": 2,
+    "experiment_3": 2,
+    "experiment_4": 2,
+    "experiment_5": 2,
+    "experiment_1": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "c7f57c3e": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "ca8f78db": {
+   "strict": {
+    "base": true,
+    "finetuned": true,
+    "low_nucleus": true,
+    "instruct_sampling": true
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "cb2d8a2c": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "cbebaa4b": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "d35bdbdc": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "d59b0160": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "d8e07eb2": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "da515329": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "db0c5428": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "db695cfb": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "dbff022c": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "dd6b8c4b": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "de809cff": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "dfadab01": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "e12f9a14": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "e3721c99": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "e376de54": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "e66aafb8": {
+   "strict": {
+    "base": false,
+    "finetuned": true,
+    "low_nucleus": true,
+    "instruct_sampling": true
+   },
+   "openrouter_exact_trials": 9,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_2": 2,
+    "experiment_3": 2,
+    "experiment_4": 1,
+    "experiment_5": 2,
+    "experiment_1": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "e8686506": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "e87109e9": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "e95e3d8e": {
+   "strict": {
+    "base": false,
+    "finetuned": true,
+    "low_nucleus": true,
+    "instruct_sampling": true
+   },
+   "openrouter_exact_trials": 10,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_3": 2,
+    "experiment_4": 2,
+    "experiment_5": 2,
+    "experiment_1": 2,
+    "experiment_2": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "edb79dae": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "eee78d87": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": false
+  },
+  "f4081712": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 3,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {
+    "experiment_1": 1,
+    "experiment_3": 2
+   },
+   "bf16_greedy_pilot": null
+  },
+  "f560132c": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "f931b4a8": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "faa9f03d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  },
+  "fc7cae8d": {
+   "strict": {
+    "base": false,
+    "finetuned": false,
+    "low_nucleus": false,
+    "instruct_sampling": false
+   },
+   "openrouter_exact_trials": 0,
+   "openrouter_trials": 10,
+   "openrouter_exact_by_condition": {},
+   "bf16_greedy_pilot": null
+  }
+ }
+}

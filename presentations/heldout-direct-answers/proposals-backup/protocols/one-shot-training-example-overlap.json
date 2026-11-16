@@ -1,0 +1,17 @@
+{
+  "task_id": "00576224",
+  "source_sha256": {
+    "artifacts/cluster/arc-agi3-data-v1/sft/train.jsonl": "71d5772fc3f5de97d332d00927f8c2642e741e9f05a18d58dce990355fe79d72",
+    "artifacts/arc_practice/full-validation-2x-20261016/cancelled-batch.json": "718927b72fb8c4f89cd02de3b82d3ab4b2049122b5de486817db5cde44668ffd",
+    "artifacts/arc_practice/full-validation-2x-20261016/completed-validation-20261016T183455Z.json": "be3367ed469e2476c35df8fd7d0481c814544a2781e796232bcb01a4c043d1fa"
+  },
+  "conditions_checked": {
+    "original_training_records": 880,
+    "archives": 2,
+    "original_evaluation_cohort": 138
+  },
+  "demo_pairs_equal_in_reverse_order": true,
+  "query_input_equal": true,
+  "shown_output_equal": true,
+  "task_id_in_evaluation_cohort": false
+}

@@ -1,0 +1,1 @@
+Before your first solver you may instead submit one fenced ```probe block containing Python statements. Variables train and test contain the visible demonstration pairs and query inputs. Use print to inspect them. Each call starts fresh. You have at most two calls, 512 output tokens per call and 256 tokens of feedback. You may submit the solver immediately.

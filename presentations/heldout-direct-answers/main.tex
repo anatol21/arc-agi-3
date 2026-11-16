@@ -1,0 +1,250 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,booktabs,array,graphicx,amssymb}
+\geometry{paperwidth=240mm,paperheight=135mm}
+\definecolor{ink}{HTML}{151C22}
+\definecolor{muted}{HTML}{495761}
+\definecolor{accent}{HTML}{234F68}
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{frametitle}{fg=ink,bg=white}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamersize{text margin left=10mm,text margin right=10mm}
+\setbeamerfont{frametitle}{size=\fontsize{23}{26}\selectfont,series=\mdseries}
+\setbeamertemplate{frametitle}{\vspace{3mm}\insertframetitle\par\vspace{1.5mm}}
+\newcommand{\normbody}{\fontsize{16}{20}\selectfont}
+\newcommand{\med}{\fontsize{14}{17}\selectfont}
+\newcommand{\smallbody}{\fontsize{12.5}{15}\selectfont}
+\newcommand{\id}[1]{\texttt{#1}}
+\newcommand{\sectiontag}{A\quad NF4 greedy decoding}
+\newcommand{\readsource}{Archived responses}
+\newcommand{\readurl}{https://github.com/anatol21/arc-agi-3/blob/e37ec8b840155c28c843b175cf1f2116d5c5d8cc/benchmarks/qwen3.8-flash-next/greedy-no-thinking/held-out-138/evidence/observations.jsonl}
+\newcommand{\bfurl}{https://github.com/anatol21/arc-agi-3/blob/e37ec8b840155c28c843b175cf1f2116d5c5d8cc/benchmarks/qwen3.8-flash-next/bf16-sampling/responses.jsonl}
+\setbeamertemplate{footline}{\leavevmode\hbox to\paperwidth{\hspace{10mm}{\color{muted}\fontsize{10}{12}\selectfont\sectiontag}\hfil{\color{muted}\fontsize{10}{12}\selectfont\href{\readurl}{\readsource}\hspace{6mm}\insertframenumber}\hspace{10mm}}\vspace{2.5mm}}
+\newcommand{\picturegrid}[2]{\par\noindent\makebox[\linewidth][c]{\includegraphics[width=\linewidth,height=#2,keepaspectratio]{figures/#1.pdf}}\par}
+\newcommand{\yes}{\textcolor{accent}{\ensuremath{\boldsymbol{\checkmark}}}}
+\newcommand{\dash}{\textcolor{muted}{\textemdash}}
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{document}
+
+\begin{frame}[t]{Direct answers on all 138 held-out tasks}
+\normbody
+Each condition answered the same 138 public ARC tasks (185 query grids). All were excluded from the 880-task fine-tuning set. Earlier API studies had used this public set.
+\vspace{4mm}
+
+\begin{tabular}{@{}>{\bfseries}p{38mm}>{\raggedright\arraybackslash}p{171mm}@{}}
+Model & Qwen3.8-Flash-Next on three H100s, with NF4 quantization and BF16 compute. Both arms used the same base weights. Only the fine-tuned arm enabled the \mbox{checkpoint-660} LoRA adapter.\\[2mm]
+Prompt & Demonstration input/output pairs and query inputs. Return one JSON object with an ordered list of predicted grids.\\[2mm]
+Generation & Greedy decoding, one beam, thinking off. Context 18,432 tokens. Up to 8,192 output tokens within the remaining context.\\[2mm]
+Score & One primary response per task and model. Every query grid must match exactly. The scorer reads the original response without repair.\\
+\end{tabular}
+\vfill
+\med\color{muted}The primary score uses each task's first completed answer in the archive's fixed source order across serial and batched runs.
+\end{frame}
+
+\begin{frame}[t]{Four tasks were solved by both NF4 models}
+\normbody
+Base solved \textbf{4/138}. Checkpoint-660 solved \textbf{7/138}, including all four base solves. These are the query inputs and exact answers for the four shared tasks.
+\vspace{3mm}
+\picturegrid{nf4-shared}{68mm}
+\vfill
+\med The first checkpoint response on \id{67b4a34d} missed one cell. A later response solved it. Prioritizing the full serial run would give checkpoint-660 8/138 and keep base at 4/138.
+\end{frame}
+
+\begin{frame}[t]{\id{e66aafb8}\enspace The base extended the patch by two rows}
+\normbody
+The required output was the missing $3\times3$ patch in a symmetric $24\times24$ grid.
+\vspace{3mm}
+\picturegrid{e66aafb8}{64mm}
+\vfill
+The base returned all three correct rows, then appended \id{594} and \id{684}. Its $5\times3$ answer parsed successfully. Checkpoint-660 stopped after the third row.
+\end{frame}
+
+\begin{frame}[t]{\id{e95e3d8e}\enspace Correct cells, one missing JSON list}
+\normbody
+Both models filled all 46 missing cells correctly and preserved the other 438. The scorer expects \id{outputs} to hold a list of query grids, even for a single query.
+\vspace{2mm}
+\picturegrid{e95e3d8e}{52mm}
+\vfill
+\med
+\begin{tabular}{@{}lp{139mm}@{}}
+Base & \texttt{\textbraceleft\detokenize{"outputs": [[1, 3, 1, 3,}}\ldots\quad rows directly under \id{outputs}\\
+Checkpoint-660 & \texttt{\textbraceleft\detokenize{"outputs":[[[1,3,1,3,}}\ldots\quad a list containing one grid\\
+\end{tabular}
+\par\vspace{2mm}
+Adding the outer list recovers an exact $22\times22$ grid in a diagnostic check. The official base score is zero.
+\end{frame}
+
+\begin{frame}[t]{\id{1e97544e}\enspace Fine-tuning corrected 35 cell values}
+\normbody
+Each row follows a color cycle. One value repeats, and the repeat moves one column to the right in each successive row.
+\vspace{2mm}
+\picturegrid{1e97544e}{58mm}
+\vfill
+\med
+At row 5, column 5, the correct sequence begins \id{3 4 5 6 6}. The base wrote \id{3 4 5 6 7}. All 35 errors were one step ahead in the nine-color cycle.\\[1.5mm]
+The base missed 22 blank cells and changed 13 visible ones. Checkpoint-660 filled all 73 blanks and preserved all 456 visible cells. Both responses were valid $23\times23$ grids.
+\end{frame}
+
+\renewcommand{\readsource}{Original ARC training grids}
+\renewcommand{\readurl}{https://github.com/fchollet/ARC-AGI/tree/master/data/training}
+\begin{frame}[t]{Three training tasks with related completion rules}
+\med
+A retrospective search of 880 training tasks found 19 that fill blanks and preserve all visible cells on every pair. Three also increase the palette by one color across successive examples.
+\vspace{2mm}
+\picturegrid{training-neighbors}{51mm}
+\smallbody
+\begin{tabular}{@{}ll@{}}
+\id{73251a56} & Color runs have row-dependent repeat boundaries. Palette sizes grow $6,7,8\to9$, as on the target.\\
+\id{c3f564a4} & Colors wrap back to 1. The starting color advances by one on each row.\\
+\id{29ec7d0e} & The cyclic increment depends on the row. The query uses nine colors.\\
+\end{tabular}
+\vfill
+\med\textbf{Hypothesis.} These examples may have helped the model keep its place in a cycle while filling blanks. The exact diagonal rule occurred in the target demonstrations. No training output matched it under the rotations, reflections and palette relabelings tested.
+\end{frame}
+
+\renewcommand{\sectiontag}{B\quad BF16 sampled decoding}
+\renewcommand{\readurl}{\bfurl}
+\renewcommand{\readsource}{BF16 response archive}
+\begin{frame}[t]{Two BF16 sampling settings solved exactly the same five tasks}
+\normbody
+The unquantized base ran on four H100s without a LoRA adapter. Both settings used the same prompt and token allowance as the NF4 evaluation, thinking off, one beam and one sampled response per task (seed setting 42).
+\vspace{5mm}
+\begin{center}
+\med\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Setting & Temperature & Top-$p$ & Top-$k$ & Exact tasks & Exact grids\\
+\midrule
+Low nucleus & 0.2 & 0.95 & Off & 5/138 & 5/185\\
+Instruct sampling & 0.7 & 0.80 & 20 & 5/138 & 5/185\\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{3mm}
+\normbody
+\id{4aab4007}\quad \id{c663677b}\quad \id{ca8f78db}\quad \id{e66aafb8}\quad \id{e95e3d8e}
+\vfill
+\med Each strategy missed the same 133 tasks. The comparison with NF4 changes precision, decoding and execution layout together.
+\end{frame}
+
+\begin{frame}[t]{Why the scorer rejected 12 and 13 BF16 responses}
+\normbody
+These counts refer to rejected task responses. Across the two settings, 17 distinct tasks had a rejection. Eight were rejected under both.
+\vspace{3mm}
+\begin{center}
+\med\begin{tabular}{@{}lrr@{}}
+\toprule
+Reason recorded by the scorer & Low nucleus & Instruct sampling\\
+\midrule
+End of sequence with malformed JSON & 5 & 4\\
+End of sequence with a ragged or oversized grid & 2 & 2\\
+End of sequence with the wrong number of grids & 1 & 1\\
+Token allowance exhausted with an incomplete answer & 4 & 6\\
+\midrule
+\textbf{All rejected responses} & \textbf{12} & \textbf{13}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\vfill
+\med On \id{929ab4e9}, both settings produced answers that omitted the outer list and had wrong cell values. Adding one list recovered zero exact BF16 answers across the audit.\\[1.5mm] Most failures still parsed. Low nucleus returned 94 correct-size answers with wrong cells, and instruct sampling returned 92.
+\end{frame}
+
+\begin{frame}[t]{Which tasks were solved across the four conditions?}
+\med
+A check marks an exact task. Both BF16 settings have identical columns.
+\vspace{2mm}
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{NF4, greedy} & \multicolumn{2}{c}{BF16 base, sampled}\\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Task & Base & Checkpoint-660 & Low nucleus & Instruct\\
+\midrule
+\id{4aab4007} & \yes & \yes & \yes & \yes\\
+\id{c663677b} & \yes & \yes & \yes & \yes\\
+\id{ca8f78db} & \yes & \yes & \yes & \yes\\
+\id{e66aafb8} & \dash & \yes & \yes & \yes\\
+\id{e95e3d8e} & \dash & \yes & \yes & \yes\\
+\id{af22c60d} & \yes & \yes & Token cap & Token cap\\
+\id{1e97544e} & \dash & \yes & \dash & \dash\\
+\midrule
+Exact tasks / 138 & 4 & 7 & 5 & 5\\
+\bottomrule
+\end{tabular}
+\end{center}
+\vfill
+\med On \id{1e97544e} both BF16 samples made the same 23 cell errors. 131 tasks were unsolved under all four conditions.
+\end{frame}
+
+\begin{frame}[t]{\id{af22c60d}\enspace Both BF16 responses stopped mid-grid}
+\normbody
+The prompt used 16,377 of 18,432 context tokens, leaving \textbf{2,055} for the answer. Both BF16 samples reached that limit immediately after a comma.
+\vspace{2mm}
+\picturegrid{af22c60d}{56mm}
+\vfill
+\med Gray marks unwritten cells. Both emitted 22 complete rows and 24 cells of row 23. All \textbf{684} emitted cell values match the reference. The model never emitted the remaining \textbf{216} cells.\\[1.5mm]
+The BF16 answers used spaces after commas. Both NF4 answers used compact separators and completed the $30\times30$ grid in 1,806 tokens. Instruct sampling also omitted the outer grid list.
+\end{frame}
+
+\renewcommand{\readsource}{Benchmark archive}
+\renewcommand{\readurl}{https://github.com/anatol21/arc-agi-3/tree/e37ec8b840155c28c843b175cf1f2116d5c5d8cc/benchmarks/qwen3.8-flash-next}
+\renewcommand{\sectiontag}{A + B\quad Token accounting}
+\begin{frame}[t]{Generated tokens per task and per exact answer}
+\med
+Counts use the primary saved answer for each task and condition. The seven task rows give output length for exact answers only. A dash means the submitted answer failed strict scoring.
+\vspace{1mm}
+\begin{center}
+\smallbody\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & NF4 base & NF4 checkpoint-660 & BF16 low nucleus & BF16 instruct\\
+\midrule
+Total output tokens, 138 tasks & 246,639 & 241,737 & 242,239 & 240,413\\
+Mean output tokens per task & 1,787.2 & 1,751.7 & 1,755.4 & 1,742.1\\
+Mean length of an exact answer & 2,756.0 & 1,244.6 & 1,748.6 & 1,748.6\\
+All output tokens / exact tasks & 61,660 & 34,534 & 48,448 & 48,083\\
+\midrule
+\id{4aab4007} & 2,357 & 1,574 & 2,357 & 2,357\\
+\id{c663677b} & 2,192 & 1,464 & 2,192 & 2,192\\
+\id{ca8f78db} & 4,669 & 1,806 & 2,705 & 2,705\\
+\id{e66aafb8} & \dash & 24 & 32 & 32\\
+\id{e95e3d8e} & \dash & 974 & 1,457 & 1,457\\
+\id{af22c60d} & 1,806 & 1,806 & \dash & \dash\\
+\id{1e97544e} & \dash & 1,064 & \dash & \dash\\
+\bottomrule
+\end{tabular}
+\end{center}
+\vfill
+\smallbody Exact-answer means cover different task sets (4, 7, 5 and 5). Counts exclude prompts, padding, replay and discarded work. GPU time also includes loading and computation on input tokens.
+\end{frame}
+\input{python-first-pass/slides.tex}
+\input{python-case-audit/solution.tex}
+\input{python-case-audit/failures.tex}
+\input{python-case-audit/cases.tex}
+\input{python-case-audit/crosswalk.tex}
+\section{Proposed experiments}
+\setbeamertemplate{footline}{\leavevmode\hbox to\paperwidth{\hspace{10mm}{\color{muted}\fontsize{10}{12}\selectfont\sectiontag}\hfil{\color{muted}\fontsize{10}{12}\selectfont\insertframenumber}\hspace{10mm}}\vspace{2.5mm}}
+\renewcommand{\sectiontag}{Proposed experiments}
+\input{proposals-backup/weight-plan.tex}
+\input{proposals-backup/directions.tex}
+\section{Backup: local protocols and prompts}
+\renewcommand{\sectiontag}{Backup\quad Python protocol}
+\input{proposals-backup/arm-procedure.tex}
+\renewcommand{\sectiontag}{Backup\quad Cluster prompts}
+\input{proposals-backup/prompts.tex}
+\input{proposals-backup/training.tex}
+\section{Backup: API experiments and proposed prompts}
+\renewcommand{\sectiontag}{Backup\quad Earlier API experiments}
+\input{proposals-backup/openrouter.tex}
+\renewcommand{\sectiontag}{Backup\quad Proposed prompts}
+\input{proposals-backup/future-prompts.tex}
+\section{Backup: research precedents}
+\renewcommand{\sectiontag}{Backup\quad Research precedents}
+\input{proposals-backup/weight-backup.tex}
+\input{proposals-backup/synthetic-third.tex}
+\section{Complete historical OpenRouter prompts}
+\renewcommand{\sectiontag}{Backup\quad OpenRouter prompt archive}
+\input{proposals-backup/openrouter/verbatim-slides.tex}
+\end{document}

@@ -1,0 +1,232 @@
+{
+  "figures/build_figures.py": {
+    "origin": "heldout-direct-answers-source.zip#figures/build_figures.py",
+    "source_sha256": "14b6dafb58ee41b102a8f335784a343734a1298c2e887517307ffb9389e4f6da",
+    "published_sha256": "14b6dafb58ee41b102a8f335784a343734a1298c2e887517307ffb9389e4f6da"
+  },
+  "figures/figure-inputs.json": {
+    "origin": "heldout-direct-answers-source.zip#figures/figure-inputs.json",
+    "source_sha256": "376f25e0cd113bcc0daac20a9d6f9c53449545c2eaa4568e713303536e6e9ee3",
+    "published_sha256": "376f25e0cd113bcc0daac20a9d6f9c53449545c2eaa4568e713303536e6e9ee3"
+  },
+  "figures/nf4-shared.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/nf4-shared.pdf",
+    "source_sha256": "ab9a6fa599b4178044c5f18bfad248f4fb81978e333c09bc1f84648ec42dc2ae",
+    "published_sha256": "ab9a6fa599b4178044c5f18bfad248f4fb81978e333c09bc1f84648ec42dc2ae"
+  },
+  "figures/e66aafb8.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/e66aafb8.pdf",
+    "source_sha256": "0045ae5671cfddcb697ac42447b76bce03779576dfff7760059506af9eb96a0a",
+    "published_sha256": "0045ae5671cfddcb697ac42447b76bce03779576dfff7760059506af9eb96a0a"
+  },
+  "figures/e95e3d8e.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/e95e3d8e.pdf",
+    "source_sha256": "423c19b41f2ce3409550e010fecf2fe5399288bb68b9a0eaf4fc477c6d1b5264",
+    "published_sha256": "423c19b41f2ce3409550e010fecf2fe5399288bb68b9a0eaf4fc477c6d1b5264"
+  },
+  "figures/1e97544e.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/1e97544e.pdf",
+    "source_sha256": "f7a15746a71f7811811c89d7d343fa6896469533c3330ec53bbd173d861c3839",
+    "published_sha256": "f7a15746a71f7811811c89d7d343fa6896469533c3330ec53bbd173d861c3839"
+  },
+  "figures/training-neighbors.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/training-neighbors.pdf",
+    "source_sha256": "f03a7859b0e70feef887324ffbd139362d81fcdb0feb644dfb6fb7c57451e0de",
+    "published_sha256": "f03a7859b0e70feef887324ffbd139362d81fcdb0feb644dfb6fb7c57451e0de"
+  },
+  "figures/af22c60d.pdf": {
+    "origin": "heldout-direct-answers-source.zip#figures/af22c60d.pdf",
+    "source_sha256": "260f670fad73660980e8b3d5e5ca0978aafbba5eefc5bd3cb0609014ddaa376f",
+    "published_sha256": "260f670fad73660980e8b3d5e5ca0978aafbba5eefc5bd3cb0609014ddaa376f"
+  },
+  "evidence/report.md": {
+    "origin": "heldout-direct-answers-source.zip#evidence/report.md",
+    "source_sha256": "7ecc4f136b0fab2fcf64529a1cdeb450d66da4dcd77105992fe70996db3bb3a6",
+    "published_sha256": "7ecc4f136b0fab2fcf64529a1cdeb450d66da4dcd77105992fe70996db3bb3a6"
+  },
+  "evidence/audit.json": {
+    "origin": "heldout-direct-answers-source.zip#evidence/audit.json",
+    "source_sha256": "2fa1fd332ded814abf2edf6b60b354216e6133b2aa34318a0d73ac6ad72f68a5",
+    "published_sha256": "2fa1fd332ded814abf2edf6b60b354216e6133b2aa34318a0d73ac6ad72f68a5"
+  },
+  "evidence/analyze.py": {
+    "origin": "heldout-direct-answers-source.zip#evidence/analyze.py",
+    "source_sha256": "e23a1a40476903e89de2ce5cfbc99465b2033ec685df0795e240562c82da0006",
+    "published_sha256": "e23a1a40476903e89de2ce5cfbc99465b2033ec685df0795e240562c82da0006"
+  },
+  "evidence/1e97544e-training-neighbors.md": {
+    "origin": "heldout-direct-answers-source.zip#evidence/1e97544e-training-neighbors.md",
+    "source_sha256": "7376e7ab2d6760fe3f0aa6145f2d2c4226a8503939a54125944be754370e262a",
+    "published_sha256": "7376e7ab2d6760fe3f0aa6145f2d2c4226a8503939a54125944be754370e262a"
+  },
+  "evidence/training_neighbors.py": {
+    "origin": "heldout-direct-answers-source.zip#evidence/training_neighbors.py",
+    "source_sha256": "1accf5b0d56ce31aea0e0304d6d5a8cdbba64b4c47b48d34aa233bb4e98c4d34",
+    "published_sha256": "1accf5b0d56ce31aea0e0304d6d5a8cdbba64b4c47b48d34aa233bb4e98c4d34"
+  },
+  "evidence/token-accounting.json": {
+    "origin": "heldout-direct-answers-source.zip#evidence/token-accounting.json",
+    "source_sha256": "84f096026841bc53519378a4973662d94883bde97f8f673ba30c2d48e8d37668",
+    "published_sha256": "84f096026841bc53519378a4973662d94883bde97f8f673ba30c2d48e8d37668"
+  },
+  "evidence/token_accounting.py": {
+    "origin": "heldout-direct-answers-source.zip#evidence/token_accounting.py",
+    "source_sha256": "ff887d1dde76aa598b612585bbed5442514376b09e94d31c7d8786e9c01ea8fe",
+    "published_sha256": "ff887d1dde76aa598b612585bbed5442514376b09e94d31c7d8786e9c01ea8fe"
+  },
+  "figures/LICENSE-ARC.txt": {
+    "origin": "heldout-direct-answers-source.zip#figures/LICENSE-ARC.txt",
+    "source_sha256": "b3a161754ffc20840ccf92aec0fe464fbbcf42f14c22f78a3ec2e98fca3864ca",
+    "published_sha256": "b3a161754ffc20840ccf92aec0fe464fbbcf42f14c22f78a3ec2e98fca3864ca"
+  },
+  "README.md": {
+    "origin": "heldout-direct-answers-source.zip#README.md",
+    "source_sha256": "a2f8eea17b6dce496e858bca06306a337cbfbd256bcc5547300034a617a35ff9",
+    "published_sha256": "a2f8eea17b6dce496e858bca06306a337cbfbd256bcc5547300034a617a35ff9"
+  },
+  "main.tex": {
+    "origin": "heldout-direct-answers-source.zip#main.tex",
+    "source_sha256": "662d3976bc6c2c186399e1de6cb1e8e8acd4bca9ed7951a0eb6a2a760af5b1ab",
+    "published_sha256": "662d3976bc6c2c186399e1de6cb1e8e8acd4bca9ed7951a0eb6a2a760af5b1ab"
+  },
+  "proposals-backup/arm-procedure.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/arm-procedure.tex",
+    "source_sha256": "6f6a4307605d492d4fefd62b25c052c1fd0d71a46ca0818e4e386f98229b3d14",
+    "published_sha256": "6f6a4307605d492d4fefd62b25c052c1fd0d71a46ca0818e4e386f98229b3d14"
+  },
+  "proposals-backup/directions.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/directions.tex",
+    "source_sha256": "74753c3943226d1abb73ba5446b9a945c81bdfd58271a99a4a59f2e60c85ab27",
+    "published_sha256": "74753c3943226d1abb73ba5446b9a945c81bdfd58271a99a4a59f2e60c85ab27"
+  },
+  "proposals-backup/future-prompts.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/future-prompts.tex",
+    "source_sha256": "fb20e22314869642696fea839bedf27f0a2f28f9ff04504d9a4740c571ad3c53",
+    "published_sha256": "fb20e22314869642696fea839bedf27f0a2f28f9ff04504d9a4740c571ad3c53"
+  },
+  "proposals-backup/openrouter.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter.tex",
+    "source_sha256": "39b5635248b856ef87d88bcdb1b6f7a202040f9b851a2d2e72146e160ffe0d7c",
+    "published_sha256": "39b5635248b856ef87d88bcdb1b6f7a202040f9b851a2d2e72146e160ffe0d7c"
+  },
+  "proposals-backup/openrouter/full-prompts.pdf": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter/full-prompts.pdf",
+    "source_sha256": "e1a76b602f9420cd94ffd0303a2e87b6b944984ecccbddc8bc2ca1d5049c15bc",
+    "published_sha256": "e1a76b602f9420cd94ffd0303a2e87b6b944984ecccbddc8bc2ca1d5049c15bc"
+  },
+  "proposals-backup/openrouter/full-prompts.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter/full-prompts.tex",
+    "source_sha256": "ed6919daabaa58d395f8a82a05be55b188024888d26fea6aab356138c6fa0d34",
+    "published_sha256": "ed6919daabaa58d395f8a82a05be55b188024888d26fea6aab356138c6fa0d34"
+  },
+  "proposals-backup/openrouter/saved-experiment-configurations.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter/saved-experiment-configurations.json",
+    "source_sha256": "93860713746555a4d8571cd53811d48a23443414042b3ab65638bbe4a19a71be",
+    "published_sha256": "93860713746555a4d8571cd53811d48a23443414042b3ab65638bbe4a19a71be"
+  },
+  "proposals-backup/openrouter/source-verification.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter/source-verification.json",
+    "source_sha256": "df61927478e6348a42757b545f5e69dd25f96d9784e3bdd0051ac035f762bc4b",
+    "published_sha256": "df61927478e6348a42757b545f5e69dd25f96d9784e3bdd0051ac035f762bc4b"
+  },
+  "proposals-backup/openrouter/verbatim-slides.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/openrouter/verbatim-slides.tex",
+    "source_sha256": "73f53ac3b7a5c975a1a38bfa47136016a15d4ccccf7885b1cc5f1bf8cf517088",
+    "published_sha256": "73f53ac3b7a5c975a1a38bfa47136016a15d4ccccf7885b1cc5f1bf8cf517088"
+  },
+  "proposals-backup/prompts.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/prompts.tex",
+    "source_sha256": "fe6ab2ec9cfb8334cd754bfe3c600c89b935535606bd63f486cd82eae0cd0a15",
+    "published_sha256": "fe6ab2ec9cfb8334cd754bfe3c600c89b935535606bd63f486cd82eae0cd0a15"
+  },
+  "proposals-backup/protocols/arc3-poc.md": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/arc3-poc.md",
+    "source_sha256": "ba5477766a20d2ca6b93f02590f7d95941b1c9675f50a9964d1fcf6d3ef8c610",
+    "published_sha256": "ba5477766a20d2ca6b93f02590f7d95941b1c9675f50a9964d1fcf6d3ef8c610"
+  },
+  "proposals-backup/protocols/checkpoint-660-pairs.tsv": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/checkpoint-660-pairs.tsv",
+    "source_sha256": "379d155fa3f81aa01d5271db013324ea3060e9641194570ac5c0859846fb6081",
+    "published_sha256": "379d155fa3f81aa01d5271db013324ea3060e9641194570ac5c0859846fb6081"
+  },
+  "proposals-backup/protocols/direct-08573cc6.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/direct-08573cc6.json",
+    "source_sha256": "3eb51efc53b3b813c8424ce2e011d35e0779b12b5b7b4eecea05cf6a8b0e61d6",
+    "published_sha256": "3eb51efc53b3b813c8424ce2e011d35e0779b12b5b7b4eecea05cf6a8b0e61d6"
+  },
+  "proposals-backup/protocols/direct-user-prefix.txt": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/direct-user-prefix.txt",
+    "source_sha256": "7551bb066bcd504feb550a4a2c12b5dd81c67f2fa6660e1da25edc6a47d7783f",
+    "published_sha256": "7551bb066bcd504feb550a4a2c12b5dd81c67f2fa6660e1da25edc6a47d7783f"
+  },
+  "proposals-backup/protocols/directions.md": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/directions.md",
+    "source_sha256": "f58507f58baaf8dfd991e889238a51e905f9290d2d2e0173ec391453b6f9b73b",
+    "published_sha256": "f58507f58baaf8dfd991e889238a51e905f9290d2d2e0173ec391453b6f9b73b"
+  },
+  "proposals-backup/protocols/one-shot-training-example-overlap.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/one-shot-training-example-overlap.json",
+    "source_sha256": "1e3ca97d9a63a6fdaae7885ebf469dc1ed7dec77be800e9def2362ad0207d425",
+    "published_sha256": "1e3ca97d9a63a6fdaae7885ebf469dc1ed7dec77be800e9def2362ad0207d425"
+  },
+  "proposals-backup/protocols/python-08573cc6-initial.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/python-08573cc6-initial.json",
+    "source_sha256": "0ad9b84856d7f25e522c219897615f39dd7f6a67e0c8da1c35640e9173ec2986",
+    "published_sha256": "0ad9b84856d7f25e522c219897615f39dd7f6a67e0c8da1c35640e9173ec2986"
+  },
+  "proposals-backup/protocols/python-cbebaa4b-repair.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/python-cbebaa4b-repair.json",
+    "source_sha256": "e5708169d92cc6389f918f1282c6e4b35178bdf4c335c57f10df35e341b71e02",
+    "published_sha256": "e5708169d92cc6389f918f1282c6e4b35178bdf4c335c57f10df35e341b71e02"
+  },
+  "proposals-backup/protocols/python-probe-suffix.txt": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/python-probe-suffix.txt",
+    "source_sha256": "d12e961637ebf5395a6a15f582cbe252907ff2e6dc649e6b3c598ff545927e61",
+    "published_sha256": "d12e961637ebf5395a6a15f582cbe252907ff2e6dc649e6b3c598ff545927e61"
+  },
+  "proposals-backup/protocols/python-system.txt": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/python-system.txt",
+    "source_sha256": "58f5a43b0ca4fc11196a0a12bc464f2c6554e1e9a04f2b30c345850ef60d51e4",
+    "published_sha256": "58f5a43b0ca4fc11196a0a12bc464f2c6554e1e9a04f2b30c345850ef60d51e4"
+  },
+  "proposals-backup/protocols/runtime-prompts-provenance.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/runtime-prompts-provenance.json",
+    "source_sha256": "e836629e8fc0b72f1d14630044f76c58166b698399e748b0f35693ea59c9f55f",
+    "published_sha256": "e836629e8fc0b72f1d14630044f76c58166b698399e748b0f35693ea59c9f55f"
+  },
+  "proposals-backup/protocols/training-chat-example.json": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/training-chat-example.json",
+    "source_sha256": "83d6317f879f6db08d7d6c3aa40c3cb0653ffd407d3959478b828f187a268154",
+    "published_sha256": "83d6317f879f6db08d7d6c3aa40c3cb0653ffd407d3959478b828f187a268154"
+  },
+  "proposals-backup/protocols/weight-interventions.md": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/protocols/weight-interventions.md",
+    "source_sha256": "47a70464c8612efe8741db53a8909dcd27023560ac805e72a392f99df07d4690",
+    "published_sha256": "47a70464c8612efe8741db53a8909dcd27023560ac805e72a392f99df07d4690"
+  },
+  "proposals-backup/synthetic-third.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/synthetic-third.tex",
+    "source_sha256": "3de7e470fdb857077a9d6339ca01eba284181cb9968fd5679bec930ce5079823",
+    "published_sha256": "3de7e470fdb857077a9d6339ca01eba284181cb9968fd5679bec930ce5079823"
+  },
+  "proposals-backup/training.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/training.tex",
+    "source_sha256": "3c0cd3d0f74ef346a6464df53eb1ffa5e4fe371bfbb2f0fb1c9034d2a5f34a90",
+    "published_sha256": "3c0cd3d0f74ef346a6464df53eb1ffa5e4fe371bfbb2f0fb1c9034d2a5f34a90"
+  },
+  "proposals-backup/weight-backup.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/weight-backup.tex",
+    "source_sha256": "95a8cb3e21e8ea1eac7aa8015faa5568474faf88734045d514394be36b02e1a1",
+    "published_sha256": "95a8cb3e21e8ea1eac7aa8015faa5568474faf88734045d514394be36b02e1a1"
+  },
+  "proposals-backup/weight-plan.tex": {
+    "origin": "heldout-direct-answers-source.zip#proposals-backup/weight-plan.tex",
+    "source_sha256": "e5b37487af3fd1b99c0e50fa9727ec996223e9e38c0714d158c3798aed28291f",
+    "published_sha256": "e5b37487af3fd1b99c0e50fa9727ec996223e9e38c0714d158c3798aed28291f"
+  },
+  "heldout-direct-answers.pdf": {
+    "origin": "artifacts/presentations/heldout-direct-answers/heldout-direct-answers.pdf",
+    "source_sha256": "4d3abb652620fec186ad4eedf2d972b64cc8ada2c047538cd5b1e81dc0bdd201",
+    "published_sha256": "4d3abb652620fec186ad4eedf2d972b64cc8ada2c047538cd5b1e81dc0bdd201"
+  }
+}

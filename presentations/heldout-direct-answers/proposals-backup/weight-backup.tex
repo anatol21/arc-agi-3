@@ -1,0 +1,13 @@
+% Primary sources and evidence: Panigrahi et al. L138. Hu et al. L102--L105/L107.
+% Lehmann L078/L081/L088, level-episode success is macro-averaged by game family.
+% Astra Qwen edit precedents T06 L097--L101; the Gemma follow-up is a counterexample to broad transfer.
+\begin{frame}[t]{Three ways to study behavior in weight space}
+\med
+\begin{tabular}{@{}>{\raggedright\arraybackslash\bfseries}p{43mm}>{\raggedright\arraybackslash}p{165mm}@{}}
+Locate a learned change & Panigrahi et al. copied subsets of fine-tuned parameters back into the original language model. On the NLP tasks they studied, roughly 0.01\% of parameters retained over 95\% of fine-tuned performance. \href{https://proceedings.mlr.press/v202/panigrahi23a.html}{\textcolor{accent}{ICML 2023}}\\[3mm]
+Edit a pretrained model & Hu et al. report that Astra changed 1,023 values in one Qwen3.5-0.8B MLP column. Held-out MATH-500 rose from 8.35\% to 37.80\%. Across 16 searches on two models, six retained the original weights. \href{https://arxiv.org/html/2611.09382v1}{\textcolor{accent}{November 2026 preprint}}\\[3mm]
+Write a policy from rules & Lehmann gave Astra game simulator code, with held-out levels removed. On 20 private game families, its fixed neural policy averaged 56\% held-out-level success. Its Python player averaged 99.95\%. \href{https://arxiv.org/html/2611.16981v1}{\textcolor{accent}{November 2026 preprint}}\\
+\end{tabular}
+\vfill
+\smallbody Our proposed first test follows the first approach. We switch subsets of the \emph{existing} checkpoint update on and off, then score their effects on the same ARC query.
+\end{frame}

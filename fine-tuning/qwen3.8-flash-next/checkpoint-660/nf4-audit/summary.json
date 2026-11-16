@@ -1,0 +1,53 @@
+{
+  "cpu_counts": {
+    "not_selected": 567,
+    "bnb_linear_weight": 834,
+    "axolotl_expert_weight": 96
+  },
+  "actual_quantized_count": 930,
+  "routes_and_families": {
+    "bitsandbytes.Linear4bit": {
+      "qkv": 27,
+      "proj": 27,
+      "linear_fc1": 28,
+      "linear_fc2": 28,
+      "out_proj": 36,
+      "in_proj_qkv": 36,
+      "in_proj_z": 36,
+      "in_proj_b": 36,
+      "in_proj_a": 36,
+      "gate_proj": 48,
+      "up_proj": 48,
+      "down_proj": 48,
+      "shared_expert_gate": 48,
+      "input_mix_weight_down": 97,
+      "input_mix_weight_up": 97,
+      "block_inject_weight": 96,
+      "key_proj": 1,
+      "value_proj": 1,
+      "q_proj": 12,
+      "k_proj": 12,
+      "v_proj": 12,
+      "o_proj": 12,
+      "index_qk_proj": 12
+    },
+    "bitsandbytes.Bnb4bitParametrization": {
+      "down_proj": 48,
+      "gate_up_proj": 48
+    }
+  },
+  "packed_byte_count_mismatches": [],
+  "physical_non_adapter_parameters_not_directly_matched": [],
+  "nf4_live_by_device": {
+    "cuda:0": 384,
+    "cuda:1": 272,
+    "cuda:2": 274
+  },
+  "dtype_of_packed_carrier": {
+    "torch.bfloat16": 834,
+    "torch.uint8": 96
+  },
+  "verified_trainable_adapter_dtypes": {
+    "torch.float32": 744
+  }
+}

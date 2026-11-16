@@ -1,0 +1,137 @@
+{
+  "producer/arc-bf16-base-debug-v1/cold.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/cold.py",
+    "source_sha256": "babe5179c738d0307df72b4255f779ec8165c2e09767e1490b4a4357974663c2",
+    "published_sha256": "babe5179c738d0307df72b4255f779ec8165c2e09767e1490b4a4357974663c2"
+  },
+  "producer/arc-bf16-base-debug-v1/debug.sbatch": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/debug.sbatch",
+    "source_sha256": "a99579024f1087a11a0416486d24dfa3e336edb61bc59e9643933795033dbf91",
+    "published_sha256": "87c8f86a9c1f477b84e45f3c193e2da1e8e619cab70bc31eb8be567c72500b42"
+  },
+  "producer/arc-bf16-base-debug-v1/generation.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/generation.py",
+    "source_sha256": "a73ee3dafe491821857a60adabe14683a0cb6423c2666f21af73480411ecd5aa",
+    "published_sha256": "a73ee3dafe491821857a60adabe14683a0cb6423c2666f21af73480411ecd5aa"
+  },
+  "producer/arc-bf16-base-debug-v1/live_generation.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/live_generation.py",
+    "source_sha256": "152b42c2b1d2cd8f67e58774e2da1375babfe8a034abfb84e47537490d67dfd6",
+    "published_sha256": "152b42c2b1d2cd8f67e58774e2da1375babfe8a034abfb84e47537490d67dfd6"
+  },
+  "producer/arc-bf16-base-debug-v1/loader.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/loader.py",
+    "source_sha256": "f48559f766fdd3c78a6bd410962d6b4aea1784aeb849d0f9bd894865b7649c00",
+    "published_sha256": "f48559f766fdd3c78a6bd410962d6b4aea1784aeb849d0f9bd894865b7649c00"
+  },
+  "producer/arc-bf16-base-debug-v1/nf4-reference.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/nf4-reference.json",
+    "source_sha256": "0050e1f741d4669de8b30044df8d6c62f961ab49fa8e42f3e035cbceaf923752",
+    "published_sha256": "0050e1f741d4669de8b30044df8d6c62f961ab49fa8e42f3e035cbceaf923752"
+  },
+  "producer/arc-bf16-base-debug-v1/package.sha256": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/package.sha256",
+    "source_sha256": "a6a3a1af9ef58d516d0520821919cb4bd907a5260e83acd840e48a5b0b329616",
+    "published_sha256": "bf3561bc614391af9794d1105d42d530e185d22c24575232adfae180e2748421"
+  },
+  "producer/arc-bf16-base-debug-v1/run.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/run.py",
+    "source_sha256": "de56453133bbc9f5467998fcd1ac196414fb80319fd69ad02777ae3939954ba3",
+    "published_sha256": "de56453133bbc9f5467998fcd1ac196414fb80319fd69ad02777ae3939954ba3"
+  },
+  "producer/arc-bf16-base-debug-v1/score.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/score.py",
+    "source_sha256": "d96ae18295241db8818bfe003ce38873bef1dc2a4a2e0373d0a2655af4662fcf",
+    "published_sha256": "d96ae18295241db8818bfe003ce38873bef1dc2a4a2e0373d0a2655af4662fcf"
+  },
+  "producer/arc-bf16-base-debug-v1/stage.py": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/stage.py",
+    "source_sha256": "8879f8cba9ec5272c355384b0f08952864c8bf1a2474076a62d8daada9e02058",
+    "published_sha256": "8879f8cba9ec5272c355384b0f08952864c8bf1a2474076a62d8daada9e02058"
+  },
+  "producer/arc-bf16-base-debug-v1/tensor-inventory.csv": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-v1/tensor-inventory.csv",
+    "source_sha256": "3932538acc27838d3549e5ca71bb12bd80f25d798e4a4d7a695a2a4eac3ec96f",
+    "published_sha256": "3932538acc27838d3549e5ca71bb12bd80f25d798e4a4d7a695a2a4eac3ec96f"
+  },
+  "evidence/pilot-plan.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/pilot-plan.json",
+    "source_sha256": "33b4b96bbb16de2ff74e288fef46e6aaa83619c3d020b53831ebe4f5ad916994",
+    "published_sha256": "f2ebbc1397671859c85f0053f64959eb58627aed469f78822cc763538d611cd5"
+  },
+  "evidence/scores.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/allocations/8487396/scores.json",
+    "source_sha256": "cf6d6149c9e87881c2961efb55701d1f9f0cb50fa676530ba213a5e0d2507b8f",
+    "published_sha256": "cf6d6149c9e87881c2961efb55701d1f9f0cb50fa676530ba213a5e0d2507b8f"
+  },
+  "evidence/generation-summary.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/allocations/8487396/generation-summary.json",
+    "source_sha256": "506d6e5b15e935a73f2f3bc8159962bab210ddc0d21781ee60d4fdb4ff683304",
+    "published_sha256": "506d6e5b15e935a73f2f3bc8159962bab210ddc0d21781ee60d4fdb4ff683304"
+  },
+  "evidence/verified-loader.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/allocations/8487396/verified-loader.json",
+    "source_sha256": "2d6ef31c9491f452e7c8c5b6aea12d51b3a2b072e9ae234b8967da03e1b3f670",
+    "published_sha256": "2d6ef31c9491f452e7c8c5b6aea12d51b3a2b072e9ae234b8967da03e1b3f670"
+  },
+  "evidence/states/08573cc6.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/08573cc6.json",
+    "source_sha256": "78b3c55c77060185218df6ee271bd874916c06881da1f2abf9d73ab82057f855",
+    "published_sha256": "78b3c55c77060185218df6ee271bd874916c06881da1f2abf9d73ab82057f855"
+  },
+  "evidence/states/20270e3b.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/20270e3b.json",
+    "source_sha256": "e5bba579242952fb7b52fb54ff2a113c35736a3777fb91d7633a1ceaddaa39df",
+    "published_sha256": "e5bba579242952fb7b52fb54ff2a113c35736a3777fb91d7633a1ceaddaa39df"
+  },
+  "evidence/states/28a6681f.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/28a6681f.json",
+    "source_sha256": "cfe780e51105ca34b17aaefe333683f7a4adb86b7c917f515a447d7320f45de7",
+    "published_sha256": "cfe780e51105ca34b17aaefe333683f7a4adb86b7c917f515a447d7320f45de7"
+  },
+  "evidence/states/3dc255db.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/3dc255db.json",
+    "source_sha256": "9a4059653ff44376b27c8e65e850d67edd7e61d8678debde75fa40618af2fdf3",
+    "published_sha256": "9a4059653ff44376b27c8e65e850d67edd7e61d8678debde75fa40618af2fdf3"
+  },
+  "evidence/states/4c3d4a41.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/4c3d4a41.json",
+    "source_sha256": "09e75c006decf3c1f307d1ad4e026e71ba98145f7c3f35e4c81a6b28023df5d7",
+    "published_sha256": "09e75c006decf3c1f307d1ad4e026e71ba98145f7c3f35e4c81a6b28023df5d7"
+  },
+  "evidence/states/78332cb0.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/78332cb0.json",
+    "source_sha256": "5a408cfe9b563571a05f47c7d0db51e5789dece434ca456f7217681df0516250",
+    "published_sha256": "5a408cfe9b563571a05f47c7d0db51e5789dece434ca456f7217681df0516250"
+  },
+  "evidence/states/7b5033c1.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/7b5033c1.json",
+    "source_sha256": "e8cc889c1fe6bad1793a3524b14a7e2078a4055b0ad2f680b4b6fafbbd50bb5b",
+    "published_sha256": "e8cc889c1fe6bad1793a3524b14a7e2078a4055b0ad2f680b4b6fafbbd50bb5b"
+  },
+  "evidence/states/b0039139.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/b0039139.json",
+    "source_sha256": "65aeb7c3d509d1ec87ba81de6c6fbdf46d8991a73e3359b25211e44aa3655b1b",
+    "published_sha256": "65aeb7c3d509d1ec87ba81de6c6fbdf46d8991a73e3359b25211e44aa3655b1b"
+  },
+  "evidence/states/d35bdbdc.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/d35bdbdc.json",
+    "source_sha256": "6a2f57e95e5ac66a3b028425cf79b2db5d51154f5cb5295a5fc614a479a938cf",
+    "published_sha256": "6a2f57e95e5ac66a3b028425cf79b2db5d51154f5cb5295a5fc614a479a938cf"
+  },
+  "evidence/states/dbff022c.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/dbff022c.json",
+    "source_sha256": "2ea9b473889d4ed014e88a7c9b251a01e72d00350fba255b9868856a1df9d3df",
+    "published_sha256": "2ea9b473889d4ed014e88a7c9b251a01e72d00350fba255b9868856a1df9d3df"
+  },
+  "evidence/states/e8686506.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/e8686506.json",
+    "source_sha256": "833bd865c7bada77ad19f2aa4c0ffcf15807ce50c7226d768f6996d877be9308",
+    "published_sha256": "833bd865c7bada77ad19f2aa4c0ffcf15807ce50c7226d768f6996d877be9308"
+  },
+  "evidence/states/eee78d87.json": {
+    "origin": "artifacts/cluster/arc-bf16-base-debug-8487396/states/eee78d87.json",
+    "source_sha256": "84896c1a9e5cb70a0c33e5134856f22bae8a4dfd3050e1437e8e28bd42288d5d",
+    "published_sha256": "84896c1a9e5cb70a0c33e5134856f22bae8a4dfd3050e1437e8e28bd42288d5d"
+  }
+}

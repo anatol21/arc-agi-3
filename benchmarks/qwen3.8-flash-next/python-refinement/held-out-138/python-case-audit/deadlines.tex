@@ -1,0 +1,18 @@
+\begin{frame}[t]{The deadline caught 196 first solver attempts in progress}
+\med
+In all 196 cases the thinking phase had ended, and the saved answer contained more tokens. The runner accepted no candidate before its generation allowance ended.
+\par\vspace{3mm}
+\smallbody\begin{tabular}{@{}p{83mm}rrp{99mm}@{}}
+\toprule
+Last saved answer contained & A & B & Example\\
+\midrule
+No solver definition or code fence & 98 & 71 & \id{08573cc6}, A. It was still listing coordinates and considering competing rectangle rules.\\[2mm]
+A solver definition & 8 & 18 & \id{2ba387bc}, B. Its draft searched for hollow squares and began assembling the output. The saved text ends mid-expression.\\[2mm]
+A fence and comments only & 1 & 0 & \id{c7f57c3e}, A. It described connected components in Python comments.\\
+\bottomrule
+\end{tabular}
+\par\vspace{3mm}
+\med Last saved line for \id{2ba387bc}: \texttt{right = block(hollows[row+2}
+\vfill
+\smallbody None of these three example tasks was solved in the four local NF4/BF16 direct-answer conditions. OpenRouter solved \id{2ba387bc} on 8/10 trials.
+\end{frame}

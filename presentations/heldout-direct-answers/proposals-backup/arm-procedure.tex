@@ -1,0 +1,15 @@
+\begin{frame}[t]{What changes between Python arms A and B?}
+\med
+Both run the same frozen NF4 base with the adapter off. The unit of comparison is the same task, including all its query inputs.
+\par\vspace{4mm}
+\smallbody\begin{tabular}{@{}>{\bfseries}p{27mm}p{85mm}p{91mm}@{}}
+\toprule
+ & Arm A: solver refinement & Arm B: exploration, then refinement\\
+\midrule
+First turn & The model writes a Python \texttt{solve(grid)} function. & The model can write the same solver immediately or request up to two exploratory Python calls.\\[2mm]
+Exploration & No separate exploratory call. & A snippet can inspect the visible demonstrations and test inputs. Printed output is sent back before the solver is written.\\[2mm]
+Refinement & \multicolumn{2}{p{175mm}}{For both arms the harness runs each solver on the demonstrations. It returns match results and execution feedback. Up to four candidates are ranked by demonstration matches.}\\[2mm]
+Scoring & \multicolumn{2}{p{175mm}}{The selected solver is applied to the query inputs. A separate scorer compares its grids with the held-out answers.}\\
+\bottomrule\end{tabular}
+\vfill\smallbody In the first-pass snapshot B solved \id{e95e3d8e} directly. Its probe-shaped text on \id{a395ee82} failed the recognizer. Neither task received exploratory Python output.
+\end{frame}

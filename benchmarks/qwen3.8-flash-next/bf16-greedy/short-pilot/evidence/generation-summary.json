@@ -1,0 +1,15 @@
+{
+  "completed": 12,
+  "new_completed": 12,
+  "skipped_completed": 0,
+  "pending": 0,
+  "successful_batch_sizes": [
+    4,
+    8
+  ],
+  "oom_batch_sizes": [],
+  "first_saved_seconds": 395.2324457168579,
+  "allocation_elapsed_seconds": 732.2078728675842,
+  "gpu_hours_until_report": 0.8135643031862047,
+  "new_responses_per_gpu_hour_until_report": 14.749909691223877
+}

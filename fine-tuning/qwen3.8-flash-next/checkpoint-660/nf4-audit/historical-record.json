@@ -1,0 +1,56 @@
+{
+  "logs/arc-flash-v6-7853809.log": {
+    "sha256": "6583f14da756dfeae28e92f03349d55e56d1a3bb9cf555efe2b03611b5a3f3ee",
+    "quantization_lines": [
+      "  \"nf4_backend\": \"bitsandbytes\",",
+      "  \"torch_dtype\": \"torch.bfloat16\",",
+      "[2026-10-23 04:23:04,980] [INFO] [axolotl.loaders.patch_manager] Quantized 96 MoE expert parameter(s) to 4-bit during model loading"
+    ],
+    "tensor_state_pattern_hits": {
+      "Params4bit": 0,
+      "Linear4bit": 0,
+      "quant_state": 0,
+      "gate_up_proj": 0
+    }
+  },
+  "runs/arc-flash-v6/debug.log": {
+    "sha256": "45ecf6ef29bcb7bddd5017bf477603ea16a89611a97c78dc1a40018ab63db82d",
+    "quantization_lines": [
+      "  \"nf4_backend\": \"bitsandbytes\",",
+      "  \"torch_dtype\": \"torch.bfloat16\",",
+      "[2026-10-23 04:23:04,980] [INFO] [axolotl.loaders.patch_manager._finalize_moe_expert_quantization:1088] [PID:2895366] Quantized 96 MoE expert parameter(s) to 4-bit during model loading"
+    ],
+    "tensor_state_pattern_hits": {
+      "Params4bit": 0,
+      "Linear4bit": 0,
+      "quant_state": 0,
+      "gate_up_proj": 0
+    }
+  },
+  "runs/arc-flash-v6/checkpoint-660": {
+    "files": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "arc_cuda_rng_all.pt",
+      "chat_template.jinja",
+      "checkpoint-complete.json",
+      "numerical-validation.json",
+      "optimizer.pt",
+      "rng_state.pth",
+      "scheduler.pt",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "tokens_state.json",
+      "trainer_state.json",
+      "training_args.bin"
+    ],
+    "adapter_sha256": "febc869b37a58e4d5c500cd20bb8335e7de99c230f66ae39f4159e8ab5e542db"
+  },
+  "fingerprints": {
+    "arc-flash-run-v6/arc-flash.yml": "565f9823f682970af090774fd6f7c0713f32db8a97941e56e5b36a44c823d52e",
+    "/path/to/arc-workspace/models/qwen3.8-flash-next/model.safetensors.index.json": "99e815241ef03325536b0aaa4441deea45174c17fae31e10f0bb456410c590de",
+    ".venv-arc/lib/python3.12/site-packages/axolotl/monkeypatch/moe_quant.py": "ce0edf7f6920968918785de70056b7309e810b076f8b2e681d06bc5d06ab157c",
+    ".venv-arc/lib/python3.12/site-packages/axolotl/loaders/model.py": "6efe62ebbcacdacb064c46f18589d32418ac18388ce754fd8757e2bd6f6ff98d"
+  }
+}

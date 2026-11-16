@@ -15,11 +15,11 @@ Each directory includes the generated responses, per-task decisions, historical 
 
 ## Qwen3.8-Flash-Next · BF16 sampled direct answers
 
-The [BF16 sampling report](qwen3.8-flash-next/bf16-sampling/) contains 276 scored responses on 138 public tasks. Each strategy solved the same five tasks.
+The [BF16 sampling report](qwen3.8-flash-next/bf16-sampling/) contains 276 scored responses on 138 public tasks. Each strategy solved the same five tasks. The separate [BF16 greedy pilot](qwen3.8-flash-next/bf16-greedy/short-pilot/) completed 12 short tasks and solved zero.
 
 ## Qwen3.8-Flash-Next · Python refinement
 
-The [Python refinement report](qwen3.8-flash-next/python-refinement/) covers three partial experiments with sandboxed execution on the internal validation split. Each run includes generated programs and per-task scores.
+The [Python refinement report](qwen3.8-flash-next/python-refinement/) covers three partial experiments with sandboxed execution on the internal validation split. Each run includes generated programs and per-task scores. The [eight-task exploration pilot](qwen3.8-flash-next/python-refinement/thinking-on/internal-exploration-pilot/) preceded the [held-out first pass](qwen3.8-flash-next/python-refinement/held-out-138/), which used the base model in both arms.
 
 ## Qwen3.8-Flash · OpenRouter prompt study
 

@@ -1,0 +1,68 @@
+{
+  "task_id": "e95e3d8e",
+  "source": "runs/arc-python-heldout-length-v1/{A,B}/tasks/e95e3d8e.json",
+  "query_verified": true,
+  "A": {
+    "stop_reason": "task_time_limit",
+    "active_seconds": 722.5100210076198,
+    "total": 1123,
+    "after_forced_boundary_tokens": 610,
+    "completed_candidates": 0,
+    "number_of_query_grids": 0,
+    "post_boundary_contains_def_solve": false,
+    "post_boundary_contains_code_fence": false,
+    "observation": "The visible post-boundary prefix described the repeating rule and enumerated rows of examples. The 12-minute generation allowance elapsed before the model wrote a Python function."
+  },
+  "B": {
+    "active_seconds": 602.3553018164821,
+    "total": 908,
+    "exploratory_calls": 0,
+    "selected_candidate_index": 0,
+    "finish_reason": "eos",
+    "feedback": {
+      "passed": 3,
+      "total": 3,
+      "executed_cases": 3,
+      "cases": [
+        {
+          "example": 0,
+          "executable": true,
+          "valid_grid": true,
+          "correct": true
+        },
+        {
+          "example": 1,
+          "executable": true,
+          "valid_grid": true,
+          "correct": true
+        },
+        {
+          "example": 2,
+          "executable": true,
+          "valid_grid": true,
+          "correct": true
+        }
+      ]
+    }
+  },
+  "tile_sizes": [
+    [
+      5,
+      5
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "missing_query_cells": 46,
+  "exact_cells": 484
+}

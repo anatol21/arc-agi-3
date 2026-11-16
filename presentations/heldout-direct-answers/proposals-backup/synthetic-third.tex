@@ -1,0 +1,17 @@
+% Evidence L113, L114. Kaggle author report (7 Nov 2026), sections 1--3,
+% and version 367279701 of the public stage-two demonstration notebook.
+\begin{frame}[t]{How nvbanana generated synthetic ARC puzzles}
+\med
+Team nvbanana reported third place on the 2026 ARC-AGI-2 \textbf{public leaderboard}. Its training pipeline starts with ideas from public-domain puzzle and engineering books.
+\par\vspace{3mm}
+\begin{tabular}{@{}>{\raggedright\arraybackslash\bfseries}p{38mm}>{\raggedright\arraybackslash}p{170mm}@{}}
+Extract a rule & Gemini read scanned pages and described mechanisms as grid transformations. For example, a sheep-pen puzzle inspired a rule that joins hollow squares on a grid so they share walls.\\[2mm]
+Generate grids & Pair each specification with ARC training-task summaries. GPT-OSS-120B wrote and tested an input generator, then wrote three output programs in separate runs. Keep a puzzle if the three agreed on all 30 generated inputs.\\[2mm]
+Augment & Each accepted rule yielded 24 augmented puzzles of five or six input/output pairs. The team reports roughly six million augmented puzzles in total.\\
+\end{tabular}
+\par\vspace{3mm}
+\smallbody The public notebook retained 28 of 32 examples using Flash-Next. The leaderboard run also used test-time fine-tuning, voting and program search. The score alone cannot isolate the contribution of synthetic data.
+\vfill
+\smallbody \href{https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/writeups/arc-agi-2-public-3rd-place-solution}{\textcolor{accent}{Team write-up, sections 1--3}}\qquad
+\href{https://www.kaggle.com/code/darraghdog/book-spec-to-arc-puzzles-with-flash?scriptVersionId=367279701}{\textcolor{accent}{Generation notebook, version 367279701}}
+\end{frame}

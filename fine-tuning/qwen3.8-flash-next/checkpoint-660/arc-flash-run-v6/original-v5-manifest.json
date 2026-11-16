@@ -1,0 +1,28 @@
+{
+  "name": "arc-flash-run-v5",
+  "replaces_failed_job": "7830099",
+  "mode": "full_training_with_integrated_guardrails",
+  "selected_resources": {
+    "nodes": 1,
+    "gpus": 3,
+    "wall_hours": 6
+  },
+  "gpu_tested": false,
+  "files_sha256": {
+    "README.md": "e6f207db7f97438411e800c7448e1a4c9372b2117695b4c2978fc917886a8bfc",
+    "checkpoint_validation.py": "2e3f0f1ebd985340bf2af3c388e86f417bf272a766c1a234bc89eced2457663e",
+    "cpu_compatibility.py": "d9a798a66acf51b088d659d06c0d3c34c1596f322d089af539fe876a22f59eca",
+    "export_checkpoint.py": "4f68fd97f8c7fa468e479bda24840ab6085ecf41f3fa1136877f3e19371c2229",
+    "guarded_train.py": "cb5385565593469539677d9f101079d97183da4cd31bad7e4af204c2021565b5",
+    "loss_normalization.py": "f347480cabef6287d8296776848ed125356e43f7c5cf794f6a523e7e99435e3b",
+    "numeric_checks.py": "d2f9b11eedd15c3d1d15f9479d040d6d4f16b6513805d6a30a5a90d3367fa1e4",
+    "original-v4-manifest.json": "92ade32afb0e2fe3fd5c8007af0ac571bd15b6395f8bcae88b4d087c2ee46f71",
+    "ple_placement.py": "e784e9bb8b1d14e28438fb0f24773c2a73e452aff9997a21da86529b3946d2e3",
+    "prepared_data_checks.py": "f7121f122e10e3538f3790891e8c10f219d98292745fc8c694573129df50c9a7",
+    "run_checks.py": "b8c9ff98160b5d869ed908468d621759f8244f2ccc7642ea529e533bd1e23ecc",
+    "runtime_guardrails.py": "c1f6ff133568fc754db7e376fb9e70c41137c217bb3c03d0f9aacb2afaef0e99",
+    "runtime_identity.py": "eb95025e989c0cc77dc7339000b0399608841ce66963290d2cfec458ea1adcf5",
+    "stage_full_run.py": "63eb47be54ffa9a66aba51b8c6abc8b7843ffac806a61afdd6b4c3a92139568e",
+    "train_arc.sbatch": "e4b72790424b08b3b63951b0f3b65f49db057a6c406303d01a7151596ec1845e"
+  }
+}

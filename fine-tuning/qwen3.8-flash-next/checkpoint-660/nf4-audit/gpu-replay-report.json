@@ -1,0 +1,41 @@
+{
+  "job": "8484708",
+  "historical_job": "7853809",
+  "phase": "verified",
+  "optimizer_steps": 0,
+  "scope": "Fresh training-configuration reload; no historical packed payload retained",
+  "training_config_sha256": "565f9823f682970af090774fd6f7c0713f32db8a97941e56e5b36a44c823d52e",
+  "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+  "gpus": [
+    "NVIDIA H100",
+    "NVIDIA H100",
+    "NVIDIA H100"
+  ],
+  "versions": {
+    "torch": "2.13.0+cu126",
+    "bitsandbytes": "0.50.2"
+  },
+  "layout": {
+    "decoder_layers_per_gpu": {
+      "0": 16,
+      "1": 16,
+      "2": 16
+    },
+    "cpu_ple_tables": [
+      "base_model.model.model.language_model.layers.1.ple.ple_embedding.ngram_embedding.weight"
+    ],
+    "trainable_parameters": 33478656,
+    "trainable_devices": [
+      0,
+      1,
+      2
+    ]
+  },
+  "missing": [],
+  "unexpected": [],
+  "invalid_state": [],
+  "shape_mismatches": [],
+  "linear": 834,
+  "experts": 96,
+  "elapsed_seconds": 457.34784173965454
+}

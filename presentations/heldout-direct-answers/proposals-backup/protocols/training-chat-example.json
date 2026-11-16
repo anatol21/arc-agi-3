@@ -1,0 +1,13 @@
+{
+  "messages": [
+    {
+      "content": "Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.\n\nReturn exactly one complete JSON object with this schema and no prose, markdown, explanation, or code fence:\n{\"outputs\": [[[0]]]}\n\nThe `outputs` array must contain one rectangular 0–9 integer grid for each item in `test`, in the same order. Write every row and every cell explicitly. Never abbreviate repeated values or rows, and never use ellipses (such as `...` or `......`), placeholders, or omitted content.\n\nTask:\n{\"train\":[{\"input\":[[7,9],[4,3]],\"output\":[[7,9,7,9,7,9],[4,3,4,3,4,3],[9,7,9,7,9,7],[3,4,3,4,3,4],[7,9,7,9,7,9],[4,3,4,3,4,3]]},{\"input\":[[8,6],[6,4]],\"output\":[[8,6,8,6,8,6],[6,4,6,4,6,4],[6,8,6,8,6,8],[4,6,4,6,4,6],[8,6,8,6,8,6],[6,4,6,4,6,4]]}],\"test\":[{\"input\":[[3,2],[7,8]]}]}",
+      "role": "user"
+    },
+    {
+      "content": "{\"outputs\":[[[3,2,3,2,3,2],[7,8,7,8,7,8],[2,3,2,3,2,3],[8,7,8,7,8,7],[3,2,3,2,3,2],[7,8,7,8,7,8]]]}",
+      "role": "assistant"
+    }
+  ],
+  "task_id": "00576224"
+}

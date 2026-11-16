@@ -25,6 +25,7 @@ def main():
                 raise ValueError(f'BF16 sampling result does not reproduce: {name}')
     print('Verified BF16 sampling results for both strategies on all 138 tasks.', flush=True)
     refinement = benchmarks / 'qwen3.8-flash-next/python-refinement'
+    subprocess.run([sys.executable, refinement / 'held-out-138/verify.py'], check=True)
     for variant in ('thinking-on', 'serial-no-thinking', 'length-batched-no-thinking'):
         folder = refinement / variant
         report = json.loads((folder / 'report.json').read_bytes())

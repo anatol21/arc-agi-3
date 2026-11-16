@@ -1,0 +1,37 @@
+\begin{frame}[t]{All eight wrong answers from Arm A}
+\smallbody Each row describes the selected program. Cell errors are counted only when the grid dimensions match. Two numbers refer to the task's two queries in order.
+\par\vspace{3mm}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{80mm}p{69mm}r@{}}\toprule
+Task & Operation in the saved solver & Query outcome & Demos exact\\\midrule
+\id{13e47133} & Fill component bounding boxes & 798 and 810 wrong cells & 0/3\\
+\id{1818057f} & Recolor 2s with five neighboring 4s & 96 wrong cells & 0/3\\
+\id{2d0172a1} & Place the crop on a square canvas & Both outputs $24\times24$; expected $9\times13$, $14\times11$ & 0/4\\
+\id{332f06d7} & Recolor fixed $2\times2$ blocks & 32 wrong cells & 1/4\\
+\id{4c416de3} & Paint near connected zero cells & 75 wrong cells & 0/3\\
+\id{898e7135} & Crop a background component & $1\times1$; expected $30\times30$ & 0/2\\
+\id{b0039139} & Split the pattern by separator rows & Wrong size; second grid missing & 0/4\\
+\id{e87109e9} & Trim leading gray rows, replace 8s & $29\times24$; expected $24\times24$ & 0/3\\
+\bottomrule\end{tabular}
+\vfill\smallbody None was exact in the four full NF4/BF16 direct comparisons. OpenRouter previously solved \id{1818057f} and \id{b0039139} once each in ten trials.
+\end{frame}
+
+\begin{frame}[t]{All ten wrong answers from Arm B}
+\smallbody Three returned the input unchanged. Only the solver on \id{332f06d7} matched any demonstration.
+\par\vspace{3mm}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{85mm}p{62mm}r@{}}\toprule
+Task & Operation in the saved solver & Query outcome & Demos exact\\\midrule
+\id{1818057f} & Recolor centers of crosses of 4s & 24 wrong cells & 0/3\\
+\id{28a6681f} & Drop one color to the bottom & 12 wrong cells & 0/3\\
+\id{2b83f449} & Repaint 8s inside all-7 blocks & Input copy, 62 wrong cells & 0/2\\
+\id{2d0172a1} & Crop the non-background bounds & Both sizes wrong & 0/4\\
+\id{332f06d7} & Move the zeros' bounding box & 32 wrong cells & 2/4\\
+\id{8b9c3697} & Draw down from red blocks & Input copy, 65 wrong cells & 0/3\\
+\id{97d7923e} & Recolor vertical runs between 2s & 9 wrong cells & 0/3\\
+\id{aa4ec2a5} & Draw a border and fill its interior & 247 wrong cells & 0/3\\
+\id{db695cfb} & Extend diagonals into zero cells & Input copy, 77 wrong cells & 0/5\\
+\id{e8686506} & Crop, pad to a square and rotate & $14\times14$; expected $8\times5$ & 0/2\\
+\bottomrule\end{tabular}
+\vfill\smallbody None was exact in the four full NF4/BF16 direct comparisons. OpenRouter previously solved \id{1818057f} once in ten trials.
+\end{frame}

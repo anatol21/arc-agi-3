@@ -1,0 +1,74 @@
+{
+  "20270e3b": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v1",
+    "response_sha256": "7efab419a4dbdc21695a867187133f7c401219a0aaefc65c834c5cdbc7aa69bf",
+    "generated_tokens": 338
+  },
+  "e8686506": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v1",
+    "response_sha256": "fbd8d972df49d3437dec00b6dae1abdcebc169838ffa1ccf4b1564f09bcd6076",
+    "generated_tokens": 255
+  },
+  "28a6681f": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v3",
+    "response_sha256": "813700a303be135b7b6421d4516a334d38c760283aec5ca724c086d11a16f4a2",
+    "generated_tokens": 567
+  },
+  "dbff022c": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v1",
+    "response_sha256": "ccfde997382664496d5a7b43880fbb138c880fb1ba1c982b3e75f3414fc75f6d",
+    "generated_tokens": 344
+  },
+  "7b5033c1": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v1",
+    "response_sha256": "56c8cb3df657099871a793931c28b0c73e9ecf659a330e20c47c5e8d1105e01b",
+    "generated_tokens": 111
+  },
+  "78332cb0": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-dashboard-v4",
+    "response_sha256": "d3c576c2d80db1c9ca733050c1b20456f87192504ceb6c1d9c59b80f91960968",
+    "generated_tokens": 658
+  },
+  "d35bdbdc": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v3",
+    "response_sha256": "da40958cb850bbf31ba761ff91ba20a37974b30830fec213b6996bc691bfa0d0",
+    "generated_tokens": 610
+  },
+  "eee78d87": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-dashboard-v1",
+    "response_sha256": "64543cb615ddd306e9fd06905eb0373ae2b30eb1e56f837d3a7a197ca13e62a4",
+    "generated_tokens": 799
+  },
+  "3dc255db": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v1",
+    "response_sha256": "fc4f2e8df3f1effe50fc939d5ba7fed41ad55bc4d9a21176b19aa55740c1e8ca",
+    "generated_tokens": 473
+  },
+  "08573cc6": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-debug-v1",
+    "response_sha256": "b8d193eee7dd22a75594ae3f4494dd4b597f7b3619b9e98fac3654e87f826bb5",
+    "generated_tokens": 535
+  },
+  "b0039139": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v2",
+    "response_sha256": "e7832d13c3257c4a83ad31e2d3f95ac91f3436c368e17ee1cd7f3c3a19728543",
+    "generated_tokens": 512
+  },
+  "4c3d4a41": {
+    "task_correct": false,
+    "package": "arc-flash-eval138-util-v3",
+    "response_sha256": "69e8f808e32f8e8b94782d2a553d0038ddc8a269a6fe8eeaaa737aeeaddf1004",
+    "generated_tokens": 648
+  }
+}

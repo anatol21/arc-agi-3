@@ -1,0 +1,28 @@
+{
+  "source": "user-pasted sacct, run-status.json and final log on 2026-10-23",
+  "job_id": "7853809",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "start_cluster_time": "2026-10-23T04:13:52",
+  "end_cluster_time": "2026-10-23T07:16:32",
+  "elapsed": "03:02:40",
+  "node": "compute-node",
+  "global_step": 660,
+  "epoch": 3,
+  "phase": "complete",
+  "checkpoint": "/path/to/arc-workspace/runs/arc-flash-v6/checkpoint-660",
+  "checkpoint_validated": true,
+  "export_validated": true,
+  "final_eval_loss": 0.05138,
+  "final_eval_runtime_seconds": 108.9,
+  "final_train_loss": 0.02913,
+  "host_peak_GB": 251.49,
+  "resources": {
+    "nodes": 1,
+    "gpus": 3,
+    "cpu_cores": 72
+  },
+  "arc_generation_accuracy": null,
+  "ttt_performed": false,
+  "limits": "supplied Trainer memory metrics are not a complete per-GPU peak report; resumed continuation and generation accuracy remain unmeasured"
+}

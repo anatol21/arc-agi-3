@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "source_job": "7836256",
+  "optimizer_updates": 0,
+  "purpose": "loss/kernel/device debugging only",
+  "phase": "debug_completed",
+  "cases": [
+    {
+      "e": {
+        "shape": [
+          1,
+          2932,
+          2560
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:2"
+      },
+      "c": {
+        "shape": [
+          248320,
+          2560
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:2"
+      },
+      "calls": [
+        {
+          "entry_current_device": 0,
+          "launch_scope": "unchanged",
+          "loss": 26.284435272216797,
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.080549240112305,
+              "maximum_finite": 29.79553985595703
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": -9.012222290039062e-05,
+              "maximum_finite": 4.273579120635986
+            }
+          },
+          "mode": "unchanged",
+          "matches_reference": false
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "cuda:2",
+          "loss": 0.062307313084602356,
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.080533981323242,
+              "maximum_finite": 29.79553985595703
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": -8.96453857421875e-05,
+              "maximum_finite": 4.273580551147461
+            }
+          },
+          "mode": "owner_scoped",
+          "matches_reference": true
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "unchanged",
+          "loss": "-inf",
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.08053207397461,
+              "maximum_finite": 29.79553985595703
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 0,
+              "negative_infinity": 293,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": null,
+              "maximum_finite": null
+            }
+          },
+          "mode": "unchanged",
+          "matches_reference": false
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "cuda:2",
+          "loss": 0.06230809912085533,
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.08054542541504,
+              "maximum_finite": 29.79553985595703
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                293
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 293,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": -9.1552734375e-05,
+              "maximum_finite": 4.273578643798828
+            }
+          },
+          "mode": "owner_scoped",
+          "matches_reference": true
+        }
+      ],
+      "reference": {
+        "loss": 0.06238816042173234,
+        "mean_per_target": 0.06238816042173234,
+        "shifted_supervised_tokens": 293,
+        "projection_dtype": "float32",
+        "classifier_copy_GiB": 2.368
+      },
+      "owner_scoped_matches": true,
+      "unchanged_failure_reproduced": true,
+      "split": "dev",
+      "phase": "forward",
+      "global_step": 0,
+      "sequence_length": 2932,
+      "nonpadding_tokens": 2932,
+      "shifted_supervised_tokens": 293,
+      "first_supervised_position": 2639,
+      "last_supervised_position": 2931,
+      "task_id": "423a55dc",
+      "token_sha256": "90567ae16b05c26a49bdb954df6c47fe1377985969a917aa224c0703a83482fb",
+      "input_device": "cuda:0",
+      "num_items_in_batch": 293,
+      "loss_device": "cuda:2",
+      "hidden_dtype": "torch.float32",
+      "classifier_dtype": "torch.bfloat16",
+      "denominator_device": "cuda:2",
+      "replay": {
+        "classifier": "/path/to/arc-workspace/runs/arc-flash-loss-debug-v1/replay/classifier.pt",
+        "case": "/path/to/arc-workspace/runs/arc-flash-loss-debug-v1/replay/423a55dc.pt",
+        "case_sha256": "f6308739d52ae9ddb03bb7e99bc5b39c68d29a3cdcb9e8379cf2767ed40d36b7"
+      }
+    },
+    {
+      "e": {
+        "shape": [
+          1,
+          2696,
+          2560
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:2"
+      },
+      "c": {
+        "shape": [
+          248320,
+          2560
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:2"
+      },
+      "calls": [
+        {
+          "entry_current_device": 0,
+          "launch_scope": "unchanged",
+          "loss": "-inf",
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.948078155517578,
+              "maximum_finite": 28.50114631652832
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 0,
+              "negative_infinity": 517,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": null,
+              "maximum_finite": null
+            }
+          },
+          "mode": "unchanged",
+          "matches_reference": false
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "cuda:2",
+          "loss": 0.05760079249739647,
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.948076248168945,
+              "maximum_finite": 28.50114631652832
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": -7.2479248046875e-05,
+              "maximum_finite": 3.898303985595703
+            }
+          },
+          "mode": "owner_scoped",
+          "matches_reference": true
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "unchanged",
+          "loss": "-inf",
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.948078155517578,
+              "maximum_finite": 28.50114631652832
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 0,
+              "negative_infinity": 517,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": null,
+              "maximum_finite": null
+            }
+          },
+          "mode": "unchanged",
+          "matches_reference": false
+        },
+        {
+          "entry_current_device": 0,
+          "launch_scope": "cuda:2",
+          "loss": 0.0576014406979084,
+          "intermediates_after_synchronization": {
+            "lse": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": 20.948070526123047,
+              "maximum_finite": 28.50114631652832
+            },
+            "nll_after_inplace_add": {
+              "shape": [
+                517
+              ],
+              "dtype": "torch.float32",
+              "device": "cuda:2",
+              "finite": 517,
+              "negative_infinity": 0,
+              "positive_infinity": 0,
+              "nan": 0,
+              "minimum_finite": -7.2479248046875e-05,
+              "maximum_finite": 3.898303985595703
+            }
+          },
+          "mode": "owner_scoped",
+          "matches_reference": true
+        }
+      ],
+      "reference": {
+        "loss": 0.05768056371027687,
+        "mean_per_target": 0.05768056371027687,
+        "shifted_supervised_tokens": 517,
+        "projection_dtype": "float32",
+        "classifier_copy_GiB": 2.368
+      },
+      "owner_scoped_matches": true,
+      "unchanged_failure_reproduced": true,
+      "split": "dev",
+      "phase": "forward",
+      "global_step": 0,
+      "sequence_length": 2696,
+      "nonpadding_tokens": 2696,
+      "shifted_supervised_tokens": 517,
+      "first_supervised_position": 2179,
+      "last_supervised_position": 2695,
+      "task_id": "d492a647",
+      "token_sha256": "fba7a8eab3a683761b7c23d322d4664e4bd674ffb691a7a48ae0df9e3dee9c96",
+      "input_device": "cuda:0",
+      "num_items_in_batch": 517,
+      "loss_device": "cuda:2",
+      "hidden_dtype": "torch.float32",
+      "classifier_dtype": "torch.bfloat16",
+      "denominator_device": "cuda:2",
+      "replay": {
+        "classifier": "/path/to/arc-workspace/runs/arc-flash-loss-debug-v1/replay/classifier.pt",
+        "case": "/path/to/arc-workspace/runs/arc-flash-loss-debug-v1/replay/d492a647.pt",
+        "case_sha256": "1799655eca2f82efc56ae1f24ee1bf2dccec9e7e83ba7e30ed10796822fd9c1a"
+      },
+      "gradient": {
+        "candidate_finite": true,
+        "candidate_nonzero": true,
+        "reference_finite": true,
+        "candidate_norm": 0.004723981488496065,
+        "reference_norm": 0.004724662285298109,
+        "maximum_absolute_error": 3.814697265625e-06,
+        "relative_l2_error": 0.0034801829711510837,
+        "cosine_similarity": 0.9999940991401672,
+        "filter_eps": "auto",
+        "scope": "isolated hidden-state gradient; not a backbone backward or optimizer update"
+      }
+    }
+  ],
+  "kernel_source_sha256": {
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/cce_lse_forward.py": "b8de1bbfb1290889ce677260fd45d0259b0c5380392fa107ce9a85dd5d3316e1",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/indexed_dot.py": "8537b2b88212912de5376506acc3c5e796eb3894766feb7e99155e37d327e413",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/utils.py": "f36f3938f9fce52ecb2730084d806dc98619fc8e5c6f17bf2d124dab1c919aaa",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/cce_utils.py": "7de4def75e834918039842cf6d4a1112ea7a7f68231a09cfd7a89ba7af38dd9b",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/tl_autotune.py": "c3fcc15dfd62fd61c8e5d1419e51bbe79a83464edcea588e60215561459d03d7",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/tl_utils.py": "8923e02f3240dfb96ca9204e81e1d21f73f5ee1d5649e4b84dda1b1e36dd0d60",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/cut_cross_entropy/cce_backward.py": "d3ff233566ea714bf855368f128b1d3cf324a4e71d8a031b08db9ef8ad9c56fb",
+    "/path/to/arc-workspace/.venv-arc/lib/python3.12/site-packages/triton/runtime/jit.py": "5fe46fbfac257a2b8645b7a2cc709232273d42dd5e1d55de9770b412a9476d77"
+  },
+  "slurm_job_id": "7849447",
+  "training_readiness_established": false,
+  "task_id": "d492a647",
+  "unchanged_failure_reproduced": true,
+  "owner_scoped_losses_match": true
+}

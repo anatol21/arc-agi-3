@@ -1,0 +1,42 @@
+\begingroup
+\begin{frame}[t]{Direct answers: the fixed user instruction}
+\med NF4 base, checkpoint-660 and both BF16 samplers received the same instruction. Thinking was disabled. The complete fixed text follows.
+\par\vspace{3mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Solve this ARC task. Infer the transformation from the training examples and apply it to every test input.\par}
+\vspace{2mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Return exactly one complete JSON object with this schema and no prose, markdown, explanation, or code fence: \{\textquotedbl{}outputs\textquotedbl{}: [[[0]]]\}\par}
+\vspace{2mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright The \textasciigrave{}outputs\textasciigrave{} array must contain one rectangular 0\textendash{}9 integer grid for each item in \textasciigrave{}test\textasciigrave{}, in the same order. Write every row and every cell explicitly. Never abbreviate repeated values or rows, and never use ellipses (such as \textasciigrave{}...\textasciigrave{} or \textasciigrave{}......\textasciigrave{}), placeholders, or omitted content.\par}
+\vspace{2mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Task:\par}
+\vspace{2mm}
+\vfill\smallbody The runner appends compact JSON immediately after \texttt{Task:}, on a new line. It contains every demonstration pair and query input in order. The source includes a complete saved example for \id{08573cc6}.
+\end{frame}
+
+\begin{frame}[t]{Python refinement: the shared system instruction}
+\smallbody Complete system text used by A and B, before B’s optional-probe instruction. Line breaks are reflowed for display.
+\par\vspace{2.5mm}
+{\fontsize{13}{16}\selectfont\ttfamily\raggedright You are an expert solver of ARC grid-transformation tasks. Infer a single general transformation from all demonstration input-output pairs. Implement it as deterministic standard-library Python: def solve(grid): ... The function receives one list-of-lists input grid and returns one rectangular list-of-lists output grid, with integer colors 0-9 and dimensions 1-30. Consider objects, connected components, counting, filtering, relative positions, rotation, reflection, translation, scaling, patterns, color mappings and compositions. Input and output dimensions may differ. Avoid arbitrary example-specific cases. Check every demonstration. On a revision, diagnose the supplied execution failures: is the rule wrong, or is its implementation wrong? Then revise the program and recheck all demonstrations, including prior passes. Your final answer must be exactly one \textasciigrave{}\textasciigrave{}\textasciigrave{}python code block with the complete source, including solve(grid). Put a concise description of the rule in a docstring or comment. Do not return output grids or JSON: the runner executes your program to obtain grids. Only standard-library modules are available. No files, external services or hardcoded query answers. You have at most four candidate programs, with execution feedback.\par}
+\vfill\smallbody The user message starts with \texttt{Task:} followed by the visible task as JSON. Both arms used the tokenizer’s thinking-enabled template.
+\end{frame}
+
+\begin{frame}[t]{Python refinement: a recorded revision prompt}
+\med In arm B on \id{cbebaa4b}, the first final answer contained only two line breaks. The next turn retained the task and that assistant answer, then added this user message.
+\par\vspace{4mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Execution feedback on demonstrations only:\par}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright \{\textquotedbl{}passed\textquotedbl{}: 0, \textquotedbl{}total\textquotedbl{}: 2, \textquotedbl{}executed\_cases\textquotedbl{}: 0, \textquotedbl{}error\textquotedbl{}: \textquotedbl{}Expected exactly one Python code block\textquotedbl{}\}\par}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Earlier candidate scores: [\{\textquotedbl{}candidate\textquotedbl{}: 0, \textquotedbl{}passed\textquotedbl{}: 0, \textquotedbl{}total\textquotedbl{}: 2\}]\par}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Diagnose the rule or implementation failure, then return the complete revised Python code block.\par}
+\vfill\smallbody The second final answer also contained just two line breaks. Neither turn produced executable solver code. The candidate index in the message starts at zero.
+\end{frame}
+
+\begin{frame}[t]{Arm B: the optional probe and its reply}
+\med Before the first solver, B appends the following text to A’s system instruction.
+\par\vspace{3mm}
+{\fontsize{14}{17}\selectfont\ttfamily\raggedright Before your first solver you may instead submit one fenced \textasciigrave{}\textasciigrave{}\textasciigrave{}probe block containing Python statements. Variables train and test contain the visible demonstration pairs and query inputs. Use print to inspect them. Each call starts fresh. You have at most two calls, 512 output tokens per call and 256 tokens of feedback. You may submit the solver immediately.\par}
+\par\vspace{4mm}\med If a probe is accepted, its text becomes an assistant message. The next user message starts with \texttt{Python output:}, followed by a new line and the returned console output. Its last line depends on the call count.
+\par\vspace{2mm}\smallbody After one call: \texttt{Continue.}\\[1mm]After two calls: \texttt{Return the complete solver in one fenced python block.}
+\vfill\smallbody The held-out first-pass snapshot recorded zero accepted probes. These feedback strings describe the implemented path.
+\end{frame}
+
+\endgroup

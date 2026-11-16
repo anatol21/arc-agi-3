@@ -1,0 +1,453 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,fvextra}
+\usepackage[margin=22mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\pagestyle{plain}
+\raggedbottom
+\hypersetup{pdftitle={OpenRouter ARC validation: complete saved prompt configurations}}
+\begin{document}
+{\LARGE OpenRouter ARC validation}\\[2mm]
+{\large Complete saved prompt configurations, 15--16 October 2026}\\[4mm]
+Two trials per condition on 138 public tasks. The initial archive contains 20 trial records for two tasks. Its continuation contains 1,360 for the other 136. Both contain identical configuration strings.
+All five conditions used \texttt{qwen/qwen3.8-flash}, thinking enabled, temperature 0.2 and top-$p$ 0.95. Self-refinement requested 32,768 tokens and a 240-second timeout. Each other condition requested 16,384 tokens and a 180-second timeout.\\[2mm]
+Each condition has a core instruction and a modifier. The three Python conditions share their core. Both text fields appear below as saved, with long lines wrapped to fit the page. The task-specific serialization sent to the provider is unknown. The accompanying JSON retains the original line breaks and settings.
+
+\pdfbookmark[1]{Python synthesis and refinement: shared core}{prompt-1}
+\section*{Python synthesis and refinement: shared core}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+You are an expert solver of Abstract Reasoning Corpus (ARC-AGI) tasks.
+
+Each task contains training examples consisting of input and output grids, followed by one or more unseen test inputs.
+
+Your objective is to infer a single general transformation rule that explains every training example and apply that rule to every test input.
+
+Reason about the task as a program synthesis problem. A useful conceptual representation is:
+
+def solve(grid):
+    ...
+
+The inferred transformation must reproduce every training output exactly.
+
+When searching for a transformation, consider operations such as:
+
+- Cropping, extraction, and connected components
+- Object detection, counting, grouping, and filtering
+- Reflection, rotation, translation, and scaling
+- Pattern repetition, tiling, and symmetry
+- Color mapping and conditional recoloring
+- Object relationships and relative positions
+- Row and column operations
+- Copying, extending, completing, or moving patterns
+- Compositions of multiple transformations
+
+Do not assume that input and output dimensions are equal.
+Do not assume that the input should be copied unchanged.
+Do not infer rules from the test input that contradict the training examples.
+
+Prefer concise, generalizable transformations over rules containing arbitrary special cases.
+
+Before answering, verify that your inferred rule is consistent with every training example.
+
+Your final response must contain ONLY a valid JSON object of the following form:
+
+{"outputs": [[[0]]]}
+
+Replace the example grid with the actual predicted output grids.
+
+The outputs array must contain exactly one rectangular grid for each test input, preserving their order.
+
+Do not output Python code, reasoning, explanations, markdown, or additional JSON fields in the final answer.
+\end{Verbatim}
+\pdfbookmark[1]{Zero-shot Python synthesis: modifier}{prompt-2}
+\section*{Zero-shot Python synthesis: modifier}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+ZERO-SHOT PROGRAM SYNTHESIS
+
+Solve the task without relying on any demonstration from another ARC problem.
+
+Internally:
+
+1. Analyze all training input-output pairs.
+2. Infer candidate transformations.
+3. Express the strongest candidate conceptually as a deterministic solve(grid) program.
+4. Check whether that program reproduces every training output exactly.
+5. Reject or revise any candidate that fails even one training example.
+6. Prefer the simplest fully consistent program.
+7. Apply the resulting program to each test input.
+
+Do not commit to the first visually plausible pattern. Validate the transformation globally across all training examples before producing the final prediction.
+\end{Verbatim}
+\pdfbookmark[1]{One-shot Python synthesis: modifier}{prompt-3}
+\section*{One-shot Python synthesis: modifier}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+ONE-SHOT PROGRAM SYNTHESIS
+
+The following solved ARC example demonstrates the desired problem-solving procedure.
+
+The transformation shown in this example is specific to that task. Do NOT assume that the new task uses reflection, repetition, tiling, or any other operation from the demonstration unless its own training examples independently justify it.
+
+EXAMPLE TASK
+
+{
+  "train": [
+    {
+      "input": [[8,6],[6,4]],
+      "output": [
+        [8,6,8,6,8,6],
+        [6,4,6,4,6,4],
+        [6,8,6,8,6,8],
+        [4,6,4,6,4,6],
+        [8,6,8,6,8,6],
+        [6,4,6,4,6,4]
+      ]
+    },
+    {
+      "input": [[7,9],[4,3]],
+      "output": [
+        [7,9,7,9,7,9],
+        [4,3,4,3,4,3],
+        [9,7,9,7,9,7],
+        [3,4,3,4,3,4],
+        [7,9,7,9,7,9],
+        [4,3,4,3,4,3]
+      ]
+    }
+  ],
+  "test": [
+    {
+      "input": [[3,2],[7,8]]
+    }
+  ]
+}
+
+EXAMPLE ANALYSIS
+
+Both training examples follow the same transformation.
+
+The input grid is vertically expanded by concatenating:
+
+1. The original rows.
+2. The original rows with each row horizontally reflected.
+3. The original rows again.
+
+Each resulting row is then repeated three times horizontally.
+
+The transformation can therefore be represented as:
+
+def solve(grid):
+    reflected = [row[::-1] for row in grid]
+    rows = grid + reflected + grid
+    return [row * 3 for row in rows]
+
+The program reproduces both training examples exactly.
+
+Applied to the test input, it gives:
+
+{
+  "outputs": [
+    [
+      [3,2,3,2,3,2],
+      [7,8,7,8,7,8],
+      [2,3,2,3,2,3],
+      [8,7,8,7,8,7],
+      [3,2,3,2,3,2],
+      [7,8,7,8,7,8]
+    ]
+  ]
+}
+
+END OF EXAMPLE
+
+Now solve the NEW ARC task.
+
+Use the same methodological process:
+
+1. Analyze the new training pairs.
+2. Infer a transformation specific to the new task.
+3. Formulate it internally as a concise Python solve(grid) function.
+4. Validate it against every new training example.
+5. Revise it if any training example is not reproduced exactly.
+6. Apply the validated transformation to every test input.
+
+Do not reuse the demonstration transformation unless the new training examples independently require it.
+\end{Verbatim}
+\pdfbookmark[1]{Python self-refinement: modifier}{prompt-4}
+\section*{Python self-refinement: modifier}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+PROGRAM SYNTHESIS WITH ITERATIVE VERIFICATION
+
+Use an execution-oriented generate-test-repair procedure.
+
+Internally perform the following process:
+
+PHASE 1 — HYPOTHESIS
+
+Analyze all training input-output pairs and formulate a precise transformation hypothesis.
+
+PHASE 2 — PROGRAM
+
+Translate the hypothesis into a deterministic Python-style function:
+
+def solve(grid):
+    ...
+
+Do not produce the function in the final response. It is an internal representation used to make the transformation precise.
+
+PHASE 3 — TRAINING VERIFICATION
+
+For EACH training example independently:
+
+1. Simulate execution of the candidate program on the training input.
+2. Determine the complete predicted grid.
+3. Compare its dimensions with the expected output.
+4. Compare every predicted cell with the expected output.
+5. Mark the candidate as valid only if the grids match exactly.
+
+PHASE 4 — REPAIR
+
+If any training example fails:
+
+1. Identify the first assumption responsible for the mismatch.
+2. Reject or modify that assumption.
+3. Construct a revised program.
+4. Repeat verification against ALL training examples, including examples that previously passed.
+
+Perform up to three candidate/repair iterations if necessary.
+
+Do not repair a program by adding arbitrary conditions tied to individual training examples.
+
+PHASE 5 — SELECTION
+
+If several transformations reproduce all training examples, select the one with:
+
+1. fewer arbitrary conditions,
+2. fewer transformation steps,
+3. stronger object or relational generality,
+4. less dependence on absolute coordinates when a relative rule explains the data.
+
+Only after obtaining a candidate consistent with every training example should you apply it to the test input.
+
+Return only the required final JSON.
+\end{Verbatim}
+\pdfbookmark[1]{Natural-language rule induction: core}{prompt-5}
+\section*{Natural-language rule induction: core}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+You are an expert solver of Abstract Reasoning Corpus (ARC-AGI) tasks.
+
+Each task contains training examples consisting of input and output grids, followed by one or more unseen test inputs.
+
+Your objective is to infer the latent abstract rule that explains every training example and apply that rule to every test input.
+
+Reason primarily in terms of objects, properties, relationships, invariants, and transformations rather than immediately translating the task into code.
+
+Possible concepts include:
+
+- Objects and connected components
+- Colors and object identities
+- Size, shape, orientation, and topology
+- Counting and cardinality
+- Relative positions and spatial relationships
+- Symmetry and repetition
+- Movement and correspondence
+- Selection and filtering
+- Completion and extrapolation
+- Row and column structure
+- Conditional transformations
+- Compositions of multiple relations
+
+The inferred rule must explain every training input-output pair.
+
+Prefer a single coherent abstract rule over independent descriptions of individual examples.
+
+Your final response must contain ONLY a valid JSON object:
+
+{"outputs": [[[0]]]}
+
+The outputs array must contain exactly one rectangular grid for each test input, preserving their order.
+
+Do not include reasoning, explanations, markdown, or additional fields in the final response.
+\end{Verbatim}
+\pdfbookmark[1]{Natural-language rule induction: modifier}{prompt-6}
+\section*{Natural-language rule induction: modifier}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+EXPLICIT NATURAL-LANGUAGE RULE INDUCTION
+
+Before predicting the test output, perform an explicit internal chain of abstraction.
+
+STEP 1 — SCENE DECOMPOSITION
+
+For each training pair, identify:
+
+- relevant objects or regions,
+- colors,
+- shapes,
+- sizes,
+- counts,
+- locations,
+- symmetries,
+- repetitions,
+- relationships between objects.
+
+STEP 2 — INVARIANTS
+
+Determine what properties remain unchanged between input and output.
+
+STEP 3 — CHANGES
+
+Determine exactly what properties change.
+
+STEP 4 — RELATIONAL RULE
+
+Describe the transformation internally as a general natural-language rule.
+
+The rule should state WHAT entities are selected, WHY they are selected, and HOW they are transformed.
+
+Avoid descriptions tied to arbitrary coordinates unless absolute position is demonstrably part of the rule.
+
+STEP 5 — CROSS-EXAMPLE VALIDATION
+
+Apply the proposed natural-language rule independently to every training input.
+
+Reject the rule if it fails to explain any training output exactly.
+
+STEP 6 — ALTERNATIVE HYPOTHESES
+
+If the training examples permit multiple plausible interpretations, compare them and prefer the rule that:
+
+- explains all examples,
+- uses fewer arbitrary assumptions,
+- relies on stable object relationships,
+- generalizes naturally to different grid sizes and positions.
+
+STEP 7 — TEST APPLICATION
+
+Apply the resulting abstract rule to the test input or inputs.
+
+Keep this reasoning in the requested reasoning trace.
+
+The visible final answer must contain only the required JSON output.
+\end{Verbatim}
+\pdfbookmark[1]{Zero-shot ARC DSL: core}{prompt-7}
+\section*{Zero-shot ARC DSL: core}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+You are an expert solver of Abstract Reasoning Corpus (ARC-AGI) tasks.
+
+Solve each task by synthesizing a transformation from a compact ARC domain-specific language (DSL).
+
+The transformation must reproduce every training output exactly and then generalize to each test input.
+
+Your final response must contain ONLY a valid JSON object:
+
+{"outputs": [[[0]]]}
+
+Replace the example grid with the actual predicted output grids.
+
+The outputs array must contain exactly one rectangular grid for each test input, preserving their order.
+
+Do not output the DSL program, reasoning, explanations, markdown, or additional JSON fields in the final answer.
+\end{Verbatim}
+\pdfbookmark[1]{Zero-shot ARC DSL: modifier}{prompt-8}
+\section*{Zero-shot ARC DSL: modifier}
+\begin{Verbatim}[breaklines=true,breakanywhere=false,breaksymbolleft={},fontsize=\small]
+ZERO-SHOT DSL PROGRAM SYNTHESIS
+
+Represent the transformation internally using compositions of the following abstract primitives.
+
+GRID TRANSFORMATIONS
+
+IDENTITY(grid)
+ROT90(grid)
+ROT180(grid)
+ROT270(grid)
+FLIP_H(grid)
+FLIP_V(grid)
+TRANSPOSE(grid)
+CROP(grid, region)
+CONCAT_H(a, b)
+CONCAT_V(a, b)
+TILE(grid, rows, cols)
+REPEAT_ROWS(grid, n)
+REPEAT_COLS(grid, n)
+
+OBJECT OPERATIONS
+
+OBJECTS(grid)
+CONNECTED_COMPONENTS(grid)
+BBOX(object)
+MASK(object)
+COLOR(object)
+SIZE(object)
+WIDTH(object)
+HEIGHT(object)
+POSITION(object)
+COUNT(objects)
+LARGEST(objects)
+SMALLEST(objects)
+FILTER_COLOR(objects, color)
+FILTER_SIZE(objects, condition)
+FILTER_SHAPE(objects, condition)
+
+SPATIAL RELATIONS
+
+ABOVE(a, b)
+BELOW(a, b)
+LEFT_OF(a, b)
+RIGHT_OF(a, b)
+INSIDE(a, b)
+CONTAINS(a, b)
+TOUCHING(a, b)
+ALIGNED_ROW(a, b)
+ALIGNED_COLUMN(a, b)
+OVERLAPS(a, b)
+
+TRANSFORMATIONS
+
+MOVE(object, dr, dc)
+COPY(object, position)
+RECOLOR(entity, source_color, target_color)
+FILL(region, color)
+DELETE(object)
+SCALE(object, factor)
+REFLECT(object, axis)
+ROTATE(object, angle)
+
+STRUCTURAL OPERATIONS
+
+ROWS(grid)
+COLUMNS(grid)
+SELECT(condition)
+MAP(operation, collection)
+COUNT(collection)
+REPEAT(pattern, n)
+EXTEND(pattern, direction)
+COMPLETE(pattern)
+COMPOSE(operation1, operation2, ...)
+
+You may use parameters inferred from the input, such as:
+
+- object count,
+- dimensions,
+- relative displacement,
+- bounding boxes,
+- colors,
+- symmetry axes,
+- repeated intervals.
+
+Do not assume that the primitive vocabulary implies that every task uses objects or geometry. Use only the operations justified by the examples.
+
+SEARCH PROCEDURE
+
+1. Parse each training grid into potentially relevant structures.
+2. Generate candidate DSL expressions or short DSL programs.
+3. Prefer compositions containing few primitives.
+4. Apply each candidate to ALL training examples.
+5. Reject any candidate that does not exactly reproduce every expected output.
+6. If several candidates fit, prefer the candidate based on relational properties rather than arbitrary absolute coordinates.
+7. Apply the best consistent DSL program to every test input.
+
+Do not simply describe the transformation visually. Make the internal rule operational enough that it could be executed deterministically.
+\end{Verbatim}
+\end{document}

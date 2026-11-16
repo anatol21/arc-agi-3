@@ -1,0 +1,197 @@
+{
+  "repository": "https://github.com/anatol21/arc-agi-3",
+  "revision": "e37ec8b840155c28c843b175cf1f2116d5c5d8cc",
+  "files_relative_to_benchmarks_qwen3.8-flash-next_sha256": {
+    "greedy-no-thinking/held-out-138/evidence/observations.jsonl": "cbb3cdad15a4d67feba6c50e0b3a2371ce1ca9ff0e877ff797f3226744a593ca",
+    "bf16-sampling/responses.jsonl": "91d00b8d791b0bac93546ae5a113ad03c3158fc3f51426f19235fc98c7941b46"
+  },
+  "unit": "One retained terminal answer per task and condition; NF4 source_order == 0.",
+  "scope": "Output tokens in scored answers. Excludes prompts, duplicate observations, padding, replay and abandoned work. Solved subsets differ between variants.",
+  "failure_definition": "Task-level answers flagged by the scorer. Stop at the token limit takes precedence over parse or schema exceptions. All other cases ended at EOS.",
+  "variants": {
+    "base": {
+      "terminal_answers": 138,
+      "exact_tasks": 4,
+      "generated_tokens_total": 246639,
+      "generated_tokens_per_answer": 1787.239,
+      "generated_tokens_in_exact_answers": 11024,
+      "generated_tokens_per_exact_answer": 2756.0,
+      "all_generated_tokens_divided_by_exact_tasks": 61659.75,
+      "generated_tokens_by_exact_task": {
+        "4aab4007": 2357,
+        "af22c60d": 1806,
+        "c663677b": 2192,
+        "ca8f78db": 4669
+      }
+    },
+    "finetuned": {
+      "terminal_answers": 138,
+      "exact_tasks": 7,
+      "generated_tokens_total": 241737,
+      "generated_tokens_per_answer": 1751.717,
+      "generated_tokens_in_exact_answers": 8712,
+      "generated_tokens_per_exact_answer": 1244.571,
+      "all_generated_tokens_divided_by_exact_tasks": 34533.857,
+      "generated_tokens_by_exact_task": {
+        "1e97544e": 1064,
+        "4aab4007": 1574,
+        "af22c60d": 1806,
+        "c663677b": 1464,
+        "ca8f78db": 1806,
+        "e66aafb8": 24,
+        "e95e3d8e": 974
+      }
+    },
+    "low_nucleus": {
+      "terminal_answers": 138,
+      "exact_tasks": 5,
+      "generated_tokens_total": 242239,
+      "generated_tokens_per_answer": 1755.355,
+      "generated_tokens_in_exact_answers": 8743,
+      "generated_tokens_per_exact_answer": 1748.6,
+      "all_generated_tokens_divided_by_exact_tasks": 48447.8,
+      "generated_tokens_by_exact_task": {
+        "4aab4007": 2357,
+        "c663677b": 2192,
+        "ca8f78db": 2705,
+        "e66aafb8": 32,
+        "e95e3d8e": 1457
+      },
+      "format_error_counts": {
+        "eos_invalid_json": 5,
+        "eos_ragged_grid": 2,
+        "eos_wrong_grid_count": 1,
+        "token_limit": 4
+      },
+      "format_errors_total": 12,
+      "format_errors_by_task": {
+        "20a9e565": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 2557 (char 2556)"
+        },
+        "47996f11": {
+          "kind": "eos_ragged_grid",
+          "scorer_message": "Grid must be rectangular"
+        },
+        "62593bfd": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting ',' delimiter: line 1 column 8422 (char 8421)"
+        },
+        "65b59efc": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting ',' delimiter: line 1 column 584 (char 583)"
+        },
+        "78332cb0": {
+          "kind": "eos_ragged_grid",
+          "scorer_message": "Grid must be rectangular"
+        },
+        "7b3084d4": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 390 (char 389)"
+        },
+        "7b5033c1": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 2841 (char 2840)"
+        },
+        "929ab4e9": {
+          "kind": "eos_wrong_grid_count",
+          "scorer_message": "Response has the wrong number of grids"
+        },
+        "981571dc": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2110 (char 2109)"
+        },
+        "af22c60d": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2111 (char 2110)"
+        },
+        "d8e07eb2": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2489 (char 2488)"
+        },
+        "f560132c": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 471 (char 470)"
+        }
+      }
+    },
+    "instruct_sampling": {
+      "terminal_answers": 138,
+      "exact_tasks": 5,
+      "generated_tokens_total": 240413,
+      "generated_tokens_per_answer": 1742.123,
+      "generated_tokens_in_exact_answers": 8743,
+      "generated_tokens_per_exact_answer": 1748.6,
+      "all_generated_tokens_divided_by_exact_tasks": 48082.6,
+      "generated_tokens_by_exact_task": {
+        "4aab4007": 2357,
+        "c663677b": 2192,
+        "ca8f78db": 2705,
+        "e66aafb8": 32,
+        "e95e3d8e": 1457
+      },
+      "format_error_counts": {
+        "eos_grid_dimension_out_of_bounds": 1,
+        "eos_invalid_json": 4,
+        "eos_ragged_grid": 1,
+        "eos_wrong_grid_count": 1,
+        "token_limit": 6
+      },
+      "format_errors_total": 13,
+      "format_errors_by_task": {
+        "47996f11": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2115 (char 2114)"
+        },
+        "62593bfd": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting ',' delimiter: line 1 column 8422 (char 8421)"
+        },
+        "65b59efc": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 462 (char 461)"
+        },
+        "7b80bb43": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 1 (char 0)"
+        },
+        "898e7135": {
+          "kind": "eos_grid_dimension_out_of_bounds",
+          "scorer_message": "Grid must have 1–30 rows and columns"
+        },
+        "929ab4e9": {
+          "kind": "eos_wrong_grid_count",
+          "scorer_message": "Response has the wrong number of grids"
+        },
+        "981571dc": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2110 (char 2109)"
+        },
+        "af22c60d": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2110 (char 2109)"
+        },
+        "b6f77b65": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting property name enclosed in double quotes: line 1 column 473 (char 472)"
+        },
+        "c7f57c3e": {
+          "kind": "eos_ragged_grid",
+          "scorer_message": "Grid must be rectangular"
+        },
+        "d8e07eb2": {
+          "kind": "token_limit",
+          "scorer_message": "Expecting value: line 1 column 2489 (char 2488)"
+        },
+        "f560132c": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting ',' delimiter: line 1 column 404 (char 403)"
+        },
+        "f931b4a8": {
+          "kind": "eos_invalid_json",
+          "scorer_message": "Expecting value: line 1 column 1182 (char 1181)"
+        }
+      }
+    }
+  }
+}

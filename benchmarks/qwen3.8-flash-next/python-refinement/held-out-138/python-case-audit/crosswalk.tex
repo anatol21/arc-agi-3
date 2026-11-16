@@ -1,0 +1,21 @@
+\begin{frame}[t]{Where direct answers had already solved the task}
+\med
+A returned wrong grids on eight tasks and B on ten. Three task IDs occur in both sets. \textbf{None of the 15 distinct tasks} had a strict solve in either full NF4 direct-answer run or either full BF16 sampling run.
+\par\vspace{3mm}
+\smallbody\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Prior NF4 greedy} & Prior BF16 & Python first pass\\
+Task & Base & Checkpoint-660 & Both samplers & A\enspace /\enspace B\\
+\midrule
+\id{1e97544e} & \dash & \yes & \dash & No grid / No grid\\
+\id{af22c60d} & \yes & \yes & \dash & No grid / No grid\\
+\id{ca8f78db} & \yes & \yes & \yes & No grid / No grid\\
+\id{e66aafb8} & \dash & \yes & \yes & No grid / No grid\\
+\id{e95e3d8e} & \dash & \yes & \yes & No grid / Exact\\
+\id{4aab4007}, \id{c663677b} & \yes & \yes & \yes & Unattempted / Unattempted\\
+\bottomrule
+\end{tabular}
+\vfill
+\smallbody In the separate OpenRouter experiment, \id{1818057f} (Python A and B wrong) and \id{b0039139} (A wrong) each had one exact answer in ten trials. Both came from the Python Self-Refinement prompt; that API harness did not execute code.
+\end{frame}

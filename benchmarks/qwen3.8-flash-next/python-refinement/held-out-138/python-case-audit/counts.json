@@ -1,0 +1,27 @@
+{
+  "A": {
+    "context_limit": 7,
+    "fence_and_comments": 1,
+    "missing_query_grid": 1,
+    "no_function_or_fence": 98,
+    "open": 6,
+    "unattempted": 8,
+    "unfinished_function": 8,
+    "wrong_cells": 4,
+    "wrong_code_block_format": 2,
+    "wrong_dimensions": 3
+  },
+  "B": {
+    "context_limit": 7,
+    "copied_input": 3,
+    "exact": 1,
+    "no_function_or_fence": 71,
+    "open": 7,
+    "unattempted": 10,
+    "unfinished_function": 18,
+    "unrecognized_probe": 1,
+    "wrong_cells": 5,
+    "wrong_code_block_format": 13,
+    "wrong_dimensions": 2
+  }
+}

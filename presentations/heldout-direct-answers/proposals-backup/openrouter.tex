@@ -1,0 +1,47 @@
+% Historical OpenRouter experiment, October 2026. Five saved configurations
+% match in cancelled-batch.json and completed-validation-20261016T183455Z.json.
+% Full strings, settings and source digests accompany this deck in openrouter/.
+\begingroup
+\renewcommand{\sectiontag}{Backup\quad Historical OpenRouter prompts}
+\renewcommand{\readurl}{run:proposals-backup/openrouter/full-prompts.pdf}
+\renewcommand{\readsource}{Full saved prompts (supplement)}
+\begin{frame}[t]{OpenRouter prompts for 138 public tasks}
+\med
+The API ran five prompt conditions twice per task. All used \id{qwen/qwen3.8-flash},
+thinking enabled, temperature 0.2 and top-$p$ 0.95. Each requested an ordered list
+of output grids in JSON.
+\vspace{4mm}
+
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{49mm}>{\raggedright\arraybackslash}p{157mm}@{}}
+\textbf{Python-style prompt} & \textbf{Excerpt from the saved instruction for that condition}\\[2mm]
+Zero-shot synthesis & \texttt{Express the strongest candidate conceptually as a deterministic solve(grid) program.}\\[3mm]
+One-shot synthesis & A worked example expands a grid by reflection and repetition. The prompt then says \texttt{Infer a transformation specific to the new task.}\\[3mm]
+Self-refinement & \texttt{Simulate execution of the candidate program on the training input.}\par
+\texttt{Perform up to three candidate/repair iterations if necessary.}\\
+\end{tabular}
+\vfill
+\smallbody
+These three conditions share one core instruction. Their prompts ask the model to check its candidate internally.
+In the local Python experiment, the worker executes the model's program and returns feedback.
+\end{frame}
+
+\begin{frame}[t]{OpenRouter prompts for rule induction and a grid language}
+\med
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{49mm}>{\raggedright\arraybackslash}p{157mm}@{}}
+\textbf{Prompt} & \textbf{Excerpt from the saved instruction for that condition}\\[2mm]
+Natural-language rule induction &
+\texttt{The rule should state WHAT entities are selected, WHY they are selected, and HOW they are transformed.}\\[4mm]
+Zero-shot ARC DSL &
+\texttt{Represent the transformation internally using compositions of the following abstract primitives.}\par
+The supplied vocabulary includes \id{CONNECTED\_COMPONENTS(grid)}, \id{BBOX(object)}, and \id{REPEAT(pattern, n)}.\\
+\end{tabular}
+\vspace{5mm}
+
+\textbf{Generation limits.} Self-refinement requested 32,768 tokens and a 240-second timeout.
+The other four conditions requested 16,384 tokens and a 180-second timeout.
+\vfill
+\smallbody
+The final backup slides reproduce the full saved instructions, including the one-shot example.
+The archive does not record how the provider assembled those fields and task grids into each request.
+\end{frame}
+\endgroup

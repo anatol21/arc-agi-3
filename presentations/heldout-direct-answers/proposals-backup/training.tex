@@ -1,0 +1,12 @@
+\begin{frame}[t]{Checkpoint-660 training messages}
+\med
+All 880 training records use the same user instruction as direct evaluation. Each appends the demonstrations and query inputs as compact JSON. The training file adds an assistant message containing the full reference answer.
+\par\vspace{4mm}
+\med\textbf{Saved example \id{00576224}.} Its two demonstrations expand a $2\times2$ input to a $6\times6$ grid. The query input was \texttt{[[3,2],[7,8]]}. The assistant target was
+\par\vspace{2mm}
+{\smallbody\ttfamily
+\textbraceleft\detokenize{"outputs":[[[3,2,3,2,3,2],[7,8,7,8,7,8],}\\
+\detokenize{[2,3,2,3,2,3],[8,7,8,7,8,7],}\\
+\detokenize{[3,2,3,2,3,2],[7,8,7,8,7,8]]]}\textbraceright\par}
+\vfill\smallbody Supervised loss was applied to the assistant completion. The OpenRouter one-shot prompt used this same worked puzzle with the two demonstrations reversed. The puzzle was outside the 138-task evaluation set.
+\end{frame}

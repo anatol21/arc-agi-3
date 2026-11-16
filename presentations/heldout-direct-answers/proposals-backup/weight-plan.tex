@@ -1,0 +1,16 @@
+% Design only. Controlling protocol: experiments/weight_space_arc/PREREGISTRATION.md, sections 2--7.
+% Observed index contrast: E036, E039, E040. Grafting precedent: L138 (Panigrahi et al.).
+% Threats: E009/E027 (batch shape), E012 (kernel equivalence), L104/L107 (selection and transfer).
+% Section 6 adds matched random grafts and scale controls for within-family localization.
+\begin{frame}[t]{Which checkpoint changes corrected \id{1e97544e}?}
+\normbody
+At row 5, column 5, the base continued \id{3 4 5 6} with \id{7}. Checkpoint-660 repeated \id{6} and solved the grid. Which learned weight changes were sufficient?
+\par\vspace{4mm}
+\med\begin{tabular}{@{}>{\raggedright\arraybackslash\bfseries}p{34mm}>{\raggedright\arraybackslash}p{174mm}@{}}
+Intervention & Switch the learned LoRA updates on or off in three projection families: GDN, QSA and the shared-expert MLP. Test all eight combinations on the frozen NF4 base.\\[2mm]
+Controls & Reproduce the original adapter-off and adapter-on answers. Hold the prompt and serial greedy decoding fixed, clear model state between settings, and repeat in reverse order in a fresh process.\\[2mm]
+Readouts & Score the full $23\times23$ grid. At the first error, compare the model's probabilities of 6 and 7 after the same correct prefix, in both compact and spaced JSON.\\
+\end{tabular}
+\vfill
+\smallbody If removing an update loses the solve and restoring it recovers it, that tests dependence on this puzzle. To test transfer, freeze the chosen subset before evaluating 32 new puzzles with the same rule and two 16-task control sets.
+\end{frame}

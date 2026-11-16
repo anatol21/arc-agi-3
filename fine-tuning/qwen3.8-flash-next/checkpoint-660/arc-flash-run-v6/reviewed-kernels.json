@@ -1,0 +1,38 @@
+{
+  "cut_cross_entropy": {
+    "cce_lse_forward.py": {
+      "sha256": "b8de1bbfb1290889ce677260fd45d0259b0c5380392fa107ce9a85dd5d3316e1",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/cce_lse_forward.py"
+    },
+    "indexed_dot.py": {
+      "sha256": "8537b2b88212912de5376506acc3c5e796eb3894766feb7e99155e37d327e413",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/indexed_dot.py"
+    },
+    "utils.py": {
+      "sha256": "f36f3938f9fce52ecb2730084d806dc98619fc8e5c6f17bf2d124dab1c919aaa",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/utils.py"
+    },
+    "cce_utils.py": {
+      "sha256": "7de4def75e834918039842cf6d4a1112ea7a7f68231a09cfd7a89ba7af38dd9b",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/cce_utils.py"
+    },
+    "tl_autotune.py": {
+      "sha256": "c3fcc15dfd62fd61c8e5d1419e51bbe79a83464edcea588e60215561459d03d7",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/tl_autotune.py"
+    },
+    "tl_utils.py": {
+      "sha256": "8923e02f3240dfb96ca9204e81e1d21f73f5ee1d5649e4b84dda1b1e36dd0d60",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/tl_utils.py"
+    },
+    "cce_backward.py": {
+      "sha256": "d3ff233566ea714bf855368f128b1d3cf324a4e71d8a031b08db9ef8ad9c56fb",
+      "source": "https://raw.githubusercontent.com/axolotl-ai-cloud/ml-cross-entropy/f2d026e6961cb4325a6e3d316461235aeeab0ac2/cut_cross_entropy/cce_backward.py"
+    }
+  },
+  "triton": {
+    "runtime/jit.py": {
+      "sha256": "5fe46fbfac257a2b8645b7a2cc709232273d42dd5e1d55de9770b412a9476d77",
+      "source": "https://raw.githubusercontent.com/triton-lang/triton/v3.7.1/python/triton/runtime/jit.py"
+    }
+  }
+}

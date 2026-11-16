@@ -1,0 +1,44 @@
+% Two conditions of a separate Python campaign on the same 138 tasks.
+\renewcommand{\sectiontag}{C\quad Python refinement}
+\setbeamertemplate{footline}{\leavevmode\hbox to\paperwidth{\hspace{10mm}{\color{muted}\fontsize{10}{12}\selectfont\sectiontag}\hfil{\color{muted}\fontsize{10}{12}\selectfont First pass\quad 16 Nov 2026, 15:59 CET\hspace{6mm}\insertframenumber}\hspace{10mm}}\vspace{2.5mm}}
+\definecolor{closedColor}{HTML}{DFE3E5}
+\definecolor{openColor}{HTML}{A8D4F3}
+\definecolor{wrongColor}{HTML}{FFC294}
+\definecolor{exactColor}{HTML}{93D4AA}
+\definecolor{mapBorder}{HTML}{99A5AD}
+\newcommand{\pycell}[3]{\begingroup\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{.3pt}\fcolorbox{mapBorder}{#1}{\makebox[20.1mm]{\rule[-1.25mm]{0pt}{4.3mm}\fontsize{10}{11}\selectfont\texttt{#2}\hspace{.7mm}\makebox[2mm]{\ensuremath{#3}}}}\hspace{.8mm}\endgroup}
+\newcommand{\pykey}[4]{\begingroup\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{.3pt}\fcolorbox{mapBorder}{#1}{\makebox[4mm]{\rule[-.9mm]{0pt}{3.7mm}\fontsize{10}{11}\selectfont\ensuremath{#2}}}\hspace{1.1mm}{\fontsize{11.5}{14}\selectfont #3 \textbf{#4}}\endgroup}
+
+\begin{frame}[t]{Python refinement on the 138 held-out tasks}
+\normbody
+Both arms use the same frozen NF4 base on four H100s, with the LoRA adapter disabled. The model sees the demonstrations and query inputs.
+\par\vspace{4mm}
+\med\begin{tabular}{@{}>{\bfseries}p{44mm}>{\raggedright\arraybackslash}p{164mm}@{}}
+Arm A & Write a Python \texttt{solve(grid)} function. Run it on the demonstrations and use the results to revise it.\\[2mm]
+Arm B & Before writing the first solver, the model may run up to two exploratory Python snippets on the visible grids and read their printed output. It then follows the same refinement procedure as A.\\
+\end{tabular}
+\par\vspace{3mm}
+\med\textbf{Selection and score.} Try up to four solvers. Select by demonstration matches, then execute on the query inputs. A task is exact when every predicted query grid matches the reference.
+\par\vspace{2mm}
+\med\textbf{First-pass budget.} Up to 512 reasoning tokens and 1,536 code tokens per turn. Each task has 15 active minutes, including three reserved for execution.
+\vfill
+\smallbody The scheduler starts eligible retries after both arms close their first pass. Each retry extends the task budget to 30 cumulative active minutes.
+\end{frame}
+
+\begin{frame}[t]{Arm A\enspace Write and revise a Python solver}
+\med
+\textbf{124 of 138} first-pass attempts closed. Eight produced a grid. None solved every query.
+\par\vspace{3mm}
+\input{python-first-pass/map-A.tex}
+\vfill
+\smallbody Each cell is one ARC task ID. Six of the 14 open tasks already have saved work.
+\end{frame}
+
+\begin{frame}[t]{Arm B\enspace Optional Python probes before writing the solver}
+\med
+\textbf{121 of 138} first-pass attempts closed. Eleven produced a grid. One solved every query.
+\par\vspace{3mm}
+\input{python-first-pass/map-B.tex}
+\vfill
+\smallbody \id{e95e3d8e} was exact on the first solver candidate. Arm B recorded zero exploratory Python calls.
+\end{frame}

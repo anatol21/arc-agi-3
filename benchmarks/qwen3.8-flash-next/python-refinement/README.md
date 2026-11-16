@@ -17,3 +17,7 @@ The batched worker grouped rows by input length and padding limits. Its cap was 
 Each run directory contains the first-candidate and selected-candidate scores in `report.json` and archived program text with SHA-256 checksums in `candidates.jsonl`. The two thinking-disabled directories also contain the attempted IDs from the batch journals. The candidate files record available Python programs; a generation that never produced extractable Python has no program to archive.
 
 The [historical producer packages](producer/) include the sandbox, generation loop, selection logic and scorer. The private workspace path is replaced with a path relative to the deployed package. Running these historical packages requires the original model, adapter, staged inputs, environment and package manifests. The published evidence can be checked offline with `python3 benchmarks/verify.py` from the repository root.
+
+## Paired exploration experiments
+
+[Internal eight-task pilot and continuation](thinking-on/internal-exploration-pilot/) · [Held-out first pass on 138 tasks](held-out-138/)

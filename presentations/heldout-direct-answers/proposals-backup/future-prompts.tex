@@ -1,0 +1,12 @@
+\begin{frame}[t]{Prompts for the proposed experiments}
+\med
+\textbf{Weight interventions and training-data comparisons.} Reuse the archived direct-answer instruction and the same serialized task for every static ARC evaluation. The weight intervention or training corpus is the experimental variable.
+\par\vspace{5mm}
+\textbf{ARC-AGI-3 action prompt.} Proposed wording for the first one-game integration test:
+\par\vspace{2mm}
+\begin{quote}\smallbody
+Choose one action from the available actions in this observation. Return a single JSON object with the action and its data. Use an empty data object for an action with no coordinates. For a coordinate action, include integer \texttt{x} and \texttt{y}.
+\end{quote}
+\smallbody The changing part of the message supplies the public frames, available actions, game state and bounded transition history. Example response: \texttt{\detokenize{{"action":"ACTION1","data":{}}}}.
+\vfill\smallbody No outcome is claimed for this action prompt. The engineering test checks that an action advances the environment and that its observation and replay are recorded.
+\end{frame}
